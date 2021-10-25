@@ -17,7 +17,7 @@ export default function NavBar() {
 
                 Menu open: "hidden", Menu closed: "block"
               */}
-              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="false">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
               {/* 
@@ -36,14 +36,14 @@ export default function NavBar() {
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
             <div className="flex-shrink-0 flex items-center">
               <img className="block lg:hidden h-10 w-auto mx-2" src="/img/ccbcet-logo.svg" alt="ccbcet logo" />
-              <img class="hidden lg:block h-10 w-auto mx-4" src="/img/ccbcet-logo.svg" alt="Workflow"/>
+              <img class="hidden lg:block h-10 w-auto mx-4" src="/img/ccbcet-logo.svg" alt="Workflow" />
               <span className="text-white text-xl">CodeChef BCET Chapter</span>
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
                 <a href="#" className="navbar-link">Team</a>
-                <a href="#" className="navbar-link">Projects</a>
-                <a href="#" className="navbar-link">Calendar</a>
+                <a href="#" className="navbar-link">Events</a>
+                <a href="#" className="navbar-link">Resources</a>
               </div>
             </div>
           </div>
@@ -54,8 +54,8 @@ export default function NavBar() {
       <div className="sm:hidden" id="mobile-menu">
         <div className="px-2 pt-2 pb-3 space-y-1">
           <a href="#" className="navbar-link-mobile">Team</a>
-          <a href="#" className="navbar-link-mobile">Projects</a>
-          <a href="#" className="navbar-link-mobile">Calendar</a>
+          <a href="#" className="navbar-link-mobile">Events</a>
+          <a href="#" className="navbar-link-mobile">Resources</a>
         </div>
       </div>
     </nav>
