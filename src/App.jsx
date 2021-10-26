@@ -1,8 +1,14 @@
 import React from "react";
 import NavBar from "./components/NavBar";
+import Foot from "./components/Foot";
+
 
 export default function App() {
   return (
-    <NavBar/>
+    <div>
+      <NavBar/>
+        <Foot/>
+    </div>
+        
   )
 }
