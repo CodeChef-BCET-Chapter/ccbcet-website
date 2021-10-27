@@ -1,7 +1,7 @@
 export default[
     //Code CRACKER
     {
-        imageUrl: "./public/img/Event/codecracker.png",
+        imageUrl: "/img/Event/codecracker.png",
         imageAlt: "Code Crakcer CCBCET",
         title: "Code Crakcer",
         date: "26", suscript:"th", year:"April 2021",
@@ -12,7 +12,7 @@ export default[
     },
     //Headstart to CP
     {
-        imageUrl: "./public/img/Event/headstartToCP.png",
+        imageUrl: "/img/Event/headstartToCP.png",
         imageAlt: "Headstart to Competitive Programming CCBCET",
         title: "Headstart to CP",
         date: "18", suscript:"th", year:"April 2021",
@@ -23,7 +23,7 @@ export default[
     },
     //Bootcamp-2
     {
-        imageUrl: "./public/img/Event/bootcamp-2.png",
+        imageUrl: "/img/Event/bootcamp-2.png",
         imageAlt: "Bootcamp-2 CCBCET",
         title: "Bootcamp-2",
         date: "24", suscript:"th", year:"January 2021",
@@ -34,7 +34,7 @@ export default[
     },
     // Bootcamp-1
     {
-        imageUrl: "./public/img/Event/bootcamp-1.png ",
+        imageUrl: "/img/Event/bootcamp-1.png ",
         imageAlt: "Bootcamp-1 CCBCET ",
         title: "Bootcamp-1 ",
         date: "17-18 ", suscript:"th", year:"January 2021",
