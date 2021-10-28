@@ -18,10 +18,10 @@ export default function Foot() {
               <button className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 transform transition   hover:-translate-y-0.5 " type="button">
                 <a href="https://www.facebook.com/codechefbcetchapter" className="fa fa-facebook-square" target='_blank'></a>
               </button>
-              <button className="bg-white text-orange-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 transform transition   hover:-translate-y-0.5" type="button">
+              <button className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 transform transition   hover:-translate-y-0.5" type="button">
                 <a href=" https://www.linkedin.com/company/codechef-bcet-chapter/" className="fa fa-linkedin" target='_blank'></a>
               </button>
-              <button className="bg-white text-black-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 transform transition   hover:-translate-y-0.5" type="button">
+              <button className="bg-white text-black shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 transform transition   hover:-translate-y-0.5" type="button">
                 <a href="https://github.com/CodeChef-BCET-Chapter" className="fa fa-github" target='_blank'></a>
               </button>
             </div>

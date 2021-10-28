@@ -4,13 +4,15 @@ import EventCard from "./components/EventCard";
 import eventCard from "./data/eventCard";
 import Faq from "./components/Faq";
 import Foot from "./components/Foot";
-
+import Landing from "./components/Landing";
+import About from "./components/About";
 
 export default function App() {
   return (
     <div>
       <NavBar />
-      
+      <Landing />
+      <About />
       {/* Event Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden">
         <article className="mb-10 col-auto">
@@ -24,9 +26,9 @@ export default function App() {
           </div>
             <section className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
             {eventCard.map((events) => (
-                    <EventCard events={events} key={events.title} />
-                  ))}
-            </section>
+              <EventCard events={events} key={events.title} />
+            ))}
+          </section>
         </article>
       </section>
       <Faq/>      

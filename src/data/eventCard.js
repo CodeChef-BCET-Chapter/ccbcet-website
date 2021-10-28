@@ -34,7 +34,11 @@ export default[
     },
     // Bootcamp-1
     {
+<<<<<<< HEAD
         imageUrl: "/img/Event/bootcamp-1.png",
+=======
+        imageUrl: "/img/Event/bootcamp-1.png ",
+>>>>>>> d1dc44e543893e52be773b0ed6202d17ae2d9d30
         imageAlt: "Bootcamp-1 CCBCET ",
         title: "Bootcamp-1 ",
         date: "17-18 ", suscript:"th", year:"January 2021",
