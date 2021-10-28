@@ -2,7 +2,9 @@ import React from "react";
 
 export default function EventCard({events}){
     return(
+            
             <div className="bg-white group w-auto relative mb-auto mt-auto rounded-lg overflow-hidden h-auto transition duration-500 ease-in-out transform shadow-2xl hover:scale-105">
+                  
                   <div className="relative">
                       <img src={events.imageUrl} alt={events.imageAlt} className=" w-full h-full object-center object-cover"/>
                   </div>
