@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Faq(){
-    return(
-       
-<div>
+export default function Faq() {
+  return (
+
+    <div>
       <section class="text-gray-700">
         <div class="container px-5 py-24 mx-auto">
           <div class="text-center mb-20">
@@ -19,7 +19,7 @@ export default function Faq(){
             <div class="w-full lg:w-1/2 px-4 py-2">
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-5 px-5">
-                Who can become a member ?
+                  Who can become a member ?
                 </summary>
 
                 <p class="pl-4 pt-4 text-left ">
@@ -30,7 +30,7 @@ export default function Faq(){
               </details>
               <details class="mb-4">
                 <summary class="font-semibold bg-gray-200 rounded-md py-5 px-4">
-                What should I carry when attending a workshop ?
+                  What should I carry when attending a workshop ?
                 </summary>
 
                 <p class="pl-4 pt-4 text-left ">
@@ -39,12 +39,12 @@ export default function Faq(){
                   minim velit nostrud pariatur culpa magna in aute.
                 </p>
               </details>
-              
+
             </div>
             <div class="w-full lg:w-1/2 px-4 py-2">
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-5 px-5">
-                How frequently do events and workshops occur ?
+                  How frequently do events and workshops occur ?
                 </summary>
 
                 <p class="pl-4 pt-4 text-left ">
@@ -55,7 +55,7 @@ export default function Faq(){
               </details>
               <details class="mb-4">
                 <summary class="font-semibold  bg-gray-200 rounded-md py-5 px-5">
-                Who should I reach out to if I have any questions ?
+                  Who should I reach out to if I have any questions ?
                 </summary>
 
                 <p class="pl-4 pt-4 text-left ">
@@ -69,5 +69,5 @@ export default function Faq(){
         </div>
       </section>
     </div>
-    )
+  )
 }

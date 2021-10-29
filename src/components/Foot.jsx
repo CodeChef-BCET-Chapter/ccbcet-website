@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function Foot() {
   return (
     <footer className="relative bg-gray-300 pt-8 pb-6 flex justify-center border-t-2 font-serif ">
