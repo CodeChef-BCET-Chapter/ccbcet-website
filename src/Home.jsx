@@ -3,6 +3,7 @@ import Landing from "./components/Landing";
 import Youtubevideo from "./components/Youtubevideo";
 import EventCard from "./components/EventCard";
 import eventCard from "./data/eventCard";
+import Opportunity from "./components/Opportunity";
 import Faq from "./components/Faq";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     <div>
       <Landing />
       <Youtubevideo/>
+      <Opportunity/>
       {/* Event Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden">
         <article className="mb-10 col-auto">

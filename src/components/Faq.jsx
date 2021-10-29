@@ -65,6 +65,7 @@ export default function Faq() {
                 </p>
               </details>
             </div>
+             
           </div>
         </div>
       </section>
