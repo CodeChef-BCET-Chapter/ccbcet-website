@@ -5,7 +5,7 @@ import Home from "./Home";
 
 export default function App() {
   return (
-    <div>
+    <div className="App">
       <NavBar />      
       <Home />
       <Foot />
