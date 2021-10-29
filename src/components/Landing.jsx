@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Landing() {
   return (
-    <div className="grid lg:grid-cols-2 2xl:grid-cols-5 mb-5">
+    <div className="grid lg:grid-cols-2 2xl:grid-cols-5 mb-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12">
       <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
         <div className="xl:max-w-xl">
           {/* <img className="h-10" src="/img/ccbcet-logo.svg" alt="Workcation" /> */}
