@@ -8,15 +8,17 @@ export default function NavBar() {
       <nav className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
+            <div className="flex flex-grow justify-between">
+              <div className="flex gap-4 items-center">
                 <img
                   className="h-8 w-8"
                   src="/img/ccbcet-logo.svg"
                   alt="CC BECT logo"
                 />
-              <div className="flex-shrink-0">
+                <h1 className="text-white font-semibold">CodeChef BCET Chapter</h1>
               </div>
-              <div className="flex justify-end">
+
+              <div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     <a
