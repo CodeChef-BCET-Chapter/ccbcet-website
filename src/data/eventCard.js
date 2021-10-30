@@ -43,6 +43,39 @@ export default[
         button: "Register ",
         href: "https://forms.gle/aV3vUwH9Y9EKrp7J7 ",
     },
+    // Bootcamp-1
+    {
+        imageUrl: "/img/Event/bootcamp-1.png ",
+        imageAlt: "Bootcamp-1 CCBCET ",
+        title: "Bootcamp-1 ",
+        date: "17-18 ", suscript:"th", year:"January 2021",
+        platform: "Microsoft teams ",
+        time: "03:00 pm - onwards ",
+        button: "Register ",
+        href: "https://forms.gle/aV3vUwH9Y9EKrp7J7 ",
+    },
+    // Bootcamp-1
+    {
+        imageUrl: "/img/Event/bootcamp-1.png ",
+        imageAlt: "Bootcamp-1 CCBCET ",
+        title: "Bootcamp-1 ",
+        date: "17-18 ", suscript:"th", year:"January 2021",
+        platform: "Microsoft teams ",
+        time: "03:00 pm - onwards ",
+        button: "Register ",
+        href: "https://forms.gle/aV3vUwH9Y9EKrp7J7 ",
+    },
+    // Bootcamp-1
+    {
+        imageUrl: "/img/Event/bootcamp-1.png ",
+        imageAlt: "Bootcamp-1 CCBCET ",
+        title: "Bootcamp-1 ",
+        date: "17-18 ", suscript:"th", year:"January 2021",
+        platform: "Microsoft teams ",
+        time: "03:00 pm - onwards ",
+        button: "Register ",
+        href: "https://forms.gle/aV3vUwH9Y9EKrp7J7 ",
+    },
     // {
     //     imageUrl: " ",
     //     imageAlt: " ",

@@ -7,15 +7,18 @@ import Opportunity from "./components/Opportunity";
 import Faq from "./components/Faq";
 
 export default function Home() {
+  const runCallback = (cb) => {
+    return cb();
+  };
   return (
     <div>
       <Landing />
-      <Youtubevideo/>
-      <Opportunity/>
+      <Youtubevideo />
+      <Opportunity />
       {/* Event Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden">
         <article className="mb-10 col-auto">
-        <div className="text-center mb-20">
+          <div className="text-center mb-20">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
               Event & Workshops
             </h1>
@@ -23,14 +26,20 @@ export default function Home() {
               Recent Events
             </p>
           </div>
-            <section className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
-            {eventCard.map((events) => (
-              <EventCard events={events} key={events.title} />
-            ))}
+          <section className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
+            {
+              runCallback(() => {
+                const row = [];
+                for (let i = 0; i < 4; i++) {
+                  row.push(<EventCard events={eventCard[i]} key={eventCard[i].title} />)
+                }
+                return row;
+              })
+            }
           </section>
         </article>
       </section>
-      <Faq/>
+      <Faq />
     </div>
   )
 }
