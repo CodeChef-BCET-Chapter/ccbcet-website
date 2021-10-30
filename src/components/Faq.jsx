@@ -22,10 +22,8 @@ export default function Faq() {
                   Who can become a member ?
                 </summary>
 
-                <p class="pl-4 pt-4 text-left ">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                <p class="pl-4 pt-4 text-left antialiased ">
+                There is no any membership criteria! Anyone who is willing to learn and develop their skills in the field of programming can be a member.
                 </p>
               </details>
               <details class="mb-4">
@@ -33,10 +31,8 @@ export default function Faq() {
                   What should I carry when attending a workshop ?
                 </summary>
 
-                <p class="pl-4 pt-4 text-left ">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                <p class="pl-4 pt-4 text-left antialiased ">
+                  We recommend you carry with you a notebook, pen and laptop because more often than not we get our hands dirty with code. Most importantly, bring along a healty dose of curisoty and enthusiam.
                 </p>
               </details>
 
@@ -47,10 +43,8 @@ export default function Faq() {
                   How frequently do events and workshops occur ?
                 </summary>
 
-                <p class="pl-4 pt-4 text-left ">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                <p class="pl-4 pt-4 text-left antialiased ">
+                We organize a lot of events and workshops throughout the year, from programming bootcamps to various contests and speaker sessions.
                 </p>
               </details>
               <details class="mb-4">
@@ -58,10 +52,9 @@ export default function Faq() {
                   Who should I reach out to if I have any questions ?
                 </summary>
 
-                <p class="pl-4 pt-4 text-left ">
-                  Laboris qui labore cillum culpa in sunt quis sint veniam.
-                  Dolore ex aute deserunt esse ipsum elit aliqua. Aute quis
-                  minim velit nostrud pariatur culpa magna in aute.
+                <p class="pl-4 pt-4 text-left antialiased ">
+                We have an extended management system. you can always reach us out everywhere through our Social media platforms. Despite this Discord is our first priority.
+                We would love to handle queries and see your comments and suggestions there.
                 </p>
               </details>
             </div>
