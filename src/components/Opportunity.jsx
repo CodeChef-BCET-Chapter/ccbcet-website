@@ -25,7 +25,7 @@ export default function Opportunity(){
                 <p class="font-semibold text-gray-700 antialiased">We provide proper mentorship and resources to become a better programmer, who can compete on global scale.</p>
             </div>
             <div href="#" class=" p-6 bg-white border-gray-200 rounded-lg mb-4  transition duration-500 ease-in-out transform shadow-md border hover:scale-105  ">
-                <p class="font-semibold text-gray-700 antialiased">Being a part of a large community, you will get an opportunity to interact with diverse CodeChef community and Chapter leaders from various colleges across the country.</p>
+                <p class="font-semibold text-gray-700 antialiased">Being a part of a large community, you will get an opportunity to interact with diverse CodeChef community and top tech leaders across the country.</p>
             </div>
             </div>   
           </div>

@@ -19,7 +19,7 @@ export default function Faq() {
                 </summary>
 
                 <p class="pl-4 pt-4 text-left antialiased ">
-                There is no any membership criteria! Anyone who is willing to learn and develop their skills in the field of programming can be a member.
+                There is not any membership criteria! Anyone who is willing to learn and develop their skills in the field of programming can become a member.
                 </p>
               </details>
               <details class="mb-4">
