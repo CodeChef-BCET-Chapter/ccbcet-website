@@ -9,14 +9,16 @@ export default function NavBar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex flex-grow justify-between">
-              <div className="flex gap-4 items-center">
-                <img
-                  className="h-8 w-8"
-                  src="/img/ccbcet-logo.svg"
-                  alt="CC BECT logo"
-                />
-                <h1 className="text-white font-semibold">CodeChef BCET Chapter</h1>
-              </div>
+              <a href="/">
+                <div className="flex gap-4 items-center">
+                  <img
+                    className="h-8 w-8"
+                    src="/img/ccbcet-logo.svg"
+                    alt="CC BECT logo"
+                  />
+                  <h1 className="text-white font-semibold">CodeChef BCET Chapter</h1>
+                </div>
+              </a>
 
               <div>
                 <div className="hidden md:block">
