@@ -7,7 +7,7 @@ export default function Landing() {
         <div className="xl:max-w-xl">
           {/* <img className="h-10" src="/img/ccbcet-logo.svg" alt="Workcation" /> */}
           <img
-            className="mt-6 rounded-lg sm:mt-8 sm:h-64 sm:w-full sm:object-cover object-center lg:hidden"
+            className="mt-6 rounded-lg sm:mt-8 sm:h-64 sm:w-auto sm:object-cover object-center lg:hidden"
             src="/img/landing_img.svg"
             alt="Woman workcationing on the beach"
           />
