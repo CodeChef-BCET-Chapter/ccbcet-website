@@ -22,3 +22,5 @@ https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-s
 + Install Node.js
 + Open terminal/powershell, cd into cloned project directory and
 run ```npm i ```
++ To start server, run ```npm run dev``` on terminal
++ Click on link shown on terminal to open it on browser.
