@@ -99,6 +99,18 @@ export default[
         href: "https://www.codechef.com/college-chapter/events",
     },
 
+    {
+        imageUrl: "/img/Event/learning sprint.jpeg",
+        imageAlt: "learning sprint",
+        title: "Learning Sprint",
+        date: "18", suscript:"th", year:"November 2018",
+        platform: "Cisco webex",
+        time: "03:00 pm",
+        button: "Attend",
+        href: "https://meetingsapac43.webex.com/meetingsapac43/j.php?MTID=mc7c3c220b7d81af30c9cb0f2113cc9bc",
+    },
+
+
     // {
     //     imageUrl: " ",
     //     imageAlt: " ",
