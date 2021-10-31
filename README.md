@@ -10,6 +10,7 @@ https://www.codechefbcetchapter.tech/
 + **React** - Front-end library
 + **tailwindcss** - CSS Framework
 + **Vite** - build tool
++ **Netlify** - cloud service
 
 ## How to Contribute ?
 
@@ -21,8 +22,3 @@ https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-s
 + Install Node.js
 + Open terminal/powershell, cd into cloned project directory and
 run ```npm i ```
-
-
-
-
-
