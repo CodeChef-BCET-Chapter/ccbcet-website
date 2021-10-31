@@ -44,6 +44,28 @@ export default[
         href: "https://forms.gle/aV3vUwH9Y9EKrp7J7 ",
     },
     
+    {
+        imageUrl: "https://cdn.discordapp.com/attachments/773467848789983232/783179807357272084/Instagram_banner.jpg",
+        imageAlt: "national fiesta",
+        title: "National Fiesta",
+        date: "4", suscript:"th", year:"December 2020",
+        platform: "Youtube",
+        time: "08:00 pm",
+        button: "Register",
+        href: "https://www.codechef.com/college-chapter/events",
+    },
+
+    // {
+    //     imageUrl: " ",
+    //     imageAlt: " ",
+    //     title: " ",
+    //     date: " ", suscript:"th", year:" ",
+    //     platform: " ",
+    //     time: " ",
+    //     button: " ",
+    //     href: " ",
+    // },
+
     // {
     //     imageUrl: " ",
     //     imageAlt: " ",
