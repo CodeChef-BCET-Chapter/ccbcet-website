@@ -28,7 +28,7 @@ export default function Faq() {
                 </summary>
 
                 <p class="pl-4 pt-4 text-left antialiased ">
-                  We recommend you carry with you a notebook, pen and laptop because more often than not we get our hands dirty with code. Most importantly, bring along a healty dose of curisoty and enthusiam.
+                  We recommend you to carry with you a notebook, pen and laptop because more often than not we get our hands dirty with code. Most importantly, bring along a healthy dose of curiosity and enthusiam.
                 </p>
               </details>
 
@@ -49,7 +49,7 @@ export default function Faq() {
                 </summary>
 
                 <p class="pl-4 pt-4 text-left antialiased ">
-                We have an extended management system. you can always reach us out everywhere through our Social media platforms. Despite this Discord is our first priority.
+                We have an extended management system. You can always reach out to us anytime through our Social media platforms. Despite this, Discord is our first priority.
                 We would love to handle queries and see your comments and suggestions there.
                 </p>
               </details>
