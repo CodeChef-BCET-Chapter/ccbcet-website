@@ -11,10 +11,9 @@ export default function Home() {
     return cb();
   };
   return (
-    <div>
+    <div className="space-y-24">
       <Landing />
       <Youtubevideo />
-      <Opportunity />
       {/* Event Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden">
         <article className="mb-10 col-auto">
@@ -26,20 +25,25 @@ export default function Home() {
               Recent Events
             </p>
           </div>
+          {/* banner */}
+          <div>
+            <img src="" alt="banner" />
+          </div>
           <section className="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
-            {
-              runCallback(() => {
-                const row = [];
-                for (let i = 0; i < 4; i++) {
-                  row.push(<EventCard events={eventCard[i]} key={eventCard[i].title} />)
-                }
-                return row;
-              })
-            }
+            {runCallback(() => {
+              const row = [];
+              for (let i = 0; i < 4; i++) {
+                row.push(
+                  <EventCard events={eventCard[i]} key={eventCard[i].title} />
+                );
+              }
+              return row;
+            })}
           </section>
         </article>
       </section>
+      <Opportunity />
       <Faq />
     </div>
-  )
+  );
 }

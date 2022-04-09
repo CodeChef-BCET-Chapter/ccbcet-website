@@ -9,7 +9,7 @@ export default function Landing() {
           <img
             className="mt-6 rounded-lg sm:mt-8 sm:h-64 sm:w-auto sm:object-cover object-center lg:hidden"
             src="/img/landing_img.svg"
-            alt="Woman workcationing on the beach"
+            alt="graphics"
           />
           <h1 className="mt-12 text-2xl font-headline tracking-tight font-semibold text-brand-light sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
             CodeChef BCET Chapter
