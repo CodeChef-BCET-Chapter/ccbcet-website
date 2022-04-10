@@ -25,12 +25,12 @@ export default function EventDetails() {
             <p className="mb-2">Before registering for the contest, everyone :</p>
             <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
-                Must have an account on CodeChef. If not, then visit: 
+                Must have an account on CodeChef. If not, then visit:  
                 <a target="blank"
                   className=" underline"
                   href="https://www.codechef.com/login?destination=/"
                 >
-                  https://www.codechef.com/login?destination=/
+                  www.codechef.com
                 </a>{" "}
                 to create a new account.
               </li>
