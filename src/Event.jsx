@@ -9,7 +9,7 @@ export default function Event() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden">
         <article className="mb-10 col-auto">
           <div className=" mb-20">
-            <h1 className="sm:text-3xl text-2xl text-center font-medium text-center title-font text-gray-900 mb-4">
+            <h1 className="sm:text-3xl text-2xl text-center font-medium title-font text-gray-900 mb-8">
               Event & Workshops
             </h1>
             {/* banner */}

@@ -12,9 +12,9 @@ export default function EventDetails() {
       </div>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden space-y-12 text-xl">
         <h3 className="">
-          It is a 36-hours online cod text-2xling contest on CodeChef Platform,
-          hosted by CodeChef RCOEM Chapter in collaboration with CodeChef BCET
-          Chapter. It will be conducted on 14th-15th April.
+          It is a 36-hours online coding contest on CodeChef Platform, hosted by
+          CodeChef RCOEM Chapter in collaboration with CodeChef BCET Chapter. It
+          will be conducted on 14th-15th April.
         </h3>
 
         <div>
@@ -22,16 +22,18 @@ export default function EventDetails() {
             PRE REQUISITES :{" "}
           </h5>
           <p>
-            <p className="mb-2">Before registering for the contest, everyone :</p>
+            <p className="mb-2">
+              Before registering for the contest, everyone :
+            </p>
             <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
-                Must have an account on CodeChef. If not, then visit: 
+                Must have an account on CodeChef. If not, then visit:{"\ \ "}
                 <a
                   className=" underline"
                   href="https://www.codechef.com/login?destination=/"
                 >
                   https://www.codechef.com/login?destination=/
-                </a>{" "}
+                </a>{"\ "}
                 to create a new account.
               </li>
               <li className=" list-disc">
@@ -71,7 +73,7 @@ export default function EventDetails() {
             Prizes and Certifications :
           </h5>
           <p>
-           <p className="mb-2">Top 3 winners will get:</p> 
+            <p className="mb-2">Top 3 winners will get:</p>
             <ul className=" ml-8  space-y-2 ">
               <li className=" list-disc">Cool goodies by Newton School.</li>
               <li className=" list-disc">
