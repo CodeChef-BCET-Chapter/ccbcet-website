@@ -5,6 +5,7 @@ import EventCard from "./components/EventCard";
 import eventCard from "./data/eventCard";
 import Opportunity from "./components/Opportunity";
 import Faq from "./components/Faq";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const runCallback = (cb) => {
@@ -17,13 +18,13 @@ export default function Home() {
       {/* Event Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden">
         <article className="mb-10 col-auto">
-          <div className="text-center mb-14">
+          <div id="codeaajkal" className="text-center mb-14">
             <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
               Event & Workshops
             </h1>
           </div>
           {/* banner */}
-          <div href="/codeaajkal" className="flex flex-col xl:flex-row rounded-lg bg-gray-100">
+          <div className="flex flex-col xl:flex-row rounded-lg bg-gray-100">
             <img
               className=" xl:rounded-l-lg rounded-t-lg xl:rounded-t-none roun w-auto xl:h-96"
               src="/img/Code Aaj Kal Contest.png"
