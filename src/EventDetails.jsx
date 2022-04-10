@@ -4,7 +4,7 @@ export default function EventDetails() {
     <div className=" text-gray-800 ">
       <div className="flex justify-between items-center bg-header px-36 py-10">
         <h1 className=" font-bold text-5xl text-white">
-          CODE AAJ KAL <span className="text-red-400">3.0</span>
+          CODE AAJ KAL <span className="text-red-600">3.0</span>
         </h1>
         <a className="bg-white py-2 px-6 rounded-sm text-xl" href="">
           APPLY
@@ -19,13 +19,13 @@ export default function EventDetails() {
 
         <div>
           <h5 className=" font-bold uppercase mb-4 text-2xl">
-            PRE-REQUISITES :{" "}
+            PRE REQUISITES :{" "}
           </h5>
           <p>
             <p className="mb-2">Before registering for the contest, everyone :</p>
             <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
-                Must have an account on CodeChef. If not, then visit
+                Must have an account on CodeChef. If not, then visit: 
                 <a
                   className=" underline"
                   href="https://www.codechef.com/login?destination=/"
@@ -43,11 +43,11 @@ export default function EventDetails() {
         </div>
 
         <div>
-          <h5 className=" font-bold text-lg uppercase mb-2 text-2xl">
+          <h5 className=" font-bold uppercase mb-4 text-2xl">
             About the Contest :{" "}
           </h5>
           <p>
-            <ul className=" ml-8">
+            <ul className=" ml-8  space-y-2">
               <li className=" list-disc">A beginner level coding contest</li>
               <li className=" list-disc">
                 36-hour coding contest, hosted on CodeChef platform.
@@ -67,12 +67,12 @@ export default function EventDetails() {
         </div>
 
         <div>
-          <h5 className=" font-bold text-lg uppercase mb-2 text-2xl">
+          <h5 className=" font-bold text-lg uppercase mb-4 text-2xl">
             Prizes and Certifications :
           </h5>
           <p>
-            Top 3 winners will get:
-            <ul className=" ml-8">
+           <p className="mb-2">Top 3 winners will get:</p> 
+            <ul className=" ml-8  space-y-2 ">
               <li className=" list-disc">Cool goodies by Newton School.</li>
               <li className=" list-disc">
                 {" "}
@@ -88,8 +88,8 @@ export default function EventDetails() {
               The top Performer from BCET will get ₹300 cash prize and the
               Runner-up will get ₹100.{" "}
             </p>
-            <p className="mt-4">Few selected top coders would also get:</p>
-            <ul className=" ml-8">
+            <p className="mt-4 mb-2">Few selected top coders would also get:</p>
+            <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
                 Free Mock interviews from Industry Professionals for placement
                 prep needs.
