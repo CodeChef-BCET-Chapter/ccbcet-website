@@ -119,9 +119,9 @@ export default function EventDetails() {
             challenge.
           </b>{" "}
           <p>
-            </b>The competition is completely free and open for coders all round the
-            world!
-          </p>{" "}
+            The competition is completely free and open for coders all round the
+            world! 
+          </p>
           <p>Gear up and be ready to crack {"chef’s"} witty questions!</p>
         </div>
       </section>
