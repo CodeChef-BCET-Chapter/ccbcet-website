@@ -111,7 +111,7 @@ export default function EventDetails() {
             </ul>
             <p className="mt-4">
               <b>
-                The top Performer from BCET will get ₹300 cash prize and the
+                The top Performer from BCET/BCE will get ₹300 cash prize and the
                 Runner-up will get ₹100.
               </b>{" "}
             </p>
