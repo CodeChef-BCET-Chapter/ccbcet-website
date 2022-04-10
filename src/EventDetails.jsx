@@ -12,9 +12,9 @@ export default function EventDetails() {
       </div>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden space-y-12 text-xl">
         <h3 className="">
-          It is a 36-hours online coding contest on CodeChef Platform, hosted by
-          CodeChef RCOEM Chapter in collaboration with CodeChef BCET Chapter. It
-          will be conducted on 14th-15th April.
+          A 36-hours online coding contest on CodeChef Platform,
+          hosted by CodeChef RCOEM Chapter in collaboration with CodeChef BCET
+          Chapter to be conducted on 14th-15th April.
         </h3>
 
         <div>
@@ -27,13 +27,13 @@ export default function EventDetails() {
             </p>
             <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
-                Must have an account on CodeChef. If not, then visit:{"\ \ "}
-                <a
+                Must have an account on CodeChef. If not, then visit:{" "}  
+                <a target="blank"
                   className=" underline"
                   href="https://www.codechef.com/login?destination=/"
                 >
-                  https://www.codechef.com/login?destination=/
-                </a>{"\ "}
+                  www.codechef.com
+                </a>{" "}
                 to create a new account.
               </li>
               <li className=" list-disc">
@@ -69,13 +69,18 @@ export default function EventDetails() {
         </div>
 
         <div>
-          <h5 className=" font-bold text-lg uppercase mb-4 text-2xl">
+          <h5 className=" font-bold uppercase mb-4 text-2xl">
             Prizes and Certifications :
           </h5>
           <p>
             <p className="mb-2">Top 3 winners will get:</p>
             <ul className=" ml-8  space-y-2 ">
-              <li className=" list-disc">Cool goodies by Newton School.</li>
+              <li className=" list-disc">Cool goodies by <a target="blank"
+                  className=" underline"
+                  href="https://www.newtonschool.co/"
+                >
+                  Newton School
+                </a>.</li>
               <li className=" list-disc">
                 {" "}
                 Free Mock interviews from Industry Professionals for placement
@@ -83,12 +88,17 @@ export default function EventDetails() {
               </li>
               <li className=" list-disc">
                 {" "}
-                Internship opportunities from the likes of O(1) coding club.
+                Internship opportunities from the likes of <a target="blank"
+                  className=" underline"
+                  href="https://www.o1codingclub.in/"
+                >
+                  O(1) Coding Club
+                </a>.
               </li>
             </ul>
             <p className="mt-4">
-              The top Performer from BCET will get ₹300 cash prize and the
-              Runner-up will get ₹100.{" "}
+              <b>The top Performer from BCET will get ₹300 cash prize and the
+              Runner-up will get ₹100.</b>{" "}
             </p>
             <p className="mt-4 mb-2">Few selected top coders would also get:</p>
             <ul className=" ml-8 space-y-2">
