@@ -6,7 +6,11 @@ export default function EventDetails() {
         <h1 className=" font-bold text-4xl md:text-5xl text-white">
           CODE AAJ KAL <span className="text-red-600">3.0</span>
         </h1>
-        <a className="bg-white py-2 w-min px-6 rounded-sm text-xl" href="">
+        <a
+        target={'_blank'}
+          className="bg-white py-2 w-min px-6 rounded-sm text-xl"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSd6wYXl-t41q1TuoRwsOGAYzf0u5WqzyDoT6luBpip0iTwsnQ/viewform"
+        >
           APPLY
         </a>
       </div>

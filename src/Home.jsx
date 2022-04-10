@@ -23,7 +23,7 @@ export default function Home() {
             </h1>
           </div>
           {/* banner */}
-          <div className="flex flex-col xl:flex-row rounded-lg bg-gray-100">
+          <div href="/codeaajkal" className="flex flex-col xl:flex-row rounded-lg bg-gray-100">
             <img
               className=" xl:rounded-l-lg rounded-t-lg xl:rounded-t-none roun w-auto xl:h-96"
               src="/img/Code Aaj Kal Contest.png"
