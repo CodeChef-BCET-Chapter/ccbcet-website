@@ -111,13 +111,16 @@ export default function EventDetails() {
               </li>
             </ul>
           </p>
-        </div>
-
-        <div className=" space-y-4">
-          <b>
+            <p className="mt-4">
+            <b>
             Participation certificates to all on successful completion of the
             challenge.
           </b>{" "}
+            </p>
+        </div>
+
+        <div className=" space-y-4">
+
           <p>
             The competition is completely free and open for coders all round the
             world! 
