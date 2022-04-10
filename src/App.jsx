@@ -9,6 +9,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom"
+import EventDetails from "./EventDetails";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route exact path="/" component={Home} />
           <Route path="/events" component={Event} />
           <Route path="/resources" component={Resource} />
+          <Route path="/eventdetails" component={EventDetails} />
         </Switch>
         <Foot />
       </div>

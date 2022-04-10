@@ -53,7 +53,7 @@ export default function EventCard({ events }) {
                     </div>
                     <a href={events.href} target="blank" className=" float-right text-center mb-5 mr-3 bg-red-600 font-semibold text-white p-2 pl-4 w-32 rounded-full hover:bg-red-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"> {events.button}</a>
                 </div>
-            </div>
+            </div>  
         </div>
     )
 }
