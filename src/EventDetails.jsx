@@ -123,7 +123,7 @@ export default function EventDetails() {
 
           <p>
             The competition is completely free and open for coders all round the
-            world! 
+            world! Contest link will be provided a day before the contest via mail to the registered participants.
           </p>
           <p>Gear up and be ready to crack {"chef’s"} witty questions!</p>
         </div>
