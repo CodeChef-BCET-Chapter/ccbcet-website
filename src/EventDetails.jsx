@@ -2,19 +2,19 @@ import React from "react";
 export default function EventDetails() {
   return (
     <div className=" text-gray-800 ">
-      <div className="flex justify-between items-center bg-header px-36 py-10">
-        <h1 className=" font-bold text-5xl text-white">
+      <div className="flex flex-col md:flex-row gap-y-4 justify-between md:items-center bg-header xl:px-36 md:px-12 px-6 py-10">
+        <h1 className=" font-bold text-4xl md:text-5xl text-white">
           CODE AAJ KAL <span className="text-red-600">3.0</span>
         </h1>
-        <a className="bg-white py-2 px-6 rounded-sm text-xl" href="">
+        <a className="bg-white py-2 w-min px-6 rounded-sm text-xl" href="">
           APPLY
         </a>
       </div>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden space-y-12 text-xl">
         <h3 className="">
-          A 36-hours online coding contest on CodeChef Platform,
-          hosted by CodeChef RCOEM Chapter in collaboration with CodeChef BCET
-          Chapter to be conducted on 14th-15th April.
+          A 36-hours online coding contest on CodeChef Platform, hosted by
+          CodeChef RCOEM Chapter in collaboration with CodeChef BCET Chapter to
+          be conducted on 14th-15th April.
         </h3>
 
         <div>
@@ -27,8 +27,9 @@ export default function EventDetails() {
             </p>
             <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
-                Must have an account on CodeChef. If not, then visit:{" "}  
-                <a target="blank"
+                Must have an account on CodeChef. If not, then visit:{" "}
+                <a
+                  target="blank"
                   className=" underline"
                   href="https://www.codechef.com/login?destination=/"
                 >
@@ -75,12 +76,17 @@ export default function EventDetails() {
           <p>
             <p className="mb-2">Top 3 winners will get:</p>
             <ul className=" ml-8  space-y-2 ">
-              <li className=" list-disc">Cool goodies by <a target="blank"
+              <li className=" list-disc">
+                Cool goodies by{" "}
+                <a
+                  target="blank"
                   className=" underline"
                   href="https://www.newtonschool.co/"
                 >
                   Newton School
-                </a>.</li>
+                </a>
+                .
+              </li>
               <li className=" list-disc">
                 {" "}
                 Free Mock interviews from Industry Professionals for placement
@@ -88,17 +94,22 @@ export default function EventDetails() {
               </li>
               <li className=" list-disc">
                 {" "}
-                Internship opportunities from the likes of <a target="blank"
+                Internship opportunities from the likes of{" "}
+                <a
+                  target="blank"
                   className=" underline"
                   href="https://www.o1codingclub.in/"
                 >
                   O(1) Coding Club
-                </a>.
+                </a>
+                .
               </li>
             </ul>
             <p className="mt-4">
-              <b>The top Performer from BCET will get ₹300 cash prize and the
-              Runner-up will get ₹100.</b>{" "}
+              <b>
+                The top Performer from BCET will get ₹300 cash prize and the
+                Runner-up will get ₹100.
+              </b>{" "}
             </p>
             <p className="mt-4 mb-2">Few selected top coders would also get:</p>
             <ul className=" ml-8 space-y-2">
@@ -111,31 +122,59 @@ export default function EventDetails() {
               </li>
             </ul>
           </p>
-            <p className="mt-4">
+          <p className="mt-4">
             <b>
-            Participation certificates to all on successful completion of the
-            challenge.
-          </b>{" "}
-            </p>
+              Participation certificates to all on successful completion of the
+              challenge.
+            </b>{" "}
+          </p>
         </div>
 
         <div className=" space-y-4">
-
           <p>
             The competition is completely free and open for coders all round the
-            world! Contest link will be provided a day before the contest via mail to the registered participants.
+            world! Contest link will be provided a day before the contest via
+            mail to the registered participants.
           </p>
           <p>Gear up and be ready to crack {"chef’s"} witty questions!</p>
         </div>
         <h1 className=" font-bold uppercase text-2xl">Our Collabrator's</h1>
         <div className=" flex flex-wrap ">
-          <img className="w-24 h-24" src="\img\chapter logo's\CodeChef_CUIET_Chapter.jpg" alt=""  />
-          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_DYPIU_Chapter.jpg" alt="" />
-          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_IIITN_Chapter.jpg" alt="" />
-          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_logo_rcoem.png" alt="" />
-          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_SCOE_Pune_Chapter.jpg" alt=""  />
-          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_UIET_Rohtak_Chapter.jpg" alt=""  />
-          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_UMIT_Chapter.jpg" alt=""  />
+          <img
+            className="w-24 h-24"
+            src="/img/chapter logo's/CodeChef_CUIET_Chapter.jpg"
+            alt=""
+          />
+          <img
+            className="w-24 h-24"
+            src="/img/chapter logo's/CodeChef_DYPIU_Chapter.jpg"
+            alt=""
+          />
+          <img
+            className="w-24 h-24"
+            src="/img/chapter logo's/Codechef_IIITN_Chapter.jpg"
+            alt=""
+          />
+          <img
+            className="w-24 h-24"
+            src="/img/chapter logo's/Codechef_logo_rcoem.png"
+            alt=""
+          />
+          <img
+            className="w-24 h-24"
+            src="/img/chapter logo's/CodeChef_SCOE_Pune_Chapter.jpg"
+            alt=""
+          />
+          <img
+            className="w-24 h-24"
+            src="/img/chapter logo's/CodeChef_UIET_Rohtak_Chapter.jpg"
+            alt=""
+          />
+          <img
+            className="w-24 h-24"
+            src="/img/chapter logo's/CodeChef_UMIT_Chapter.jpg"
+            alt=""
+          />
         </div>
       </section>
     </div>
