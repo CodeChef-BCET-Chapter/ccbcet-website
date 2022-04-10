@@ -26,7 +26,7 @@ export default function EventDetails() {
             <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
                 Must have an account on CodeChef. If not, then visit: 
-                <a
+                <a target="blank"
                   className=" underline"
                   href="https://www.codechef.com/login?destination=/"
                 >
