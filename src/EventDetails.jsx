@@ -73,7 +73,12 @@ export default function EventDetails() {
           <p>
            <p className="mb-2">Top 3 winners will get:</p> 
             <ul className=" ml-8  space-y-2 ">
-              <li className=" list-disc">Cool goodies by Newton School.</li>
+              <li className=" list-disc">Cool goodies by <a target="blank"
+                  className=" underline"
+                  href="https://www.newtonschool.co/"
+                >
+                  Newton School
+                </a>{" "}.</li>
               <li className=" list-disc">
                 {" "}
                 Free Mock interviews from Industry Professionals for placement
