@@ -22,10 +22,12 @@ export default function EventDetails() {
             PRE REQUISITES :{" "}
           </h5>
           <p>
-            <p className="mb-2">Before registering for the contest, everyone :</p>
+            <p className="mb-2">
+              Before registering for the contest, everyone :
+            </p>
             <ul className=" ml-8 space-y-2">
               <li className=" list-disc">
-                Must have an account on CodeChef. If not, then visit: 
+                Must have an account on CodeChef. If not, then visit:
                 <a
                   className=" underline"
                   href="https://www.codechef.com/login?destination=/"
@@ -71,7 +73,7 @@ export default function EventDetails() {
             Prizes and Certifications :
           </h5>
           <p>
-           <p className="mb-2">Top 3 winners will get:</p> 
+            <p className="mb-2">Top 3 winners will get:</p>
             <ul className=" ml-8  space-y-2 ">
               <li className=" list-disc">Cool goodies by Newton School.</li>
               <li className=" list-disc">
@@ -111,6 +113,16 @@ export default function EventDetails() {
             world!
           </p>{" "}
           <p>Gear up and be ready to crack {"chef’s"} witty questions!</p>
+        </div>
+        <h1 className=" font-bold uppercase text-2xl">Our Collabrator's</h1>
+        <div className=" flex flex-wrap ">
+          <img className="w-24 h-24" src="\img\chapter logo's\CodeChef_CUIET_Chapter.jpg" alt=""  />
+          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_DYPIU_Chapter.jpg" alt="" />
+          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_IIITN_Chapter.jpg" alt="" />
+          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_logo_rcoem.png" alt="" />
+          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_SCOE_Pune_Chapter.jpg" alt=""  />
+          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_UIET_Rohtak_Chapter.jpg" alt=""  />
+          <img className="w-24 h-24"  src="\img\chapter logo's\CodeChef_UMIT_Chapter.jpg" alt=""  />
         </div>
       </section>
     </div>
