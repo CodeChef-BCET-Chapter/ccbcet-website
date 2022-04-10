@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.jsx", "./index.html"],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -8,17 +8,18 @@ module.exports = {
           light: "#DC2626",
           DEFAULT: "#0fa9e6",
           dark: "#0c87b8",
-        },  
+        },
       },
-    }
+      backgroundImage: {
+        "header": "url('/public/img/header.png')",  
+      },
+    },
   },
   variants: {
     extend: {
       backgroundColor: ["active"],
     },
-    fontSmoothing: ['hover', 'focus'],
+    fontSmoothing: ["hover", "focus"],
   },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-  ],
-}
+  plugins: [require("@tailwindcss/aspect-ratio")],
+};
