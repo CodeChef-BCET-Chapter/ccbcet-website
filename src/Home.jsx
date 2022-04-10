@@ -26,7 +26,7 @@ export default function Home() {
           <div className="flex flex-col xl:flex-row rounded-lg bg-gray-100">
             <img
               className=" xl:rounded-l-lg rounded-t-lg xl:rounded-t-none roun w-auto xl:h-96"
-              src="public/img/Code Aaj Kal Contest.png"
+              src="/img/Code Aaj Kal Contest.png"
               alt="banner"
             />
             <div className="xl:p-16 p-10">

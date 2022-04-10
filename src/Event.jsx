@@ -9,14 +9,14 @@ export default function Event() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden">
         <article className="mb-10 col-auto">
           <div className=" mb-20">
-            <h1 className="sm:text-3xl text-2xl text-center font-medium text-center title-font text-gray-900 mb-4">
+            <h1 className="sm:text-3xl text-2xl text-center font-medium title-font text-gray-900 mb-8">
               Event & Workshops
             </h1>
             {/* banner */}
             <div className="flex flex-col xl:flex-row rounded-lg bg-gray-100">
               <img
                 className=" xl:rounded-l-lg rounded-t-lg xl:rounded-t-none roun w-auto xl:h-96"
-                src="public/img/Code Aaj Kal Contest.png"
+                src="/img/Code Aaj Kal Contest.png"
                 alt="banner"
               />
               <div className="xl:p-16 p-10">
