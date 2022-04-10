@@ -86,7 +86,12 @@ export default function EventDetails() {
               </li>
               <li className=" list-disc">
                 {" "}
-                Internship opportunities from the likes of O(1) coding club.
+                Internship opportunities from the likes of <a target="blank"
+                  className=" underline"
+                  href="https://www.o1codingclub.in/"
+                >
+                  O(1) Coding Club
+                </a>{" "}.
               </li>
             </ul>
             <p className="mt-4">
