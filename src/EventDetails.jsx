@@ -12,9 +12,9 @@ export default function EventDetails() {
       </div>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden space-y-12 text-xl">
         <h3 className="">
-          It is a 36-hours online cod text-2xling contest on CodeChef Platform,
+          A 36-hours online coding contest on CodeChef Platform,
           hosted by CodeChef RCOEM Chapter in collaboration with CodeChef BCET
-          Chapter. It will be conducted on 14th-15th April.
+          Chapter to be conducted on 14th-15th April.
         </h3>
 
         <div>
