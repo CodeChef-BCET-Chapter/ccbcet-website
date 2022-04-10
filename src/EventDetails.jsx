@@ -78,7 +78,7 @@ export default function EventDetails() {
                   href="https://www.newtonschool.co/"
                 >
                   Newton School
-                </a>{" "}.</li>
+                </a>.</li>
               <li className=" list-disc">
                 {" "}
                 Free Mock interviews from Industry Professionals for placement
@@ -91,12 +91,12 @@ export default function EventDetails() {
                   href="https://www.o1codingclub.in/"
                 >
                   O(1) Coding Club
-                </a>{" "}.
+                </a>.
               </li>
             </ul>
             <p className="mt-4">
-              The top Performer from BCET will get ₹300 cash prize and the
-              Runner-up will get ₹100.{" "}
+              <b>The top Performer from BCET will get ₹300 cash prize and the
+              Runner-up will get ₹100.</b>{" "}
             </p>
             <p className="mt-4 mb-2">Few selected top coders would also get:</p>
             <ul className=" ml-8 space-y-2">
