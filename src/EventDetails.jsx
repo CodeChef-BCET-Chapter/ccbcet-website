@@ -9,9 +9,9 @@ export default function EventDetails() {
         <a
         target={'_blank'}
           className="bg-white py-2 w-min px-6 rounded-sm text-xl"
-          href="https://docs.google.com/forms/d/e/1FAIpQLSd6wYXl-t41q1TuoRwsOGAYzf0u5WqzyDoT6luBpip0iTwsnQ/viewform"
+          href="https://www.codechef.com/CAJK2022"
         >
-          APPLY
+          VIEW
         </a>
       </div>
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 mt-12 mb-12 overflow-hidden space-y-12 text-xl">
