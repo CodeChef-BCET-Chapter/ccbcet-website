@@ -8,9 +8,12 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
+    "browserslist": "^4.20.3",
+    "caniuse-lite": "^1.0.30001335",
     "font-awesome": "^4.7.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
@@ -18,6 +21,8 @@
     "@vitejs/plugin-react-refresh": "^1.3.6",
     "autoprefixer": "^10.3.7",
     "postcss": "^8.3.11",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.10",
     "tailwindcss": "^2.2.17",
     "vite": "^2.6.4"
   }

@@ -20,7 +20,7 @@ export default function Landing() {
           {/* button  */}
           <div className="mt-4 space-x-1 sm:mt-6">
             <a
-              className="inline-block px-5 py-3 rounded-lg transform transition bg-brand-light hover:bg-brand-light hover:-translate-y-0.5 focus:ring-brand-light focus:ring-opacity-50 focus:outline-none focus:ring focus:ring-offset-2 active:bg-brand-dark uppercase tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base"
+              className="inline-block px-5 py-3 rounded-lg transform transition bg-red-600 hover:bg-red-600 hover:-translate-y-0.5 focus:ring-red-700 focus:ring-opacity-50 focus:outline-none focus:ring focus:ring-offset-2 active:bg-red-700 uppercase tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base"
               href="https://www.codechef.com/college-chapter/member" target="_blank" 
             >
               become a member
