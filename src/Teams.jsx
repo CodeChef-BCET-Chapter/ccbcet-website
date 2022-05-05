@@ -16,10 +16,8 @@ export default function Teams() {
         <article className="col-auto mb-10 mt-10">
           <div className="title-font mb-20 text-center text-2xl font-medium text-gray-700 sm:text-3xl">
             <p className="">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste
-              veniam atque nostrum repellat aspernatur consectetur ut corrupti
-              quas cupiditate id fuga mollitia est deleniti officiis fugit
-              fugiat, animi perferendis blanditiis.
+              {/* <span className="">Meet The Team</span><br /> */}
+            Passionate students driving the success of the Chapter
             </p>
           </div>
           <h1 className=" title-font mb-20 text-center text-2xl font-medium text-gray-900 sm:text-3xl">
