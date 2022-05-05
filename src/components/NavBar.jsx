@@ -130,33 +130,43 @@ export default function NavBar() {
           {ref => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-                <a
-                  href="/"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Home
-                </a>
+              <a
+                      href="/"
+                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      <AiOutlineHome className="mx-1 text-lg" /> Home
+                    </a>
 
-                <a
-                  href="/events"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Events
-                </a>
+                    <a
+                      href="/events"
+                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      <BsCalendarEvent className="mx-1 text-lg" /> Events
+                    </a>
 
-                <a
-                  href="/resources"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Resources
-                </a>
-                <a
-                  href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
-                  target="_blank"
-                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >
-                  Leaderboard
-                </a>
+                   
+                    <a
+                      href="/teams"
+                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      <RiTeamLine className="mx-1 text-lg" />
+                      Teams
+                    </a>
+
+                    <a
+                      href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
+                      target="_blank"
+                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      <MdOutlineLeaderboard className="mx-1 text-lg" />
+                      Leaderboard
+                    </a>
+                    <a
+                      href="/resources"
+                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                    Resources
+                    </a>
               </div>
             </div>
           )}
