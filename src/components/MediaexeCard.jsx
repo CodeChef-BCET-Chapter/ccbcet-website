@@ -4,7 +4,7 @@ export default function MediaExe({ mediaexe }) {
   return (
     <div className="">
       {/* CP Executive */}
-      <div className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl ">
+      <div data-aos="fade-up" data-aos-duration="1000" className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl ">
         <div className=" -mt-28 flex  justify-center ">
           <img
             src={mediaexe.imageUrl}
