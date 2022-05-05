@@ -14,45 +14,45 @@ export default [
     imageUrl: "/img/Teams/exe.png",
     name: "Saloni Sahay",
     designation: "CP Executive",
-    instagram: "https://www.instagram.com/viresh_dev/",
-    linkedin: "https://www.linkedin.com/in/souvik-mahato18/",
-    twitter: "https://twitter.com/viresh_dev",
+    instagram: " ",
+    linkedin: "",
+    twitter: "",
     github: ""
   },
   {
     imageUrl: "/img/Teams/CpExe/ramolacpexe.png",
     name: "Ramola Singh",
     designation: "CP Executive",
-    instagram: "https://www.instagram.com/viresh_dev/",
-    linkedin: "https://www.linkedin.com/in/souvik-mahato18/",
-    twitter: "https://twitter.com/viresh_dev",
+    instagram: " ",
+    linkedin: "",
+    twitter: "",
     github: ""
   },
   {
     imageUrl: "/img/Teams/CpExe/anirudhcpexe.png",
     name: "Aniruddha Pal",
     designation: "CP Executive",
-    instagram: "https://www.instagram.com/viresh_dev/",
-    linkedin: "https://www.linkedin.com/in/souvik-mahato18/",
-    twitter: "https://twitter.com/viresh_dev",
+    instagram: " ",
+    linkedin: "",
+    twitter: "",
     github: ""
   },
   {
     imageUrl: "/img/Teams/CpExe/bibhuenducpexe.png",
     name: "Bibhabendu Mukherjee",
     designation: "CP Executive",
-    instagram: "https://www.instagram.com/viresh_dev/",
-    linkedin: "https://www.linkedin.com/in/souvik-mahato18/",
-    twitter: "https://twitter.com/viresh_dev",
+    instagram: " ",
+    linkedin: "",
+    twitter: "",
     github: ""
   },
   {
     imageUrl: "/img/Teams/CpExe/koushikcpexe.png",
     name: "Koushik Biswas",
     designation: "CP Executive",
-    instagram: "https://www.instagram.com/viresh_dev/",
-    linkedin: "https://www.linkedin.com/in/souvik-mahato18/",
-    twitter: "https://twitter.com/viresh_dev",
-    github: ""
+    instagram: " ",
+    linkedin: " ",
+    twitter: " ",
+    github: " "
   }
 ];
