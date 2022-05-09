@@ -1,27 +1,47 @@
 import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Landing() {
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
-    <div className="grid lg:grid-cols-2 2xl:grid-cols-5 mb-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 md:mt-12">
-      <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full xl:mr-0 2xl:col-span-2">
+    <div className="mx-auto mb-5 grid max-w-7xl px-4 sm:px-6 md:mt-12 lg:grid-cols-2 lg:px-4 2xl:grid-cols-5">
+      <div className="mx-auto max-w-md px-8 py-12 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-24 xl:mr-0 2xl:col-span-2">
         <div className="xl:max-w-xl">
           {/* <img className="h-10" src="/img/ccbcet-logo.svg" alt="Workcation" /> */}
           <img
-            className="mt-6 rounded-lg sm:mt-8 sm:h-64 sm:w-auto sm:object-cover object-center lg:hidden"
+            className="mt-6 rounded-lg object-center sm:mt-8 sm:h-64 sm:w-auto sm:object-cover lg:hidden"
             src="/img/landing_img.svg"
             alt="graphics"
           />
-          <h1 className="mt-12 text-2xl font-headline tracking-tight font-semibold text-brand-light sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl">
+          <h1
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            className="font-headline text-brand-light mt-12 text-2xl font-semibold tracking-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
+          >
             CodeChef BCET Chapter
           </h1>
-          <p className="mt-2 text-gray-600 sm:mt-4 sm:text-xl">
-            CodeChef BCET Chapter is a community organisation established with the help of CodeChef to instill the culture of Programming.
+          <p
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            className="mt-2 text-gray-600 sm:mt-4 sm:text-xl"
+          >
+            CodeChef BCET Chapter is a community organisation established with
+            the help of CodeChef to instill the culture of Programming.
           </p>
           {/* button  */}
-          <div className="mt-4 space-x-1 sm:mt-6">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="  space-x-1 sm:mt-6"
+          >
             <a
-              className="inline-block px-5 py-3 rounded-lg transform transition bg-red-600 hover:bg-red-600 hover:-translate-y-0.5 focus:ring-red-700 focus:ring-opacity-50 focus:outline-none focus:ring focus:ring-offset-2 active:bg-red-700 uppercase tracking-wider font-semibold text-sm text-white shadow-lg sm:text-base"
-              href="https://www.codechef.com/college-chapter/member" target="_blank" 
+              className="focus:outline-none inline-block transform rounded-lg my-6 bg-red-600 px-5 py-3 text-sm font-semibold uppercase tracking-wider text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-red-600 focus:ring focus:ring-red-700 focus:ring-opacity-50 focus:ring-offset-2 active:bg-red-700 sm:text-base"
+              href="https://www.codechef.com/college-chapter/member"
+              target="_blank"
             >
               become a member
             </a>
@@ -29,9 +49,13 @@ export default function Landing() {
         </div>
       </div>
       {/* largest view  */}
-      <div className="hidden relative lg:block 2xl:col-span-3">
+      <div
+        data-aos="zoom-in-up"
+        data-aos-duration="1000"
+        className="relative hidden lg:block 2xl:col-span-3"
+      >
         <img
-          className="absolute inset-0 min-w-full h-full"
+          className="absolute inset-0 h-full min-w-full"
           src="/img/landing_img.svg"
           alt="Woman workcationing on the beach"
         />

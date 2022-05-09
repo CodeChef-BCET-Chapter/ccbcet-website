@@ -4,7 +4,7 @@ export default [
       name: "Vikash Mehta",
       designation: "Outreach & Media Executive",
       instagram: "",
-      linledin: "",
+      linkedin: "",
       twitter: "",
       github: ""
     },
@@ -13,7 +13,7 @@ export default [
       name: "Saloni Sahay",
       designation: "Outreach & Media Executive",
       instagram: "",
-      linledin: "",
+      linkedin: "",
       twitter: "",
       github: ""
     },
@@ -21,10 +21,10 @@ export default [
       imageUrl: "/img/Teams/MediaExe/archanamediaexe.png",
       name: "Archana Kumari",
       designation: "Outreach & Media Executive",
-      instagram: "",
-      linledin: "",
-      twitter: "",
-      github: ""
+      instagram: "https://www.instagram.com/areychana",
+      linkedin: "https://www.linkedin.com/in/archana-kumari-b75b49206",
+      twitter: "https://twitter.com/kabulichana",
+      github: "https://github.com/areychana"
     },
     {
       imageUrl: "/img/Teams/MediaExe/souvikmediaexe.png",

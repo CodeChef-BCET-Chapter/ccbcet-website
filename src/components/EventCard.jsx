@@ -1,59 +1,56 @@
 import React from "react";
 
 export default function EventCard({ events }) {
-    return (
-        <div>
-            <div className="bg-white group w-auto relative mb-auto mt-auto rounded-lg overflow-hidden h-auto transition duration-500 ease-in-out transform shadow-2xl hover:scale-105 flex sm:hidden">
-                <div className="relative">
-                    <img src={events.imageUrl} alt={events.imageAlt} className=" w-full h-full" />
-                </div>
-                <div>
-                    <div className="px-3 py-3 subpixel-antialiased ">
-                        <h1 className="text-xl text-black-500 pb-2 font-bold font-serif">{events.title}</h1>
-                        <table className="font-serif text-gray-600 mt-2 text-sm">
-                            <tr>
-                                <td width="15%" className="text-yellow-600"><i className="far fa-calendar-alt"></i></td>
-                                <td>{events.date}<sup>{events.suscript}</sup>{events.year}</td>
-                            </tr>
-                            <tr>
-                                <td className="text-red-600"><i className="fas fa-map-marker-alt"></i></td>
-                                <td>{events.platform}</td>
-                            </tr>
-                            <tr>
-                                <td className="text-green-600"><i className="far fa-clock"></i></td>
-                                <td>{events.time}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <a href={events.href} target="blank" className=" float-right text-center mb-5 mr-3 bg-red-600 font-semibold text-white p-2 pl-4 w-32 rounded-full hover:bg-red-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"> {events.button}</a>
-                </div>
-            </div>
-
-            <div className="bg-white group w-auto relative mb-auto mt-auto rounded-lg overflow-hidden h-auto transition duration-500 ease-in-out transform shadow-2xl hover:scale-105 hidden sm:block">
-                <div className="relative">
-                    <img src={events.imageUrl} alt={events.imageAlt} className=" w-full h-full" />
-                </div>
-                <div>
-                    <div className="px-3 py-3 subpixel-antialiased ">
-                        <h1 className="text-xl text-black-500 pb-2 font-bold font-serif">{events.title}</h1>
-                        <table className="font-serif text-gray-600 mt-2 text-sm">
-                            <tr>
-                                <td width="15%" className="text-yellow-600"><i className="far fa-calendar-alt"></i></td>
-                                <td>{events.date}<sup>{events.suscript}</sup>{events.year}</td>
-                            </tr>
-                            <tr>
-                                <td className="text-red-600"><i className="fas fa-map-marker-alt"></i></td>
-                                <td>{events.platform}</td>
-                            </tr>
-                            <tr>
-                                <td className="text-green-600"><i className="far fa-clock"></i></td>
-                                <td>{events.time}</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <a href={events.href} target="blank" className=" float-right text-center mb-5 mr-3 bg-red-600 font-semibold text-white p-2 pl-4 w-32 rounded-full hover:bg-red-700 focus:outline-none focus:ring shadow-lg hover:shadow-none transition-all duration-300 m-2"> {events.button}</a>
-                </div>
-            </div>  
+  return (
+    <div data-aos="fade-up" data-aos-duration="1000">
+      <div className="group w-ful h-full relative mb-auto mt-auto hidden  transform overflow-hidden rounded-lg bg-white shadow-xl transition duration-500 ease-in-out hover:scale-105 sm:block">
+        <div className="relative">
+          <img
+            src={events.imageUrl}
+            alt={events.imageAlt}
+            className=" w-full h-60 "
+          />
         </div>
-    )
+        <div>
+          <div className="px-3 py-3 subpixel-antialiased ">
+            <h1 className="text-black-500 pb-2 font-serif text-xl font-bold">
+              {events.title}
+            </h1>
+            <table className="mt-2 font-serif text-sm text-gray-600">
+              <tr>
+                <td width="15%" className="text-yellow-600">
+                  <i className="far fa-calendar-alt"></i>
+                </td>
+                <td>
+                  {events.date}
+                  <sup>{events.suscript}</sup>
+                  {events.year}
+                </td>
+              </tr>
+              <tr>
+                <td className="text-red-600">
+                  <i className="fas fa-map-marker-alt"></i>
+                </td>
+                <td>{events.platform}</td>
+              </tr>
+              <tr>
+                <td className="text-green-600">
+                  <i className="far fa-clock"></i>
+                </td>
+                <td>{events.time}</td>
+              </tr>
+            </table>
+          </div>
+          <a
+            href={events.href}
+            target="blank"
+            className=" focus:outline-none float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:ring"
+          >
+            {" "}
+            {events.button}
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }

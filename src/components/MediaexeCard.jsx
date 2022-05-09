@@ -8,8 +8,8 @@ export default function MediaExe({ mediaexe }) {
         <div className=" -mt-28 flex  justify-center ">
           <img
             src={mediaexe.imageUrl}
-            alt=""
-            className=" h-32 w-32 rounded-full border-2 border-orange-600 object-cover "
+            alt={mediaexe.name}
+            className=" h-32 w-32 rounded-full border-3 border-orange-600 object-cover "
           />
         </div>
         <div className=" p-2 ">
@@ -22,7 +22,7 @@ export default function MediaExe({ mediaexe }) {
         </div>
         <div className="flex justify-center gap-5 pt-5 text-xl text-gray-700   ">
         <a href={mediaexe.instagram} className="hover:text-red-600" target="_blank"><BsInstagram /></a>
-            <a href={mediaexe.linkedin}className="hover:text-red-600" target="_blank"><BsLinkedin /></a>
+            <a href={mediaexe.linkedin} className="hover:text-red-600" target="_blank"><BsLinkedin /></a>
             <a href={mediaexe.twitter} className="hover:text-red-600" target="_blank"><BsTwitter  /></a>
             <a href={mediaexe.github}className="hover:text-red-600" target="_blank"> <BsGithub  /></a>    
         </div>

@@ -1,19 +1,25 @@
 import React from "react";
 import EventCard from "./components/EventCard";
 import eventCard from "./data/eventCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Event() {
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div>
       {/* Event Cards */}
       <section className="mx-auto mt-12 mb-12 max-w-7xl overflow-hidden px-4 sm:px-6 lg:px-4">
         <article className="col-auto mb-10">
-          <div className=" mb-20">
+          <div  data-aos="fade-up" data-aos-duration="1000"  className=" mb-20">
             <h1 className="title-font mb-8 text-center text-2xl font-medium text-gray-900 sm:text-3xl">
               Event & Workshops
             </h1>
             {/* banner */}
-            <div className="flex flex-col rounded-lg bg-gray-100 xl:flex-row">
+            <div className="flex flex-col rounded-lg bg-gray-100 xl:flex-row shadow-xl">
               <img
                 className=" roun w-auto rounded-t-lg xl:h-96 xl:rounded-l-lg xl:rounded-t-none"
                 src="/img/Code Aaj Kal Contest.png"
@@ -41,14 +47,14 @@ export default function Event() {
               </div>
             </div>
           </div>
-          <div className="mt-10 text-center">
+          <div  data-aos="fade-up" data-aos-duration="1000"  className="mt-10 text-center">
             <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-900 lg:w-3/4 xl:w-2/4">
               Recent Events
             </p>
           </div>
-          <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+          <section  className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
             {eventCard.map(events => (
-              <EventCard events={events} key={events.title} />
+              <EventCard  events={events} key={events.title} />
             ))}
           </section>
         </article>
