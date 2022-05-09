@@ -2,14 +2,15 @@ import React from "react";
 import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 export default function MediaExe({ eventexe }) {
   return (
-    <div  className="">
+    <div className="">
       {/* Event Executives */}
-      <div className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl ">
+      
+      <div data-aos="fade-up" data-aos-duration="1000" className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl ">
         <div className=" -mt-28 flex  justify-center ">
           <img
             src={eventexe.imageUrl}
-            alt={eventexe.name}
-            className=" h-32 w-32 rounded-full border-3 border-orange-600 object-cover "
+            alt=""
+            className=" h-32 w-32 rounded-full border-2 border-orange-600 object-cover "
           />
         </div>
         <div className=" p-2 ">
