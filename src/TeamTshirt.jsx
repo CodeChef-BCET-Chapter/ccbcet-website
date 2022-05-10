@@ -5,12 +5,17 @@ import { useLocalStorage } from "./hooks/localstorage.js";
 
 function TeamTshirt(props) {
   const formRef = useRef(null);
-  const [showForm, setShowForm] = useLocalStorage('show-form', 'true');
+  const [showForm, setShowForm] = useLocalStorage("show-form", "true");
 
   function handleSubmit(e) {
     e.preventDefault();
-    setShowForm('false');
-  
+    if (showForm === "true") {
+      setShowForm("false");
+    }
+    if (showForm === "false") {
+      setShowForm("complete");
+    }
+
     axios.post(
       "https://script.google.com/macros/s/AKfycbwS0UdNtc33jTZKN_b4u0COB237VUay_BTyEZt0KsslH7b2_ztfxr2d0944Bhn77XjpZw/exec",
       new FormData(formRef.current)
@@ -18,7 +23,7 @@ function TeamTshirt(props) {
   }
   return (
     <>
-      {showForm === 'true' ? (
+      {showForm === "true" && (
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -108,18 +113,89 @@ function TeamTshirt(props) {
             </select>
           </div>
 
-          <button
-            type="submit"
-            className="focus:outline-none w-full rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300  sm:w-auto"
-          >
-            Submit
-          </button>
+          <div className="text-right">
+            <button
+              type="submit"
+              className="focus:outline-none w-full rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300  sm:w-auto"
+            >
+              Submit
+            </button>
+          </div>
         </form>
-      ) : (
-        <div className="m-auto w-full p-4 sm:w-2/3 md:w-2/5">
-          <h1 className=" text-2xl">Form Submitted</h1>
-          <p className=" text-lg">To complete your order pay Rs 350</p>
+      )}
+      {showForm === "false" && (
+        <div className="m-auto w-full rounded-md p-4 shadow-md sm:w-2/3 md:w-2/5">
+          <h1 className=" text-center text-2xl font-bold">Form Submitted</h1>
+          <p className=" text-center text-lg">
+            To complete your order pay ₹ 350 using UPI ID (9097994880@ybl)
+          </p>
           <img src="img/payment_qr.jpeg" alt="qr code" />
+          <form ref={formRef} onSubmit={handleSubmit}>
+            <div className="mb-6">
+              <label
+                htmlFor="Name"
+                className="mb-2 block text-sm font-medium text-gray-900"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                name="Name"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:ring-blue-500"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div className="mb-6">
+              <label
+                htmlFor="Name"
+                className="mb-2 block text-sm font-medium text-gray-900"
+              >
+                Transactionid{" "}
+                <span className="text-gray-600">
+                  (After completing your payment copy the Transaction ID and
+                  paste it here)
+                </span>
+              </label>
+              <input
+                type="text"
+                name="Transactionid"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:ring-blue-500"
+                placeholder="Transactionid"
+                required
+              />
+            </div>
+            <div className="text-right">
+              <button
+                type="submit"
+                className="focus:outline-none w-full rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300  sm:w-auto"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+      {showForm === "complete" && (
+        <div className="h-96">
+          <div className="m-auto my-10 w-full  rounded-md p-4 text-center shadow-md sm:w-2/3 md:w-2/5">
+            <h1 className=" p-6 text-xl  font-bold">Thank You</h1>
+            <p className="">You have secueefully ordered your T-Shirt</p>
+            <p className="">
+              Your T-Shirt will be delivered within 15-20 days.
+            </p>
+
+            <div className="text-cnter py-10">
+              <a href="/" className="">
+                <button
+                  type="submit"
+                  className="focus:outline-none max-w-max rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300  sm:w-auto"
+                >
+                  Back To Home
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       )}
     </>
