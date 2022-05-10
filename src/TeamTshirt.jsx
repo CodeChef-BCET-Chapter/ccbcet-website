@@ -74,6 +74,8 @@ function TeamTshirt(props) {
               name="Designation"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
             >
+              <option value="Choose">--choose--</option>
+              <option value="lead">Chapter Leader</option>
               <option value="CP">CP Executive</option>
               <option value="Media">Media Executive</option>
               <option value="Event">Event Executive</option>
@@ -91,7 +93,7 @@ function TeamTshirt(props) {
               type="text"
               name="TshirtName"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
-              placeholder="name on T-Shirt"
+              placeholder="name on t-shirt"
               required
             />
           </div>
@@ -106,10 +108,11 @@ function TeamTshirt(props) {
               name="TshirtSize"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
             >
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
+              <option value="Choose">--choose--</option>
+              <option value="S">S (36 cm)</option>
+              <option value="M">M (38 cm)</option>
+              <option value="L">L (40 cm)</option>
+              <option value="XL">XL (42 cm)</option>
             </select>
           </div>
 
@@ -124,7 +127,7 @@ function TeamTshirt(props) {
         </form>
       )}
       {showForm === "false" && (
-        <div className="m-auto w-full rounded-md p-4 shadow-md sm:w-2/3 md:w-2/5">
+        <div className="m-auto w-full rounded-md p-4 my-10 shadow-md sm:w-2/3 md:w-2/5">
           <h1 className=" text-center text-2xl font-bold">Form Submitted</h1>
           <p className=" text-center text-lg">
             To complete your order pay ₹ 350 using UPI ID (9097994880@ybl)
