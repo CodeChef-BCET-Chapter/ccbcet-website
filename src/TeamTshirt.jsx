@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
+import { TiTickOutline } from "react-icons/ti";
 
 import { useLocalStorage } from "./hooks/localstorage.js";
 
@@ -27,7 +28,7 @@ function TeamTshirt(props) {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="m-auto w-full p-4 sm:w-2/3 md:w-2/5"
+          className="m-auto w-full p-4 sm:w-2/3 md:w-2/5 "
         >
           <h1 className="p-8 text-center text-2xl font-bold">
             Team T-Shirt Order
@@ -180,10 +181,15 @@ function TeamTshirt(props) {
         </div>
       )}
       {showForm === "complete" && (
-        <div className="h-96">
-          <div className="m-auto my-10 w-full  rounded-md p-4 text-center shadow-md sm:w-2/3 md:w-2/5">
-            <h1 className=" p-6 text-xl  font-bold">Thank You</h1>
-            <p className="">You have secueefully ordered your T-Shirt</p>
+        <div className="h-[420px]">
+          <div className="m-auto mt-20 w-full rounded-md  bg-gray-100 p-4 text-center shadow-md sm:w-2/3 md:w-2/5">
+            <p className=" flex justify-center p-2 text-green-600 ">
+              <TiTickOutline size={70} />
+            </p>
+            <h1 className=" pb-6 text-5xl font-bold italic text-green-600">
+              Thank You!
+            </h1>
+            <p className="">You have sucessfully ordered your T-Shirt</p>
             <p className="">
               Your T-Shirt will be delivered within 15-20 days.
             </p>
