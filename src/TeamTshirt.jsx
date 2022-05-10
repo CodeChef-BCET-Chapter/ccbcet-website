@@ -26,7 +26,7 @@ function TeamTshirt(props) {
           <h1 className="p-8 text-center text-2xl font-bold">
             Team T-Shirt Order
           </h1>
-          <img src="public/img/exe t-shirt-01.png" alt="tshirt pic" />
+          <img src="img/exe t-shirt-01.png" alt="tshirt pic" />
           <div className="mb-6">
             <label
               htmlFor="Name"
@@ -118,7 +118,7 @@ function TeamTshirt(props) {
         <div className="m-auto w-full p-4 sm:w-2/3 md:w-2/5">
           <h1 className=" text-2xl">Form Submitted</h1>
           <p className=" text-lg">To complete your order pay Rs 350</p>
-          <img src="public/img/payment_qr.jpeg" alt="qr code" />
+          <img src="img/payment_qr.jpeg" alt="qr code" />
         </div>
       )}
     </>
