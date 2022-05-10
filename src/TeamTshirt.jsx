@@ -1,16 +1,15 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 
-import { useLocalStorage } from "./hooks/localstorage.js";
-
 function TeamTshirt(props) {
   const formRef = useRef(null);
-  const [showForm, setShowForm] = useLocalStorage('show-form', 'true');
+  const [showForm, setShowForm] = useState(true);
 
   function handleSubmit(e) {
     e.preventDefault();
-    setShowForm('false');
-  
+    setShowForm((state) => !state);
+    console.log(new FormData(formRef.current));
+
     axios.post(
       "https://script.google.com/macros/s/AKfycbwS0UdNtc33jTZKN_b4u0COB237VUay_BTyEZt0KsslH7b2_ztfxr2d0944Bhn77XjpZw/exec",
       new FormData(formRef.current)
@@ -18,7 +17,7 @@ function TeamTshirt(props) {
   }
   return (
     <>
-      {showForm === 'true' ? (
+      {showForm ? (
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -69,6 +68,8 @@ function TeamTshirt(props) {
               name="Designation"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
             >
+              <option value="choose">--choose--</option>
+              <option value="Lead">Chapter leader</option>
               <option value="CP">CP Executive</option>
               <option value="Media">Media Executive</option>
               <option value="Event">Event Executive</option>
@@ -86,7 +87,7 @@ function TeamTshirt(props) {
               type="text"
               name="TshirtName"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
-              placeholder="name on T-Shirt"
+              placeholder="name on t-shirt"
               required
             />
           </div>
@@ -101,10 +102,11 @@ function TeamTshirt(props) {
               name="TshirtSize"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
             >
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
+              <option value="choose">--choose--</option>
+              <option value="S">S (36 cm)</option>
+              <option value="M">M (38 cm)</option>
+              <option value="L">L (40 cm)</option>
+              <option value="XL">XL (42 cm)</option>
             </select>
           </div>
 
