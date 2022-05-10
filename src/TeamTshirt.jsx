@@ -1,15 +1,16 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 
+import { useLocalStorage } from "./hooks/localstorage.js";
+
 function TeamTshirt(props) {
   const formRef = useRef(null);
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useLocalStorage('show-form', 'true');
 
   function handleSubmit(e) {
     e.preventDefault();
-    setShowForm(state => !state);
-    console.log(new FormData(formRef.current));
-
+    setShowForm('false');
+  
     axios.post(
       "https://script.google.com/macros/s/AKfycbwS0UdNtc33jTZKN_b4u0COB237VUay_BTyEZt0KsslH7b2_ztfxr2d0944Bhn77XjpZw/exec",
       new FormData(formRef.current)
@@ -17,7 +18,7 @@ function TeamTshirt(props) {
   }
   return (
     <>
-      {showForm ? (
+      {showForm === 'true' ? (
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -68,8 +69,6 @@ function TeamTshirt(props) {
               name="Designation"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
             >
-              <option value="choose">--choose--</option>
-              <option value="Lead">Chapter leader</option>
               <option value="CP">CP Executive</option>
               <option value="Media">Media Executive</option>
               <option value="Event">Event Executive</option>
@@ -87,7 +86,7 @@ function TeamTshirt(props) {
               type="text"
               name="TshirtName"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
-              placeholder="name on t-shirt"
+              placeholder="name on T-Shirt"
               required
             />
           </div>
@@ -102,74 +101,25 @@ function TeamTshirt(props) {
               name="TshirtSize"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
             >
-              <option value="choose">--choose--</option>
-              <option value="S">S (36 cm)</option>
-              <option value="M">M (38 cm)</option>
-              <option value="L">L (40 cm)</option>
-              <option value="XL">XL (42 cm)</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
             </select>
           </div>
 
-          <div className="text-right">
-              <button
-                type="submit"
-                className="focus:outline-none w-full rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300  sm:w-auto"
-              >
-                Submit
-              </button>
-            </div>
+          <button
+            type="submit"
+            className="focus:outline-none w-full rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300  sm:w-auto"
+          >
+            Submit
+          </button>
         </form>
       ) : (
-        <div className="m-auto my-5 w-full rounded-md p-5 shadow-xl sm:w-2/3 md:w-2/5">
-          <h1 className=" p-2 text-center text-2xl font-bold">
-            Form Submitted
-          </h1>
-          <p className="text-center text-lg">
-            To complete your order pay ₹ 350 using UPI ID (9097994880@ybl){" "}
-          </p>
-
+        <div className="m-auto w-full p-4 sm:w-2/3 md:w-2/5">
+          <h1 className=" text-2xl">Form Submitted</h1>
+          <p className=" text-lg">To complete your order pay Rs 350</p>
           <img src="img/payment_qr.jpeg" alt="qr code" />
-          <form ref={formRef} onSubmit={handleSubmit}>
-            <div className="mb-6">
-              <label
-                htmlFor="Name"
-                className="mb-2 block text-sm font-medium text-gray-900"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                name="Name"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:ring-blue-500"
-                placeholder="Name"
-                required
-              />
-            </div>
-            <div className="mb-6">
-              <label
-                htmlFor="Name"
-                className="mb-2 block text-sm font-medium text-gray-900"
-              >
-                Transactionid <span className="text-gray-600">(After completing your payment copy the
-                Transaction ID and paste it here)</span>
-              </label>
-              <input
-                type="text"
-                name="Transactionid"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:ring-blue-500"
-                placeholder="Transactionid"
-                required
-              />
-            </div>
-            <div className="text-right">
-              <button
-                type="submit"
-                className="focus:outline-none w-full rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:ring-4 focus:ring-red-300  sm:w-auto"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
         </div>
       )}
     </>
