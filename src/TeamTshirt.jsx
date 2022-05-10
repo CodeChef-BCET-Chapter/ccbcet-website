@@ -126,7 +126,7 @@ function TeamTshirt(props) {
       )}
       {showForm === "false" && (
         <div className="m-auto w-full rounded-md p-4 shadow-md sm:w-2/3 md:w-2/5">
-          <h1 className=" text-center text-2xl font-bold">Form Submitted</h1>
+          <h1 className=" text-center text-2xl font-bold">Form Submitted!</h1>
           <p className=" text-center text-lg">
             To complete your order pay ₹ 350 using UPI ID (9097994880@ybl)
           </p>
@@ -152,7 +152,7 @@ function TeamTshirt(props) {
                 htmlFor="Name"
                 className="mb-2 block text-sm font-medium text-gray-900"
               >
-                Transactionid{" "}
+                Transaction ID{" "}
                 <span className="text-gray-600">
                   (After completing your payment copy the Transaction ID and
                   paste it here)
@@ -178,8 +178,8 @@ function TeamTshirt(props) {
         </div>
       )}
       {showForm === "complete" && (
-        <div className="h-[420px]">
-          <div className="m-auto mt-20 w-full rounded-md  bg-gray-100 p-4 text-center shadow-md sm:w-2/3 md:w-2/5">
+        <div className=" h-full bg-gray-100 py-10 px-2 ">
+          <div className="m-auto bg-white w-full rounded-md  p-4 text-center shadow-md sm:w-2/3 md:w-2/5">
             <p className=" flex justify-center p-2 text-green-600 ">
               <TiTickOutline size={70} />
             </p>

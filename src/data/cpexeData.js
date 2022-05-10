@@ -11,13 +11,13 @@ export default [
     
   },
   {
-    imageUrl: "/img/Teams/exe.png",
+    imageUrl: "/img/Teams/CpExe/salonicpexe.png",
     name: "Saloni Sahay",
     designation: "CP Executive",
     instagram: " ",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/saloni-sahay-480311200",
     twitter: "",
-    github: ""
+    github: "https://github.com/SaloniSahay"
   },
   {
     imageUrl: "/img/Teams/CpExe/ramolacpexe.png",

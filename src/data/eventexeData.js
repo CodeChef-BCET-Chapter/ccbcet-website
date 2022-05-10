@@ -1,12 +1,12 @@
 export default [
     {
-      imageUrl: "/img/Teams/exe.png",
+      imageUrl: "/img/Teams/EventExe/suhashieventexe.png",
       name: "Suhashi Suman Shukla",
       designation: "Event Executive",
-      instagram: "",
-      linkedin: "",
+      instagram: "https://www.instagram.com/shukla_suhashi/",
+      linkedin: "http://linkedin.com/in/suhashi-suman-shukla-963ba61b2",
       twitter: "",
-      github: ""
+      github: "http://github.com/suhashi23"
     },
     {
       imageUrl: "/img/Teams/exe.png",
