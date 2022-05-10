@@ -11,6 +11,7 @@ import {
   Route,
 } from "react-router-dom"
 import EventDetails from "./EventDetails";
+import TeamTshirt from "./TeamTshirt";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/resources" component={Resource} />
           <Route path="/eventdetails" component={EventDetails} />
           <Route path="/teams" component={Teams} />
+          <Route path="/team-tshirt" component={TeamTshirt} />
         </Switch>
         <Foot />
       </div>
