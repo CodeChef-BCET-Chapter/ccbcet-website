@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsCalendarEvent } from "react-icons/bs";
-import { RiTeamLine } from "react-icons/ri";
+import { RiTeamLine, RiBook2Line } from "react-icons/ri";
 import { MdOutlineLeaderboard } from "react-icons/md";
 
 export default function NavBar() {
@@ -64,6 +64,7 @@ export default function NavBar() {
                       href="/resources"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
+                      <RiBook2Line className="mx-1 text-lg" />
                     Resources
                     </a>
                   </div>
@@ -165,6 +166,7 @@ export default function NavBar() {
                       href="/resources"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
+                      <RiBook2Line className="mx-1 text-lg" />
                     Resources
                     </a>
               </div>
