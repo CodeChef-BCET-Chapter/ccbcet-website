@@ -1,15 +1,16 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 
+import { useLocalStorage } from "./hooks/localstorage.js";
+
 function TeamTshirt(props) {
   const formRef = useRef(null);
-  const [showForm, setShowForm] = useState(true);
+  const [showForm, setShowForm] = useLocalStorage('show-form', 'true');
 
   function handleSubmit(e) {
     e.preventDefault();
-    setShowForm((state) => !state);
-    console.log(new FormData(formRef.current));
-
+    setShowForm('false');
+  
     axios.post(
       "https://script.google.com/macros/s/AKfycbwS0UdNtc33jTZKN_b4u0COB237VUay_BTyEZt0KsslH7b2_ztfxr2d0944Bhn77XjpZw/exec",
       new FormData(formRef.current)
@@ -17,7 +18,7 @@ function TeamTshirt(props) {
   }
   return (
     <>
-      {showForm ? (
+      {showForm === 'true' ? (
         <form
           ref={formRef}
           onSubmit={handleSubmit}
