@@ -1,5 +1,7 @@
 import React from "react";
 import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 export default function MediaExe({ eventexe }) {
   return (
     <div className="">
@@ -7,9 +9,10 @@ export default function MediaExe({ eventexe }) {
       
       <div data-aos="fade-up" data-aos-duration="1000" className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl ">
         <div className=" -mt-28 flex  justify-center ">
-          <img
+          <LazyLoadImage
             src={eventexe.imageUrl}
-            alt=""
+            alt={eventexe.name}
+            effect="blur"
             className=" h-32 w-32 rounded-full border-2 border-orange-600 object-cover "
           />
         </div>
