@@ -1,7 +1,7 @@
 import React from "react";
 import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function CpexeCard({ cpexe }) {
   return (
@@ -12,14 +12,18 @@ export default function CpexeCard({ cpexe }) {
         data-aos-duration="1000"
         className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl "
       >
-        <div className=" -mt-28 flex  justify-center ">
-          <LazyLoadImage
-            src={cpexe.imageUrl}
-            alt={cpexe.name}
-            effect="blur"
-            className=" h-32 w-32 rounded-full border-3
-             border-orange-600 object-cover "
-          />
+        <div className="flex justify-center">
+          <div
+            className=" -mt-28  h-32 w-32 rounded-full border-3
+             border-orange-600 "
+          >
+            <LazyLoadImage
+              src={cpexe.imageUrl}
+              alt={cpexe.name}
+              effect="blur"
+              className=" rounded-full object-cover "
+            />
+          </div>
         </div>
         <div className=" p-2">
           <h1 className="mb-1 text-center text-2xl font-bold">{cpexe.name}</h1>

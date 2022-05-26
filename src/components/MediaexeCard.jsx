@@ -7,13 +7,16 @@ export default function MediaExe({ mediaexe }) {
     <div className="">
       {/* CP Executive */}
       <div data-aos="fade-up" data-aos-duration="1000" className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl ">
-        <div className=" -mt-28 flex  justify-center ">
+        <div className="flex justify-center">
+        <div className=" -mt-28  h-32 w-32  border-3 border-orange-600 rounded-full ">
           <LazyLoadImage
             src={mediaexe.imageUrl}
             alt={mediaexe.name}
             effect="blur"
-            className=" h-32 w-32 rounded-full border-3 border-orange-600 object-cover "
+            className="  rounded-full object-cover "
           />
+        </div>
+        
         </div>
         <div className=" p-2 ">
           <h1 className="mb-1 text-center text-2xl font-bold">

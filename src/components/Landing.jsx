@@ -1,12 +1,8 @@
 import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 
 export default function Landing() {
-  React.useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
+ 
   return (
     <div className="mx-auto mb-5 grid max-w-7xl px-4 sm:px-6 md:mt-12 lg:grid-cols-2 lg:px-4 2xl:grid-cols-5">
       <div className="mx-auto max-w-md px-8 py-12 sm:max-w-xl lg:max-w-full lg:px-12 lg:py-24 xl:mr-0 2xl:col-span-2">
@@ -18,15 +14,11 @@ export default function Landing() {
             alt="graphics"
           />
           <h1
-            data-aos="fade-down"
-            data-aos-duration="1000"
             className="font-headline text-brand-light mt-12 text-2xl font-semibold tracking-tight sm:mt-8 sm:text-4xl lg:text-3xl xl:text-4xl"
           >
             CodeChef BCET Chapter
           </h1>
           <p
-            data-aos="fade-down"
-            data-aos-duration="1000"
             className="mt-2 text-gray-600 sm:mt-4 sm:text-xl"
           >
             CodeChef BCET Chapter is a community organisation established with
@@ -34,8 +26,6 @@ export default function Landing() {
           </p>
           {/* button  */}
           <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
             className="  space-x-1 sm:mt-6"
           >
             <a
@@ -50,8 +40,6 @@ export default function Landing() {
       </div>
       {/* largest view  */}
       <div
-        data-aos="zoom-in-up"
-        data-aos-duration="1000"
         className="relative hidden lg:block 2xl:col-span-3"
       >
         <img
