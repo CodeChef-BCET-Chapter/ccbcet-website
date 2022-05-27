@@ -5,6 +5,7 @@ import Home from "./Home";
 import Resource from "./Resource";
 import Event from "./Event";
 import Teams from "./Teams";
+import Inductionform from "./Inductionform";
 import {
   BrowserRouter,
   Switch,
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/eventdetails" component={EventDetails} />
           <Route path="/teams" component={Teams} />
           <Route path="/team-tshirt" component={TeamTshirt} />
+          <Route path="/induction-registration" component={Inductionform} />
         </Switch>
         <Foot />
       </div>
