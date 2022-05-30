@@ -4,9 +4,7 @@ import React, { useRef, useState } from "react";
 function Inductionform() {
   return (
     <div className=" bg-gray-100 pb-5">
-      <div className="m-auto  h-60 rounded-b-xl bg-red-400 sm:w-full md:w-3/4 ">
-       
-      </div>
+      <div className="m-auto  h-60 rounded-b-xl bg-red-400 sm:w-full md:w-3/4 "></div>
 
       <div className="relative z-40 mx-2">
         <form className="m-auto -mt-16 w-full rounded-xl bg-white p-4 shadow-xl sm:w-2/3 md:w-2/5 ">
@@ -19,15 +17,15 @@ function Inductionform() {
             </label>
             <input
               type="text"
-              name="Name"
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-600 "
+              name="name"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="name"
               required
             />
           </div>
           <div class="mb-6">
             <label
-              for="email"
+              htmlFor="email"
               class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
               Email
@@ -36,14 +34,14 @@ function Inductionform() {
             <input
               type="email"
               id="email"
-              class="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-600 "
+              class="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="name@gmail.com"
               required
             />
           </div>
           <div class="mb-6">
             <label
-              for="contact"
+              htmlFor="contact"
               class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
             >
               Contact No.
@@ -51,24 +49,23 @@ function Inductionform() {
 
             <input
               type="tel"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
               id="tel"
-              class="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-600 "
-              placeholder="number (123-456-7890)"
+              class="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
+              placeholder="Contact No."
               required
             />
           </div>
 
           <div className="mb-6">
             <label
-              htmlFor="Designation"
+              htmlFor="branch"
               className="mb-2 block text-sm font-medium text-gray-700"
             >
               Branch
             </label>
             <select
-              name="Designation"
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-600  "
+              name="branch"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               required
             >
               <option value="Choose">--choose your branch--</option>
@@ -132,22 +129,22 @@ function Inductionform() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="TshirtName"
+              htmlFor="CodechefUserName"
               className="mb-2 block text-sm font-medium text-gray-900"
             >
               CodeChef username
             </label>
             <input
               type="text"
-              name="TshirtName"
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-600  "
+              name="CodechefUserName"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               placeholder="codechef username"
               required
             />
           </div>
           <div className="mb-6">
             <label
-              for="message"
+              htmlFor="message"
               class="mb-2 block text-sm font-medium text-gray-900 "
             >
               Your message
@@ -155,7 +152,7 @@ function Inductionform() {
             <textarea
               id="message"
               rows="4"
-              class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-1 focus:ring-red-600 "
+              class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="Ask us anything..."
             ></textarea>
           </div>

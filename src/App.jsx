@@ -13,6 +13,8 @@ import {
 } from "react-router-dom"
 import EventDetails from "./EventDetails";
 import TeamTshirt from "./TeamTshirt";
+import CreateProfile from "./components/CreateProfile";
+import ViewProfile from "./components/ViewProfile";
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="/teams" component={Teams} />
           <Route path="/team-tshirt" component={TeamTshirt} />
           <Route path="/induction-registration" component={Inductionform} />
+          <Route path="/create-profile" component={CreateProfile} />
+          <Route path="/view-profile" component={ViewProfile} />
         </Switch>
         <Foot />
       </div>
