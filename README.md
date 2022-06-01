@@ -1,5 +1,5 @@
 # ccbcet-website
-CodeChef BCET CHAPTER Web App
+CodeChef BCET Chapter Web App
 
 ## Link
 
