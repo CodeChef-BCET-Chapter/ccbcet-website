@@ -1,5 +1,4 @@
 import React from "react";
-import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import LeadsCard from "./components/LeadsCard";
 import leadsData from "./data/leadsData";
 import CpexeCard from "./components/CpexeCard";

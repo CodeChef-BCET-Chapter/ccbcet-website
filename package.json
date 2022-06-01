@@ -12,6 +12,7 @@
     "axios": "^0.27.2",
     "browserslist": "^4.20.3",
     "caniuse-lite": "^1.0.30001335",
+    "firebase": "^9.8.2",
     "font-awesome": "^4.7.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
