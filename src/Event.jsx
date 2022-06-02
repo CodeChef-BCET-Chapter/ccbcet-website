@@ -57,7 +57,7 @@ export default function Event() {
             </p>
           </div>
           <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-            {eventCard.map(events => (
+            {eventCard.map((events) => (
               <EventCard events={events} key={events.title} />
             ))}
           </section>

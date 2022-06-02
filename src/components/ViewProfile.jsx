@@ -9,7 +9,7 @@ import {
 } from "react-icons/md";
 import { IKImage } from "imagekitio-react";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
-
+import { Link } from "react-router-dom";
 function ViewProfile() {
   return (
     <div className=" bg-gray-100 pb-5 ">
@@ -96,14 +96,14 @@ function ViewProfile() {
             </div>
           </div>
           <div className=" flex justify-end p-4 ">
-            <a
-              href="/create-profile"
+            <Link
+              to="/create-profile"
               className="text-md flex  items-center justify-end rounded-lg bg-red-600 px-5 py-2.5 text-center font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300  sm:w-auto"
             >
               <span className="px-2 text-2xl ">
                 <MdOutlineModeEdit />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

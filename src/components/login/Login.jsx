@@ -1,11 +1,10 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { MdLogin } from "react-icons/md";
 import { UserAuth } from "../../context/AuthContext";
 import { useHistory } from "react-router-dom";
 
 export default function Login() {
   const { googleSignIn, user } = UserAuth();
-  const history = useHistory()
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
@@ -13,11 +12,7 @@ export default function Login() {
       console.log(error);
     }
   };
-  useEffect(() => {
-    if (user != null) {
-      // history.push('/');
-    }
-  }, [user]);
+
   return (
     <button
       onClick={handleGoogleSignIn}

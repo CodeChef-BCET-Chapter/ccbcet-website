@@ -1,53 +1,44 @@
 import React, { useRef, useState } from "react";
 
 function CreateProfile() {
+  const initialFormData = Object.freeze({
+    username: "",
+    password: "",
+  });
+  const [formData, updateFormData] = React.useState(initialFormData);
+  function handleChange() {
+    updateFormData({
+      ...formData,
+
+      // Trimming any whitespace
+      [e.target.name]: e.target.value.trim(),
+    });
+  }
   return (
     <div className=" bg-gray-100 pt-28 pb-10">
       <div className=" mx-2">
-        <form className="m-auto -mt-16 w-full rounded-xl bg-white p-4 shadow-xl sm:w-2/3 md:w-3/5 ">
+        <form
+          onSubmit={handleSubmit}
+          className="m-auto -mt-16 w-full rounded-xl bg-white p-4 shadow-xl sm:w-2/3 md:w-2/5 "
+        >
           <span className="flex justify-center pb-5 text-2xl font-bold text-gray-800">
             Create Profile
           </span>
-          {/* <div className=" flex justify-center ">
-            <div className=" mb-6 h-32 w-32   rounded-full border-3 border-white">
-              <img
-                src="img/Teams/exe.png"
-                alt="CreateProfile"
-                className=" rounded-full  object-cover "
-              />
-            </div>
-          </div> */}
-          <div className="mb-6 grid xl:grid-cols-2 xl:gap-6">
-            <div className="">
-              <label
-                htmlFor="name"
-                className="mb-2 block text-sm font-medium text-gray-700"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
-                placeholder="name"
-                required
-              />
-            </div>
-            <div className="">
-              <label
-                htmlFor="lastname"
-                className="mb-2 block text-sm font-medium text-gray-700"
-              >
-                Last Name
-              </label>
-              <input
-                type="text"
-                name="lastname"
-                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
-                placeholder="Last name"
-                required
-              />
-            </div>
+          <div className="mb-6 ">
+            <label
+              htmlFor="Name"
+              className="mb-2 block text-sm font-medium text-gray-700"
+            >
+              Name
+            </label>
+            <input
+              onChange={handleChange}
+              type="text"
+              name="Name"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
+              placeholder="name"
+              required
+            />
           </div>
           <div className="mb-6">
             <label
@@ -58,6 +49,7 @@ function CreateProfile() {
             </label>
 
             <input
+              onChange={handleChange}
               type="email"
               id="email"
               className="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
@@ -74,6 +66,7 @@ function CreateProfile() {
             </label>
 
             <input
+              onChange={handleChange}
               type="tel"
               name="contact"
               className="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
@@ -89,6 +82,7 @@ function CreateProfile() {
               College
             </label>
             <input
+              onChange={handleChange}
               type="text"
               name="college"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
@@ -123,6 +117,7 @@ function CreateProfile() {
               Branch
             </label>
             <input
+              onChange={handleChange}
               type="text"
               name="branch"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
@@ -138,6 +133,7 @@ function CreateProfile() {
               CodeChef username
             </label>
             <input
+              onChange={handleChange}
               type="text"
               name="codechefusername"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
@@ -153,6 +149,7 @@ function CreateProfile() {
               Skills
             </label>
             <input
+              onChange={handleChange}
               type="text"
               name="skills"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
