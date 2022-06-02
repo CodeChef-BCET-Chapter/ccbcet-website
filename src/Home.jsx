@@ -8,6 +8,8 @@ import Faq from "./components/Faq";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { IKImage } from "imagekitio-react";
+const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
 export default function Home() {
   const runCallback = cb => {
@@ -40,11 +42,14 @@ export default function Home() {
             data-aos-duration="1000"
             className="flex flex-col rounded-lg bg-gray-100 xl:flex-row shadow-xl "
           >
-            <img
-              className=" roun w-auto rounded-t-lg xl:h-96 xl:rounded-l-lg xl:rounded-t-none"
-              src="/img/Code Aaj Kal Contest.png"
-              alt="banner"
-            />
+            <IKImage
+                className=" roun w-auto rounded-lg xl:h-96"
+                urlEndpoint={urlEndpoint}
+                path="Code_Aaj_Kal_Contest_0ATMNgqlH.png"
+                alt="banner"
+                lqip={{ active: true }}
+                loading="lazy"
+              />
             <div className="p-10 xl:p-16">
               <div className=" mb-8">
                 <h1 className=" mb-4 w-full text-2xl font-semibold text-gray-900">

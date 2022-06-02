@@ -13,6 +13,7 @@
     "browserslist": "^4.20.3",
     "caniuse-lite": "^1.0.30001335",
     "font-awesome": "^4.7.0",
+    "imagekitio-react": "^1.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-icons": "^4.3.1",

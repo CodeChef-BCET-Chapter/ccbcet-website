@@ -20,14 +20,14 @@ function CreateProfile() {
           <div className="mb-6 grid xl:grid-cols-2 xl:gap-6">
             <div className="">
               <label
-                htmlFor="Name"
+                htmlFor="name"
                 className="mb-2 block text-sm font-medium text-gray-700"
               >
                 Name
               </label>
               <input
                 type="text"
-                name="Name"
+                name="name"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
                 placeholder="name"
                 required
@@ -35,14 +35,14 @@ function CreateProfile() {
             </div>
             <div className="">
               <label
-                htmlFor="LastName"
+                htmlFor="lastname"
                 className="mb-2 block text-sm font-medium text-gray-700"
               >
                 Last Name
               </label>
               <input
                 type="text"
-                name="Name"
+                name="lastname"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
                 placeholder="Last name"
                 required
@@ -75,7 +75,7 @@ function CreateProfile() {
 
             <input
               type="tel"
-              id="tel"
+              name="contact"
               className="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="Contact No."
               required
@@ -83,14 +83,14 @@ function CreateProfile() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="College"
+              htmlFor="college"
               className="mb-2 block text-sm font-medium text-gray-700"
             >
               College
             </label>
             <input
               type="text"
-              name="Name"
+              name="college"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="College Name"
               required
@@ -98,13 +98,13 @@ function CreateProfile() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="Designation"
+              htmlFor="designation"
               className="mb-2 block text-sm font-medium text-gray-700"
             >
               Batch
             </label>
             <select
-              name="Designation"
+              name="designation"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               required
             >
@@ -117,14 +117,14 @@ function CreateProfile() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="Branch"
+              htmlFor="branch"
               className="mb-2 block text-sm font-medium text-gray-700"
             >
               Branch
             </label>
             <input
               type="text"
-              name="Name"
+              name="branch"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="Branch"
               required
@@ -132,14 +132,14 @@ function CreateProfile() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="CodechefUserName"
+              htmlFor="codechefusername"
               className="mb-2 block text-sm font-medium text-gray-900"
             >
               CodeChef username
             </label>
             <input
               type="text"
-              name="CodechefUserName"
+              name="codechefusername"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               placeholder="codechef username"
               required
@@ -147,18 +147,65 @@ function CreateProfile() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="Skills"
+              htmlFor="skills"
               className="mb-2 block text-sm font-medium text-gray-900"
             >
               Skills
             </label>
             <input
               type="text"
-              name="Skills"
+              name="skills"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               placeholder="C++, Python, Java"
               required
             />
+          </div>
+          <div className="mb-6 grid xl:grid-cols-3 xl:gap-6">
+            <div className="">
+              <label
+                htmlFor="linkedin"
+                className="mb-2 block text-sm font-medium text-gray-700"
+              >
+                LinkedIn
+              </label>
+              <input
+                type="text"
+                name="linkedin"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
+                placeholder="LinkedIn"
+                required
+              />
+            </div>
+            <div className="">
+              <label
+                htmlFor="github"
+                className="mb-2 block text-sm font-medium text-gray-700"
+              >
+                Github
+              </label>
+              <input
+                type="text"
+                name="github"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
+                placeholder="Github"
+                required
+              />
+            </div>
+            <div className="">
+              <label
+                htmlFor="twitter"
+                className="mb-2 block text-sm font-medium text-gray-700"
+              >
+                Twitter
+              </label>
+              <input
+                type="text"
+                name="twitter"
+                className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
+                placeholder="twitter"
+                required
+              />
+            </div>
           </div>
           <div className="mb-6">
             <label
@@ -168,7 +215,7 @@ function CreateProfile() {
               Bio
             </label>
             <textarea
-              id="message"
+              name="message"
               rows="4"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="About "

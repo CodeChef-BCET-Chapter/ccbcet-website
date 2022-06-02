@@ -39,8 +39,8 @@ export default function Teams() {
           {/* Chapter Leads */}
 
           <section className=" flex flex-wrap justify-center gap-5">
-            {leadsData.map(leads => (
-              <LeadsCard leads={leads} key={leads.title} />
+            {leadsData.map((leads, index) => (
+              <LeadsCard leads={leads} key={index} />
             ))}
           </section>
         </article>
@@ -54,8 +54,8 @@ export default function Teams() {
             CP Executive
           </h1>
           <section className=" flex flex-wrap justify-center gap-5">
-            {cpexeData.map(cpexe => (
-              <CpexeCard cpexe={cpexe} key={cpexe.title} />
+            {cpexeData.map((cpexe, index) => (
+              <CpexeCard cpexe={cpexe} key={index} />
             ))}
           </section>
         </article>
@@ -70,8 +70,8 @@ export default function Teams() {
             Outreach & Media Executive
           </h1>
           <section className=" flex flex-wrap justify-center gap-5">
-            {mediaexeData.map(mediaexe => (
-              <MediaexeCard mediaexe={mediaexe} key={mediaexe.title} />
+            {mediaexeData.map((mediaexe, index) => (
+              <MediaexeCard mediaexe={mediaexe} key={index} />
             ))}
           </section>
         </article>
@@ -82,8 +82,8 @@ export default function Teams() {
             Event Executive
           </h1>
           <section className=" flex flex-wrap justify-center gap-5">
-            {eventexeData.map(eventexe => (
-              <EventexeCard eventexe={eventexe} key={eventexeData.index} />
+            {eventexeData.map((eventexe, index) => (
+              <EventexeCard eventexe={eventexe} key={index} />
             ))}
           </section>
         </article>

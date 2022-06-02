@@ -1,6 +1,6 @@
 export default [
   {
-    imageUrl: "/img/Teams/CpExe/preeticpexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/preeticpexe_fc7csj4OiK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173926088",
     name: "Preeti Kumari Yadav",
     designation: "CP Executive",
     linkedin: "https://www.linkedin.com/in/preeti-yadav14",
@@ -11,7 +11,7 @@ export default [
     
   },
   {
-    imageUrl: "/img/Teams/CpExe/salonicpexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/salonicpexe_vRYnle6Qt.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173926865",
     name: "Saloni Sahay",
     designation: "CP Executive",
     instagram: " ",
@@ -20,7 +20,7 @@ export default [
     github: "https://github.com/SaloniSahay"
   },
   {
-    imageUrl: "/img/Teams/CpExe/ramolacpexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/ramolacpexe_n5DLXeQqQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173926414",
     name: "Ramola Singh",
     designation: "CP Executive",
     instagram: " ",
@@ -29,7 +29,7 @@ export default [
     github: ""
   },
   {
-    imageUrl: "/img/Teams/CpExe/anirudhcpexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/anirudhcpexe_1Xrc35xVP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925273",
     name: "Aniruddha Pal",
     designation: "CP Executive",
     instagram: " ",
@@ -38,7 +38,7 @@ export default [
     github: ""
   },
   {
-    imageUrl: "/img/Teams/CpExe/bibhuenducpexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/bibhuenducpexe_3wD1OPTbm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925324",
     name: "Bibhabendu Mukherjee",
     designation: "CP Executive",
     instagram: " ",
@@ -47,7 +47,7 @@ export default [
     github: ""
   },
   {
-    imageUrl: "/img/Teams/CpExe/koushikcpexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/koushikcpexe_GxvnSkmTA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925715",
     name: "Koushik Biswas",
     designation: "CP Executive",
     instagram: " ",

@@ -1,13 +1,18 @@
 import React from "react";
+import { IKImage } from "imagekitio-react";
+const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
 export default function EventCard({ events }) {
   return (
-    <div data-aos="fade-up" data-aos-duration="1000">
+    <div >
       <div className="group relative mb-auto mt-auto flex h-auto w-auto transform overflow-hidden rounded-lg bg-white shadow-xl transition duration-500 ease-in-out hover:scale-105 sm:hidden">
         <div className="relative ">
-          <img
+          <IKImage
             src={events.imageUrl}
             alt={events.imageAlt}
+            urlEndpoint={urlEndpoint}
+            lqip={{ active: true }}
+            loading="lazy"
             className=" h-full  w-full"
           />
         </div>
@@ -17,28 +22,30 @@ export default function EventCard({ events }) {
               {events.title}
             </h1>
             <table className="mt-2 font-serif text-sm text-gray-600">
-              <tr>
-                <td width="15%" className="text-yellow-600">
-                  <i className="far fa-calendar-alt"></i>
-                </td>
-                <td>
-                  {events.date}
-                  <sup>{events.suscript}</sup>
-                  {events.year}
-                </td>
-              </tr>
-              <tr>
-                <td className="text-red-600">
-                  <i className="fas fa-map-marker-alt"></i>
-                </td>
-                <td>{events.platform}</td>
-              </tr>
-              <tr>
-                <td className="text-green-600">
-                  <i className="far fa-clock"></i>
-                </td>
-                <td>{events.time}</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td width="15%" className="text-yellow-600">
+                    <i className="far fa-calendar-alt"></i>
+                  </td>
+                  <td>
+                    {events.date}
+                    <sup>{events.suscript}</sup>
+                    {events.year}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-red-600">
+                    <i className="fas fa-map-marker-alt"></i>
+                  </td>
+                  <td>{events.platform}</td>
+                </tr>
+                <tr>
+                  <td className="text-green-600">
+                    <i className="far fa-clock"></i>
+                  </td>
+                  <td>{events.time}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <a
@@ -66,28 +73,30 @@ export default function EventCard({ events }) {
               {events.title}
             </h1>
             <table className="mt-2 font-serif text-sm text-gray-600">
-              <tr>
-                <td width="15%" className="text-yellow-600">
-                  <i className="far fa-calendar-alt"></i>
-                </td>
-                <td>
-                  {events.date}
-                  <sup>{events.suscript}</sup>
-                  {events.year}
-                </td>
-              </tr>
-              <tr>
-                <td className="text-red-600">
-                  <i className="fas fa-map-marker-alt"></i>
-                </td>
-                <td>{events.platform}</td>
-              </tr>
-              <tr>
-                <td className="text-green-600">
-                  <i className="far fa-clock"></i>
-                </td>
-                <td>{events.time}</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td width="15%" className="text-yellow-600">
+                    <i className="far fa-calendar-alt"></i>
+                  </td>
+                  <td>
+                    {events.date}
+                    <sup>{events.suscript}</sup>
+                    {events.year}
+                  </td>
+                </tr>
+                <tr>
+                  <td className="text-red-600">
+                    <i className="fas fa-map-marker-alt"></i>
+                  </td>
+                  <td>{events.platform}</td>
+                </tr>
+                <tr>
+                  <td className="text-green-600">
+                    <i className="far fa-clock"></i>
+                  </td>
+                  <td>{events.time}</td>
+                </tr>
+              </tbody>
             </table>
           </div>
           <a

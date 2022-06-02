@@ -10,7 +10,7 @@ function Inductionform() {
         <form className="m-auto -mt-16 w-full rounded-xl bg-white p-4 shadow-xl sm:w-2/3 md:w-2/5 ">
           <div className="mb-6">
             <label
-              htmlFor="Name"
+              htmlFor="name"
               className="mb-2 block text-sm font-medium text-gray-700"
             >
               Name
@@ -33,7 +33,7 @@ function Inductionform() {
 
             <input
               type="email"
-              id="email"
+              name="email"
               class="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="name@gmail.com"
               required
@@ -49,7 +49,7 @@ function Inductionform() {
 
             <input
               type="tel"
-              id="tel"
+              name="contact"
               class="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="Contact No."
               required
@@ -129,14 +129,14 @@ function Inductionform() {
           </div>
           <div className="mb-6">
             <label
-              htmlFor="CodechefUserName"
+              htmlFor="codechefusername"
               className="mb-2 block text-sm font-medium text-gray-900"
             >
               CodeChef username
             </label>
             <input
               type="text"
-              name="CodechefUserName"
+              name="codechefusername"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               placeholder="codechef username"
               required
@@ -150,7 +150,7 @@ function Inductionform() {
               Your message
             </label>
             <textarea
-              id="message"
+              name="message"
               rows="4"
               class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="Ask us anything..."

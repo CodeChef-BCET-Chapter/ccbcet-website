@@ -10,7 +10,7 @@ export default function Landing() {
           {/* <img className="h-10" src="/img/ccbcet-logo.svg" alt="Workcation" /> */}
           <img
             className="mt-6 rounded-lg object-center sm:mt-8 sm:h-64 sm:w-auto sm:object-cover lg:hidden"
-            src="/img/landing_img.svg"
+            src="https://ik.imagekit.io/botoixhvc/landing_img_Z_JEK1f-D.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1654186498794"
             alt="graphics"
           />
           <h1
@@ -44,7 +44,7 @@ export default function Landing() {
       >
         <img
           className="absolute inset-0 h-full min-w-full"
-          src="/img/landing_img.svg"
+          src="https://ik.imagekit.io/botoixhvc/landing_img_Z_JEK1f-D.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1654186498794"
           alt="Woman workcationing on the beach"
         />
       </div>

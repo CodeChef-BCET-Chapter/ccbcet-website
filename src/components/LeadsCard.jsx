@@ -2,23 +2,27 @@ import React from "react";
 import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { IKImage } from "imagekitio-react";
+const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
+
 export default function Leads({ leads }) {
   return (
     <div className="">
       {/* Leads */}
 
-      <div
+      <div 
         data-aos="fade-up"
         data-aos-duration="1000"
         className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl  "
       >
         <div className=" flex justify-center">
           <div className=" -mt-28 h-32 w-32 rounded-full   border-3 border-red-600 ">
-            <LazyLoadImage
+            <IKImage
               src={leads.imageUrl}
               alt={leads.name}
-              placeholderSrc="img/Teams/exe.png"
-              effect="blur"
+              urlEndpoint={urlEndpoint}
+              lqip={{ active: true }}
+              loading="lazy"
               className=" rounded-full  object-cover "
             />
           </div>

@@ -1,6 +1,6 @@
 export default [
   {
-    imageUrl: "/img/Teams/exe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/user.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173435474",
     name: "Vikash Mehta",
     designation: "Outreach & Media Executive",
     instagram: "",
@@ -9,7 +9,7 @@ export default [
     github: "",
   },
   {
-    imageUrl: "/img/Teams/CpExe/salonicpexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/salonicpexe_vRYnle6Qt.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173926865",
     name: "Saloni Sahay",
     designation: "Outreach & Media Executive",
     instagram: " ",
@@ -18,7 +18,7 @@ export default [
     github: "https://github.com/SaloniSahay",
   },
   {
-    imageUrl: "/img/Teams/MediaExe/archanamediaexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/MediaExe/archanamediaexe_k4s287lfd.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654176574983",
     name: "Archana Kumari",
     designation: "Outreach & Media Executive",
     instagram: "https://www.instagram.com/areychana",
@@ -27,7 +27,7 @@ export default [
     github: "https://github.com/areychana",
   },
   {
-    imageUrl: "/img/Teams/MediaExe/souvikmediaexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/MediaExe/souvikmediaexe_0ebteGWV_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654176575190",
     name: "Souvik Mahato",
     designation: "Outreach & Media Executive",
     instagram: "",
@@ -37,7 +37,7 @@ export default [
   },
 
   {
-    imageUrl: "/img/Teams/MediaExe/rohitmediaexe.png",
+    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/MediaExe/rohitmediaexe_nB7SPGioY.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654176575002",
     name: "Rohit Raj ",
     designation: "Outreach & Media Executive",
     instagram: "",
