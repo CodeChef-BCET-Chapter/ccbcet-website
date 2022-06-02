@@ -3,12 +3,18 @@ import { Transition } from "@headlessui/react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsCalendarEvent } from "react-icons/bs";
 import { RiTeamLine, RiBook2Line } from "react-icons/ri";
-import { MdOutlineLeaderboard } from "react-icons/md";
+import { MdOutlineLeaderboard, MdOutlineLogin } from "react-icons/md";
+import Login from "./login/Login";
+import ProfilePic from "./login/ProfilePic";
+import { UserAuth } from "../context/AuthContext";
 
 export default function NavBar() {
+  const { user } = UserAuth();
   const [isOpen, setIsOpen] = useState(false);
+  
   return (
     <div>
+      {/* Web */}
       <nav className="bg-gray-800 ">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -28,7 +34,7 @@ export default function NavBar() {
 
               <div>
                 <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
+                  <div className="ml-10 flex space-x-4">
                     <a
                       href="/"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
@@ -43,7 +49,6 @@ export default function NavBar() {
                       <BsCalendarEvent className="mx-1 text-lg" /> Events
                     </a>
 
-                   
                     <a
                       href="/teams"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
@@ -65,8 +70,9 @@ export default function NavBar() {
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <RiBook2Line className="mx-1 text-lg" />
-                    Resources
+                      Resources
                     </a>
+                    {user ? <ProfilePic /> : <Login />}
                   </div>
                 </div>
               </div>
@@ -75,7 +81,7 @@ export default function NavBar() {
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="focus:outline-none inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -128,47 +134,46 @@ export default function NavBar() {
           leaveTo="opacity-0 scale-95"
         >
           {/* Mobile menu*/}
-          {ref => (
+          {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-              <a
-                      href="/"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <AiOutlineHome className="mx-1 text-lg" /> Home
-                    </a>
+                <a
+                  href="/"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <AiOutlineHome className="mx-1 text-lg" /> Home
+                </a>
 
-                    <a
-                      href="/events"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <BsCalendarEvent className="mx-1 text-lg" /> Events
-                    </a>
+                <a
+                  href="/events"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <BsCalendarEvent className="mx-1 text-lg" /> Events
+                </a>
 
-                   
-                    <a
-                      href="/teams"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <RiTeamLine className="mx-1 text-lg" />
-                      Teams
-                    </a>
+                <a
+                  href="/teams"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <RiTeamLine className="mx-1 text-lg" />
+                  Teams
+                </a>
 
-                    <a
-                      href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
-                      target="_blank"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <MdOutlineLeaderboard className="mx-1 text-lg" />
-                      Leaderboard
-                    </a>
-                    <a
-                      href="/resources"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <RiBook2Line className="mx-1 text-lg" />
-                    Resources
-                    </a>
+                <a
+                  href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
+                  target="_blank"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <MdOutlineLeaderboard className="mx-1 text-lg" />
+                  Leaderboard
+                </a>
+                <a
+                  href="/resources"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <RiBook2Line className="mx-1 text-lg" />
+                  Resources
+                </a>
               </div>
             </div>
           )}
