@@ -24,21 +24,17 @@ export const AuthContextProvider = ({ children }) => {
     signOut(auth);
   };
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+    if (
+      currentUser &&
+      currentUser.metadata.creationTime === currentUser.metadata.lastSignInTime
+    ) {
+      history.push("/create-profile");
+    }
+  });
 
-      if (currentUser &&
-        currentUser.metadata.creationTime ===
-        currentUser.metadata.lastSignInTime
-      ) {
-        history.push("/create-profile");
-      }
-    });
-    return () => {
-      unsubscribe();
-    };
-  }, [user]);
+  
 
   return (
     <AuthContext.Provider value={{ googleSignIn, logOut, user }}>

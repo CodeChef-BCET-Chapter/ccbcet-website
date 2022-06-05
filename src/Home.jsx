@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Landing from "./components/Landing";
 import Youtubevideo from "./components/Youtubevideo";
 import EventCard from "./components/EventCard";
@@ -9,10 +9,19 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { IKImage } from "imagekitio-react";
+import { getEvents } from "./firestoredb";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
 export default function Home() {
-  const runCallback = cb => {
+  const [events, setEvents] = useState(null);
+  useEffect(() => {
+    getEvents().then((value) => {
+      setEvents(value);
+      console.log(value);
+    });
+  }, []);
+
+  const runCallback = (cb) => {
     return cb();
   };
   React.useEffect(() => {
@@ -36,20 +45,25 @@ export default function Home() {
               Event & Workshops
             </h1>
           </div>
+          <div className="mb-6 text-center">
+            <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-900 lg:w-3/4 xl:w-2/4">
+              Upcoming Events
+            </p>
+          </div>
           {/* banner */}
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="flex flex-col rounded-lg bg-gray-100 xl:flex-row shadow-xl "
+            className="flex flex-col rounded-lg bg-gray-100 shadow-xl xl:flex-row "
           >
             <IKImage
-                className=" roun w-auto rounded-lg xl:h-96"
-                urlEndpoint={urlEndpoint}
-                path="Code_Aaj_Kal_Contest_0ATMNgqlH.png"
-                alt="banner"
-                lqip={{ active: true }}
-                loading="lazy"
-              />
+              className=" roun w-auto rounded-lg xl:h-96"
+              urlEndpoint={urlEndpoint}
+              path="Code_Aaj_Kal_Contest_0ATMNgqlH.png"
+              alt="banner"
+              lqip={{ active: true }}
+              loading="lazy"
+            />
             <div className="p-10 xl:p-16">
               <div className=" mb-8">
                 <h1 className=" mb-4 w-full text-2xl font-semibold text-gray-900">
@@ -64,7 +78,7 @@ export default function Home() {
               <div className="">
                 <a
                   href="/eventdetails"
-                  className=" focus:outline-none mt-10 rounded-full bg-red-600 p-2 px-4  text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:ring"
+                  className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
                 >
                   Register Here
                 </a>
@@ -86,15 +100,8 @@ export default function Home() {
             data-aos-duration="1000"
             className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
           >
-            {runCallback(() => {
-              const row = [];
-              for (let i = 0; i < 4; i++) {
-                row.push(
-                  <EventCard events={eventCard[i]} key={eventCard[i].title} />
-                );
-              }
-              return row;
-            })}
+            {events &&
+              events.map((e, index) => <EventCard events={e} key={index} />)}
           </section>
         </article>
       </section>
