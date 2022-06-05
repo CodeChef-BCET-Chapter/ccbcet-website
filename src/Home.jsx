@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Landing from "./components/Landing";
 import Youtubevideo from "./components/Youtubevideo";
 import EventCard from "./components/EventCard";
-import eventCard from "./data/eventCard";
 import Opportunity from "./components/Opportunity";
 import Faq from "./components/Faq";
 import { Link } from "react-router-dom";
@@ -10,33 +9,36 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { IKImage } from "imagekitio-react";
 import EventCardSkelton from "./components/EventCardSkelton";
-import LoginPopUp from "./components/Modal/LoginPopUp";
 import { getEvents } from "./firestoredb";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
+import LoginPopup from "./components/modal/LoginPopup";
+import { UserAuth } from "./context/AuthContext";
 
 export default function Home() {
   const [events, setEvents] = useState(null);
   const [isLoading, setLoading] = useState(false);
+  const {showModal, setShowModal} = UserAuth()
   useEffect(() => {
     setLoading(true);
-    getEvents().then(value => {
+    getEvents().then((value) => {
       setEvents(value);
       setLoading(false);
       console.log(value);
     });
   }, []);
 
-  const runCallback = cb => {
+  const runCallback = (cb) => {
     return cb();
   };
   React.useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+
   return (
     <div className="space-y-24">
+      {showModal && <LoginPopup onConfirm={()=>setShowModal(false)} />}
       <Landing />
       <Youtubevideo />
       {/* Event Cards */}
@@ -83,7 +85,7 @@ export default function Home() {
               </div>
               <div className="">
                 <Link
-                  to="/event-registration/:id"
+                  to="/event-registration/id"
                   className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
                 >
                   Register Here
