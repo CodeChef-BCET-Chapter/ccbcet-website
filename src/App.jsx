@@ -31,9 +31,9 @@ export default function App() {
             <Route path="/eventdetails" component={EventDetails} />
             <Route path="/teams" component={Teams} />
             <Route path="/team-tshirt" component={TeamTshirt} />
-            <Route path="/event-registration/:id" component={EventForm} />
-            <Route path="/create-profile" component={CreateProfile} />
-            <Route path="/view-profile/" component={ViewProfile} />
+            <Protected path="/event-registration/:id" component={EventForm} />
+            <Protected path="/create-profile" component={CreateProfile} />
+            <Protected path="/view-profile/" component={ViewProfile} />
           </Switch>
           <Foot />
         </AuthContextProvider>

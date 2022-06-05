@@ -1,20 +1,16 @@
-import React from 'react';
-import { UserAuth } from '../context/AuthContext';
+import React from "react";
+import { Route } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
-const Protected = ({ children }) => {
-  const { googleSignIn, user } = UserAuth();
-  const handleGoogleSignIn = async () => {
-    try {
-      !user && await googleSignIn();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const Protected = ({ component, path }) => {
+  const { user } = UserAuth();
+
   if (!user) {
-    handleGoogleSignIn();
+    return <Redirect to="/" />;
   }
 
-  return children;
+  return <Route component={component} path={path} />;
 };
 
 export default Protected;
