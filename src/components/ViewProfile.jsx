@@ -8,6 +8,8 @@ import {
   MdOutlineModeEdit,
 } from "react-icons/md";
 import { IKImage } from "imagekitio-react";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
 function ViewProfile() {
@@ -20,22 +22,22 @@ function ViewProfile() {
           urlEndpoint={urlEndpoint}
             lqip={{ active: true }}
             loading="lazy"
-          className=" h-60 w-full rounded-b-xl"
+          className=" h-60 w-full rounded-b-xl" 
         />
       </div>
       <div className="relative z-40 mx-2">
         <div className="m-auto -mt-16 w-full rounded-xl  bg-white p-4 shadow-xl sm:w-2/3 md:w-1/2 ">
           <div className=" flex justify-center ">
-            <div className=" -mt-20 mb-6 h-32 w-32   rounded-full border-3 border-white">
+            <div className=" -mt-20 mb-6 w-32 h-32  rounded-full bg-white border-3 border-white  ">
               <img
-                src="https://ik.imagekit.io/botoixhvc/user.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654189434418"
+                src="img/unnamed.png"
                 alt="ViewProfile"
-                className=" rounded-full  object-cover "
+                className=" rounded-full w-full object-cover  "
               />
             </div>
           </div>
           <div className="text-center text-gray-700">
-            <h3 className="bold font-sans text-xl text-gray-900">
+            <h3 className="bold font-serif text-2xl text-gray-900">
               Saurabh Kumar
             </h3>
             <p className="mt-4 font-sans font-light ">

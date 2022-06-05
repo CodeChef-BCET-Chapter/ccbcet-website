@@ -11,35 +11,35 @@ import { UserAuth } from "../context/AuthContext";
 export default function NavBar() {
   const { user } = UserAuth();
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <div>
       {/* Web */}
       <nav className="bg-gray-800 ">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex flex-grow justify-between">
               <a href="/">
                 <div className="flex items-center gap-4">
                   <img
-                    className="h-8 w-8"
+                    className="h-10 w-10"
                     src="/img/ccbcet-logo.svg"
                     alt="CC BECT logo"
                   />
-                  <h1 className="font-semibold text-white">
+                  <h1 className="hidden text-lg font-semibold text-white  lg:block   ">
                     CodeChef BCET Chapter
                   </h1>
                 </div>
               </a>
 
               <div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex space-x-4">
+                <div className="hidden md:block ">
+                  <div className="ml-10 flex items-center space-x-4">
                     <a
                       href="/"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      className="flex rounded-md px-3 py-2  text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
-                      <AiOutlineHome className="mx-1 text-lg" /> Home
+                      <AiOutlineHome className="mx-1 text-lg " /> Home
                     </a>
 
                     <a
@@ -72,12 +72,17 @@ export default function NavBar() {
                       <RiBook2Line className="mx-1 text-lg" />
                       Resources
                     </a>
-                    {user ? <ProfilePic /> : <Login />}
+                    {user ? <ProfilePic /> : <Login /> }
                   </div>
+                  
                 </div>
               </div>
             </div>
             <div className="-mr-2 flex md:hidden">
+              <div className=" flex items-center px-5 ">
+                <p className=" text-white px-4 ">{user ? user.displayName : null}</p>
+                {user ? <ProfilePic /> : <Login />}
+              </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -134,7 +139,7 @@ export default function NavBar() {
           leaveTo="opacity-0 scale-95"
         >
           {/* Mobile menu*/}
-          {(ref) => (
+          {ref => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                 <a

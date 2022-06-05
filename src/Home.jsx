@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { IKImage } from "imagekitio-react";
+import EventCardSkelton from "./components/EventCardSkelton";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
 export default function Home() {
@@ -96,6 +97,17 @@ export default function Home() {
               return row;
             })}
           </section>
+          {/* <section
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
+          >
+           <EventCardSkelton/>
+          <EventCardSkelton/>
+          <EventCardSkelton/>
+          <EventCardSkelton/>
+          </section> */}
+          
         </article>
       </section>
       <Opportunity />

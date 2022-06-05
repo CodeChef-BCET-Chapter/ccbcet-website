@@ -1,10 +1,12 @@
 import React from "react";
 import { IKImage } from "imagekitio-react";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { MdLocationPin, MdAccessTime } from "react-icons/md";
 
 export default function EventCard({ events }) {
   return (
-    <div >
+    <div>
       <div className="group relative mb-auto mt-auto flex h-auto w-auto transform overflow-hidden rounded-lg bg-white shadow-xl transition duration-500 ease-in-out hover:scale-105 sm:hidden">
         <div className="relative ">
           <IKImage
@@ -24,8 +26,10 @@ export default function EventCard({ events }) {
             <table className="mt-2 font-serif text-sm text-gray-600">
               <tbody>
                 <tr>
-                  <td width="15%" className="text-yellow-600">
-                    <i className="far fa-calendar-alt"></i>
+                  <td width="15%" className="p-1 text-yellow-600">
+                    <span className="flex items-center text-lg">
+                      <FaRegCalendarAlt />
+                    </span>
                   </td>
                   <td>
                     {events.date}
@@ -34,14 +38,18 @@ export default function EventCard({ events }) {
                   </td>
                 </tr>
                 <tr>
-                  <td className="text-red-600">
-                    <i className="fas fa-map-marker-alt"></i>
+                  <td className="p-1 text-red-600">
+                    <span className="flex items-center text-lg">
+                      <MdLocationPin />
+                    </span>
                   </td>
                   <td>{events.platform}</td>
                 </tr>
                 <tr>
-                  <td className="text-green-600">
-                    <i className="far fa-clock"></i>
+                  <td className="p-1 text-green-600">
+                    <span className="flex items-center text-lg">
+                      <MdAccessTime />
+                    </span>
                   </td>
                   <td>{events.time}</td>
                 </tr>
@@ -59,7 +67,12 @@ export default function EventCard({ events }) {
         </div>
       </div>
       {/* Dextop View */}
-      <div className="w-ful group relative mb-auto mt-auto hidden h-full  transform overflow-hidden rounded-lg bg-white shadow-xl transition duration-500 ease-in-out hover:scale-105 sm:block">
+      <div
+        className="w-ful group relative mb-auto mt-auto hidden h-full  
+      transform overflow-hidden 
+      rounded-lg bg-white shadow-xl transition
+      duration-500 ease-in-out hover:scale-105 sm:block"
+      >
         <div className="relative w-full">
           <img
             src={events.imageUrl}
@@ -75,8 +88,10 @@ export default function EventCard({ events }) {
             <table className="mt-2 font-serif text-sm text-gray-600">
               <tbody>
                 <tr>
-                  <td width="15%" className="text-yellow-600">
-                    <i className="far fa-calendar-alt"></i>
+                  <td width="15%" className="p-1 text-yellow-600 ">
+                    <span className="flex items-center text-lg ">
+                      <FaRegCalendarAlt />
+                    </span>
                   </td>
                   <td>
                     {events.date}
@@ -85,14 +100,18 @@ export default function EventCard({ events }) {
                   </td>
                 </tr>
                 <tr>
-                  <td className="text-red-600">
-                    <i className="fas fa-map-marker-alt"></i>
+                  <td className="p-1 text-red-600">
+                    <span className="flex items-center text-lg">
+                      <MdLocationPin />
+                    </span>
                   </td>
                   <td>{events.platform}</td>
                 </tr>
                 <tr>
-                  <td className="text-green-600">
-                    <i className="far fa-clock"></i>
+                  <td className="p-1 text-green-600">
+                    <span className="flex items-center text-lg ">
+                      <MdAccessTime />
+                    </span>
                   </td>
                   <td>{events.time}</td>
                 </tr>

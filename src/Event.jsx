@@ -2,6 +2,7 @@ import React from "react";
 import EventCard from "./components/EventCard";
 import eventCard from "./data/eventCard";
 import { IKImage } from "imagekitio-react";
+import EventCardSkelton from "./components/EventCardSkelton";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function Event() {
   return (
@@ -59,6 +60,7 @@ export default function Event() {
           <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
             {eventCard.map(events => (
               <EventCard events={events} key={events.title} />
+              
             ))}
           </section>
         </article>
