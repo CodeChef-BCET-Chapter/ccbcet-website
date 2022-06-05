@@ -4,9 +4,10 @@ import { Redirect } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const Protected = ({ component, path }) => {
-  const { user } = UserAuth();
+  const { user, setShowModal } = UserAuth();
 
   if (!user) {
+    setShowModal((old) => !old);
     return <Redirect to="/" />;
   }
 
