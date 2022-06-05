@@ -23,7 +23,7 @@ function EventCardSkelton() {
       </div>
 
       {/* dextop view skelton */}
-      <div className=" group relative mb-auto mt-auto hidden  h-96 w-72   transform overflow-hidden rounded-lg  shadow-xl  sm:block">
+      <div className=" group relative mb-auto mt-auto hidden transform overflow-hidden rounded-lg  shadow-xl  sm:block">
         <Skeleton height={200} borderRadius={10} />
 
         <div className="px-3 py-3 subpixel-antialiased  ">

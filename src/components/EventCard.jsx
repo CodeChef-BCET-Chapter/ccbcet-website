@@ -5,7 +5,7 @@ const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdLocationPin, MdAccessTime } from "react-icons/md";
 
-export default function EventCard({ events }) {
+export default function EventCard({ events}) {
   return (
     <div>
       <div className="group relative mb-auto mt-auto flex h-auto w-auto transform overflow-hidden rounded-lg bg-white shadow-xl transition duration-500 ease-in-out hover:scale-105 sm:hidden">
@@ -57,14 +57,14 @@ export default function EventCard({ events }) {
               </tbody>
             </table>
           </div>
-          <a
+          <button
             href={events.href}
             target="blank"
-            className=" float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+            className="cursor-not-allowed  cu float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
           >
             {" "}
             {events.button}
-          </a>
+          </button>
         </div>
       </div>
       {/* Dextop View */}
@@ -119,21 +119,23 @@ export default function EventCard({ events }) {
               </tbody>
             </table>
           </div>
-          {events.button === "Register" ? (
+          {events.button === "Register Here" ? (
             <Link
               to={`/event-registration/${events.id}`}
-              className=" float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+              type="button"
+              className="float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
             >
               {events.button}
             </Link>
           ) : (
-            <a
+            <button
               href={events.href}
               target="blank"
-              className=" float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+              type="button"
+              className=" cursor-not-allowed float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring-red-800"
             >
               {events.button}
-            </a>
+            </button>
           )}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import NavBar from "./components/NavBar";
 import Foot from "./components/Foot";
 import Home from "./Home";
@@ -12,14 +12,18 @@ import ViewProfile from "./components/ViewProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
 import EventForm from "./EventForm";
-import Protected from "./components/Protected";
+import useDetectClickOut from "./hooks/useDetectClickOut";
+import LoginPopUp from "./components/Modal/LoginPopUp";
 
 export default function App() {
+  const [showModal, setShowModal] = useState(false);
+  const { setShow, show, nodeRef, triggerRef } = useDetectClickOut(false);
   return (
     <BrowserRouter>
       <div className="App">
         <AuthContextProvider>
           <NavBar />
+          {showModal ? <LoginPopUp setShowModal={setShowModal} /> : null}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/events" component={Event} />

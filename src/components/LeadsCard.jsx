@@ -10,7 +10,7 @@ export default function Leads({ leads }) {
     <div className="">
       {/* Leads */}
 
-      <div 
+      <div
         data-aos="fade-up"
         data-aos-duration="1000"
         className=" my-10 h-56 w-72 rounded-lg bg-white p-10 shadow-xl  "

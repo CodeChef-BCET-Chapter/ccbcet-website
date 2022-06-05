@@ -10,14 +10,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { IKImage } from "imagekitio-react";
 import EventCardSkelton from "./components/EventCardSkelton";
+import LoginPopUp from "./components/Modal/LoginPopUp";
 import { getEvents } from "./firestoredb";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
-export default function Home() {
+export default function Home(props) {
   const [events, setEvents] = useState(null);
+  const [isLoading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     getEvents().then(value => {
       setEvents(value);
+      setLoading(false);
       console.log(value);
     });
   }, []);
@@ -39,7 +45,7 @@ export default function Home() {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            id="codeaajkal"
+            id="induction_2k22"
             className="mb-14 text-center"
           >
             <h1 className="title-font mb-4 text-center text-2xl font-medium text-gray-900 sm:text-3xl">
@@ -71,8 +77,8 @@ export default function Home() {
                   INDUCTION <span className=" text-red-500">2K22</span>
                 </h1>
                 <p>
-                  Introuduction to CodeChef BCET
-                  Chapter on 11th June at Seminar Hall CST Block.
+                  Introuduction to CodeChef BCET Chapter on 11th June at Seminar
+                  Hall CST Block.
                 </p>
               </div>
               <div className="">
@@ -85,24 +91,34 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="mt-10 text-center"
-          >
+          <div className="mt-10 text-center">
             <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-900 lg:w-3/4 xl:w-2/4">
               Recent Events
             </p>
           </div>
 
-          <section
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
-          >
-            {events &&
-              events.map((e, index) => <EventCard events={e} key={index} />)}
-          </section>
+          {isLoading ? (
+            <div className="">
+              <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+                {[...Array(8)].map((item, index) => (
+                  <EventCardSkelton  key={index} />
+                ))}
+              </section>
+            </div>
+          ) : (
+            <div className="">
+              <section
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
+              >
+                {events &&
+                  events.map((e, index) => (
+                    <EventCard events={e} key={index} />
+                  ))}
+              </section>
+            </div>
+          )}
         </article>
       </section>
       <Opportunity />

@@ -3,12 +3,18 @@ import EventCard from "./components/EventCard";
 import { IKImage } from "imagekitio-react";
 import { getEvents } from "./firestoredb";
 import { Link } from "react-router-dom";
+import EventCardSkelton from "./components/EventCardSkelton";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function Event() {
   const [events, setEvents] = useState(null);
+  const [isLoading, setLoading] = useState(false);
   useEffect(() => {
-    getEvents().then((value) => {
+    setLoading(true);
+    getEvents().then(value => {
       setEvents(value);
+      setLoading(false);
       console.log(value);
     });
   }, []);
@@ -39,12 +45,12 @@ export default function Event() {
               <div className="p-10 xl:p-16">
                 <div className=" mb-8">
                   <h1 className=" mb-4 w-full text-2xl font-semibold text-gray-900">
-                  INDUCTION <span className=" text-red-500">2K22</span>
-                </h1>
-                <p>
-                  Introuduction to CodeChef BCET
-                  Chapter on 11th June at Seminar Hall CST Block.
-                </p>
+                    INDUCTION <span className=" text-red-500">2K22</span>
+                  </h1>
+                  <p>
+                    Introuduction to CodeChef BCET Chapter on 11th June at
+                    Seminar Hall CST Block.
+                  </p>
                 </div>
                 <div className="">
                   <Link
@@ -62,10 +68,31 @@ export default function Event() {
               Recent Events
             </p>
           </div>
-          <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+          {/* <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
             {events &&
               events.map((e, index) => <EventCard events={e} key={index} />)}
-          </section>
+          </section> */}
+          {isLoading ? (
+            <div className="">
+              <p className="">Loading...</p>
+              <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+                {/* {events &&
+                  events.map((e, index) => (
+                    <EventCardSkelton events={e} key={index} />
+                  ))} */}
+                <EventCardSkelton />
+              </section>
+            </div>
+          ) : (
+            <div className="">
+              <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+                {events &&
+                  events.map((e, index) => (
+                    <EventCard events={e} key={index} />
+                  ))}
+              </section>
+            </div>
+          )}
         </article>
       </section>
     </div>
