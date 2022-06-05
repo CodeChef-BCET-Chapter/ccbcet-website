@@ -74,13 +74,10 @@ export default function Event() {
           </section> */}
           {isLoading ? (
             <div className="">
-              <p className="">Loading...</p>
               <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                {/* {events &&
-                  events.map((e, index) => (
-                    <EventCardSkelton events={e} key={index} />
-                  ))} */}
-                <EventCardSkelton />
+              {[...Array(8)].map((item, index) => (
+                  <EventCardSkelton key={index} />
+                ))}
               </section>
             </div>
           ) : (

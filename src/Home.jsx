@@ -16,7 +16,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
-export default function Home(props) {
+export default function Home() {
   const [events, setEvents] = useState(null);
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
@@ -101,17 +101,13 @@ export default function Home(props) {
             <div className="">
               <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                 {[...Array(8)].map((item, index) => (
-                  <EventCardSkelton  key={index} />
+                  <EventCardSkelton key={index} />
                 ))}
               </section>
             </div>
           ) : (
             <div className="">
-              <section
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
-              >
+              <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                 {events &&
                   events.map((e, index) => (
                     <EventCard events={e} key={index} />
