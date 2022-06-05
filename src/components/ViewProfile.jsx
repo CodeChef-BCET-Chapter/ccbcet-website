@@ -7,22 +7,23 @@ import { BiBuildings, BiPhoneCall, BiLinkAlt } from "react-icons/bi";
 import { BsLinkedin, BsGithub, BsTwitter } from "react-icons/bs";
 import { MdOutlineEngineering, MdOutlineModeEdit } from "react-icons/md";
 import { IKImage } from "imagekitio-react";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import "react-loading-skeleton/dist/skeleton.css";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function ViewProfile() {
   const { user } = UserAuth();
+  const history = useHistory();
   const [userData, setUserData] = useState({});
   useEffect(() => {
     user &&
-      getRealTimeUserData(user?.uid).then((value) => {
-        setUserData(value.data);
+      getRealTimeUserData(user?.uid).then(value => {
+        if (!value.data) history.push("/create-profile");
+        else setUserData(value.data);
       });
   }, []);
   console.log(userData);
-  if (!userData) return <h1>no data</h1>;
   return (
     <div className=" bg-gray-100 pb-5 ">
       <div className="m-auto  h-60 w-full rounded-b-2xl ">
@@ -38,11 +39,11 @@ function ViewProfile() {
       <div className="relative z-40 mx-2">
         <div className="m-auto -mt-16 w-full rounded-xl  bg-white p-4 shadow-xl sm:w-2/3 md:w-1/2 ">
           <div className=" flex justify-center ">
-            <div className=" -mt-20 mb-6 w-32 h-32  rounded-full bg-white border-3 border-white  ">
+            <div className=" -mt-20 mb-6 h-32 w-32  rounded-full border-3 border-white bg-white  ">
               <img
                 src={user?.photoURL}
                 alt="ViewProfile"
-                className=" rounded-full w-full object-cover  "
+                className=" w-full rounded-full object-cover  "
               />
             </div>
           </div>
@@ -91,17 +92,17 @@ function ViewProfile() {
               Social Links
             </p>
             <div className="flex space-x-3 py-2 pl-10 text-xl  ">
-              <a href={userData.linkedin} className=" ">
+              <a href={userData.linkedin} className=" "  target="_blank">
                 <span className="hover:text-blue-700">
                   <BsLinkedin />
                 </span>
               </a>
-              <a href={userData.github} className="">
+              <a href={userData.github} className="" target="_blank">
                 <span className="hover:text-black">
                   <BsGithub />
                 </span>
               </a>
-              <a href={userData.twitter} className="">
+              <a href={userData.twitter} className="" target="_blank">
                 <span className="hover:text-blue-700">
                   <BsTwitter />
                 </span>

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { UserAuth } from "./context/AuthContext";
 import { addParticipants } from "./firestoredb";
+import { IKImage } from "imagekitio-react";
+const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
 function EventForm() {
   let { id } = useParams();
@@ -26,7 +28,7 @@ function EventForm() {
       [e.target.name]: e.target.value.trim(),
     });
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     console.log(formData);
     user && addParticipants(formData, id, user.id);
@@ -34,12 +36,21 @@ function EventForm() {
   };
   return (
     <div className=" bg-gray-100 pb-5">
-      <div className="m-auto  h-60 rounded-b-xl bg-red-400 sm:w-full md:w-3/4 "></div>
+      <div className="m-auto  rounded-b-xl  sm:w-full md:w-3/4 ">
+        <IKImage
+          className=" roun h-auto w-full rounded-b-lg sm:h-60 "
+          urlEndpoint={urlEndpoint}
+          path="from_banner.png"
+          alt="banner"
+          lqip={{ active: true }}
+          loading="lazy"
+        />
+      </div>
 
       <div className="relative z-40 mx-2">
         <form
           onSubmit={handleSubmit}
-          className="m-auto -mt-16 w-full rounded-xl bg-white p-4 shadow-xl sm:w-2/3 md:w-2/5 "
+          className="m-auto -mt-7 w-full rounded-xl bg-white p-4 shadow-xl sm:-mt-16 sm:w-2/3 md:w-2/5 "
         >
           <div className="mb-6">
             <label
@@ -108,22 +119,22 @@ function EventForm() {
               <option name="branch" value="Choose">
                 --choose your branch--
               </option>
-              <option name="branch" value="lead">
+              <option name="branch" value="CSE">
                 CSE
               </option>
-              <option name="branch" value="CP">
+              <option name="branch" value="IT">
                 IT
               </option>
-              <option name="branch" value="Media">
+              <option name="branch" value="ECE">
                 ECE
               </option>
-              <option name="branch" value="Event">
+              <option name="branch" value="EE">
                 EE
               </option>
-              <option name="branch" value="Volunteer">
+              <option name="branch" value="ME">
                 ME
               </option>
-              <option name="branch" value="Volunteer">
+              <option name="branch" value="Civil">
                 Civil
               </option>
             </select>
@@ -139,7 +150,7 @@ function EventForm() {
                     type="radio"
                     className="form-radio h-4 w-4 text-green-500 checked:bg-green-500"
                     name="year"
-                    value="1"
+                    value="1st Year"
                   />
                   <span className="ml-2">1st Year</span>
                 </label>
@@ -151,7 +162,7 @@ function EventForm() {
                     type="radio"
                     className="form-radio h-4 w-4"
                     name="year"
-                    value="2"
+                    value="2nd Year"
                   />
                   <span className="ml-2">2nd Year</span>
                 </label>
@@ -163,7 +174,7 @@ function EventForm() {
                     type="radio"
                     className="form-radio h-4 w-4"
                     name="year"
-                    value="3"
+                    value="3rd Year"
                   />
                   <span className="ml-2">3rd Year</span>
                 </label>
@@ -175,7 +186,7 @@ function EventForm() {
                     type="radio"
                     className="form-radio h-4 w-4"
                     name="year"
-                    value="4"
+                    value="4th Year"
                   />
                   <span className="ml-2">4th Year</span>
                 </label>

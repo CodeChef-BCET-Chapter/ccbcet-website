@@ -16,13 +16,13 @@ const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function Home() {
   const [events, setEvents] = useState(null);
   useEffect(() => {
-    getEvents().then((value) => {
+    getEvents().then(value => {
       setEvents(value);
       console.log(value);
     });
   }, []);
 
-  const runCallback = (cb) => {
+  const runCallback = cb => {
     return cb();
   };
   React.useEffect(() => {
@@ -47,7 +47,7 @@ export default function Home() {
             </h1>
           </div>
           <div className="mb-6 text-center">
-            <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-900 lg:w-3/4 xl:w-2/4">
+            <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-700 lg:w-3/4 xl:w-2/4">
               Upcoming Events
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function Home() {
             <IKImage
               className=" roun w-auto rounded-lg xl:h-96"
               urlEndpoint={urlEndpoint}
-              path="Code_Aaj_Kal_Contest_0ATMNgqlH.png"
+              path="induction_poster_for_website_X1yC0NY5G.png"
               alt="banner"
               lqip={{ active: true }}
               loading="lazy"
@@ -68,21 +68,20 @@ export default function Home() {
             <div className="p-10 xl:p-16">
               <div className=" mb-8">
                 <h1 className=" mb-4 w-full text-2xl font-semibold text-gray-900">
-                  CODE AAJ KAL <span className=" text-red-500">3.0</span>
+                  INDUCTION <span className=" text-red-500">2K22</span>
                 </h1>
                 <p>
-                  A 36-hours online coding contest on CodeChef Platform, hosted
-                  by CodeChef RCOEM Chapter in collaboration with CodeChef BCET
-                  Chapter to be conducted on 14th-15th April.
+                  Introuduction to CodeChef BCET
+                  Chapter on 11th June at Seminar Hall CST Block.
                 </p>
               </div>
               <div className="">
-                <a
-                  href="/eventdetails"
+                <Link
+                  to="/event-registration/:id"
                   className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
                 >
                   Register Here
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -104,17 +103,6 @@ export default function Home() {
             {events &&
               events.map((e, index) => <EventCard events={e} key={index} />)}
           </section>
-          {/* <section
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4"
-          >
-           <EventCardSkelton/>
-          <EventCardSkelton/>
-          <EventCardSkelton/>
-          <EventCardSkelton/>
-          </section> */}
-          
         </article>
       </section>
       <Opportunity />

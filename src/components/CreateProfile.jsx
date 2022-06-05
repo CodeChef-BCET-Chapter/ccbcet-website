@@ -147,15 +147,39 @@ function CreateProfile() {
             >
               Branch
             </label>
-            <input
+            <select
               onChange={handleChange}
-              type="text"
               name="branch"
-              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
-              placeholder="Branch"
+              className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               required
-            />
+            >
+              <option name="branch" value="Choose">
+                --choose your Branch--
+              </option>
+              <option name="branch" value="Computer Science and Engineering">
+              Computer Science and Engineering
+              </option>
+              <option name="branch" value="Information Technology ">
+              Information Technology
+              </option>
+              <option name="branch" value="Electronics & Communication">
+              Electronics & Communication
+              </option>
+              <option name="branch" value="Electrical Engineering">
+              Electrical Engineering
+              </option>
+              <option name="branch" value="Civil Engineering">
+              Civil Engineering
+              </option>
+              <option name="branch" value="Mechanical Engineering">
+              Mechanical Engineering
+              </option>
+              <option name="branch" value="Bachelor of Computer Application">
+              Bachelor of Computer Application
+              </option>
+            </select>
           </div>
+       
           <div className="mb-6">
             <label
               htmlFor="codechefusername"

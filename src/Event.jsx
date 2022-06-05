@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react";
 import EventCard from "./components/EventCard";
 import { IKImage } from "imagekitio-react";
-<<<<<<< HEAD
-import EventCardSkelton from "./components/EventCardSkelton";
-=======
 import { getEvents } from "./firestoredb";
 import { Link } from "react-router-dom";
->>>>>>> 9c92a17ac29645b879577cc17f3bb858db123936
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function Event() {
   const [events, setEvents] = useState(null);
@@ -32,15 +28,10 @@ export default function Event() {
             </div>
             {/* banner */}
             <div className="flex flex-col rounded-lg bg-gray-100 shadow-xl xl:flex-row">
-              {/* <img
-                className=" roun w-auto rounded-lg xl:h-96"
-                src="https://ik.imagekit.io/botoixhvc/Code_Aaj_Kal_Contest_0ATMNgqlH.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654171135178"
-                alt="banner"
-              /> */}
               <IKImage
                 className=" roun w-auto rounded-lg xl:h-96"
                 urlEndpoint={urlEndpoint}
-                path="Code_Aaj_Kal_Contest_0ATMNgqlH.png"
+                path="induction_poster_for_website_X1yC0NY5G.png"
                 alt="banner"
                 lqip={{ active: true }}
                 loading="lazy"
@@ -48,17 +39,16 @@ export default function Event() {
               <div className="p-10 xl:p-16">
                 <div className=" mb-8">
                   <h1 className=" mb-4 w-full text-2xl font-semibold text-gray-900">
-                    CODE AAJ KAL <span className=" text-red-500">3.0</span>
-                  </h1>
-                  <p>
-                    A 36-hours online coding contest on CodeChef Platform,
-                    hosted by CodeChef RCOEM Chapter in collaboration with
-                    CodeChef BCET Chapter to be conducted on 14th-15th April.
-                  </p>
+                  INDUCTION <span className=" text-red-500">2K22</span>
+                </h1>
+                <p>
+                  Introuduction to CodeChef BCET
+                  Chapter on 11th June at Seminar Hall CST Block.
+                </p>
                 </div>
                 <div className="">
                   <Link
-                    to="/event-registration"
+                    to="/event-registration/:id"
                     className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
                   >
                     Register Here
