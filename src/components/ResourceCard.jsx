@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ResourceCard({ resources }) {
   return (
-    <div >
+    <div>
       <div className="group relative mb-auto mt-auto flex h-auto w-auto transform overflow-hidden rounded-lg bg-white shadow-xl transition duration-500 ease-in-out hover:scale-105 sm:hidden">
         <div className="relative">
           <img

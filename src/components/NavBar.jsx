@@ -7,6 +7,7 @@ import { MdOutlineLeaderboard, MdOutlineLogin } from "react-icons/md";
 import Login from "./login/Login";
 import ProfilePic from "./login/ProfilePic";
 import { UserAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const { user } = UserAuth();
@@ -19,7 +20,7 @@ export default function NavBar() {
         <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex flex-grow justify-between">
-              <a href="/">
+              <a to="/">
                 <div className="flex items-center gap-4">
                   <img
                     className="h-10 w-10"
@@ -33,29 +34,29 @@ export default function NavBar() {
               </a>
 
               <div>
-                <div className="hidden md:block ">
-                  <div className="ml-10 flex items-center space-x-4">
-                    <a
-                      href="/"
-                      className="flex rounded-md px-3 py-2  text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                <div className="hidden md:block">
+                  <div className="ml-10 flex space-x-4">
+                    <Link
+                      to="/"
+                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
-                      <AiOutlineHome className="mx-1 text-lg " /> Home
-                    </a>
+                      <AiOutlineHome className="mx-1 text-lg" /> Home
+                    </Link>
 
-                    <a
-                      href="/events"
+                    <Link
+                      to="/events"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <BsCalendarEvent className="mx-1 text-lg" /> Events
-                    </a>
+                    </Link>
 
-                    <a
-                      href="/teams"
+                    <Link
+                      to="/teams"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <RiTeamLine className="mx-1 text-lg" />
                       Teams
-                    </a>
+                    </Link>
 
                     <a
                       href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
@@ -65,14 +66,14 @@ export default function NavBar() {
                       <MdOutlineLeaderboard className="mx-1 text-lg" />
                       Leaderboard
                     </a>
-                    <a
-                      href="/resources"
+                    <Link
+                      to="/resources"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <RiBook2Line className="mx-1 text-lg" />
                       Resources
-                    </a>
-                    {user ? <ProfilePic /> : <Login /> }
+                    </Link>
+                    {user ? <ProfilePic /> : <Login />}
                   </div>
                   
                 </div>
@@ -143,21 +144,21 @@ export default function NavBar() {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
                 <a
-                  href="/"
+                  to="/"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <AiOutlineHome className="mx-1 text-lg" /> Home
                 </a>
 
                 <a
-                  href="/events"
+                  to="/events"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <BsCalendarEvent className="mx-1 text-lg" /> Events
                 </a>
 
                 <a
-                  href="/teams"
+                  to="/teams"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <RiTeamLine className="mx-1 text-lg" />
@@ -165,7 +166,7 @@ export default function NavBar() {
                 </a>
 
                 <a
-                  href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
+                  to="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
                   target="_blank"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
@@ -173,7 +174,7 @@ export default function NavBar() {
                   Leaderboard
                 </a>
                 <a
-                  href="/resources"
+                  to="/resources"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <RiBook2Line className="mx-1 text-lg" />

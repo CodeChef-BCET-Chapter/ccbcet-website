@@ -6,10 +6,12 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 import { auth } from "../firebase";
+import { useHistory } from "react-router-dom";
 
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
+  const history = useHistory();
   const [user, setUser] = useState(null);
 
   const googleSignIn = () => {
@@ -22,14 +24,17 @@ export const AuthContextProvider = ({ children }) => {
     signOut(auth);
   };
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => {
-      unsubscribe();
-    };
-  }, [user]);
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+    if (
+      currentUser &&
+      currentUser.metadata.creationTime === currentUser.metadata.lastSignInTime
+    ) {
+      history.push("/create-profile");
+    }
+  });
+
+  
 
   return (
     <AuthContext.Provider value={{ googleSignIn, logOut, user }}>

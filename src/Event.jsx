@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EventCard from "./components/EventCard";
-import eventCard from "./data/eventCard";
 import { IKImage } from "imagekitio-react";
+<<<<<<< HEAD
 import EventCardSkelton from "./components/EventCardSkelton";
+=======
+import { getEvents } from "./firestoredb";
+import { Link } from "react-router-dom";
+>>>>>>> 9c92a17ac29645b879577cc17f3bb858db123936
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function Event() {
+  const [events, setEvents] = useState(null);
+  useEffect(() => {
+    getEvents().then((value) => {
+      setEvents(value);
+      console.log(value);
+    });
+  }, []);
   return (
     <div>
       {/* Event Cards */}
@@ -14,7 +25,11 @@ export default function Event() {
             <h1 className="title-font mb-8 text-center text-2xl font-medium text-gray-900 sm:text-3xl">
               Event & Workshops
             </h1>
-
+            <div className="mt-10 text-center">
+              <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-900 lg:w-3/4 xl:w-2/4">
+                UpcomingLink Events
+              </p>
+            </div>
             {/* banner */}
             <div className="flex flex-col rounded-lg bg-gray-100 shadow-xl xl:flex-row">
               {/* <img
@@ -42,12 +57,12 @@ export default function Event() {
                   </p>
                 </div>
                 <div className="">
-                  <a
-                    href="/eventdetails"
+                  <Link
+                    to="/event-registration"
                     className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
                   >
                     Register Here
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -58,10 +73,8 @@ export default function Event() {
             </p>
           </div>
           <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-            {eventCard.map(events => (
-              <EventCard events={events} key={events.title} />
-              
-            ))}
+            {events &&
+              events.map((e, index) => <EventCard events={e} key={index} />)}
           </section>
         </article>
       </section>

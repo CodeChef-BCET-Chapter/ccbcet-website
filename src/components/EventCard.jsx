@@ -1,5 +1,6 @@
 import React from "react";
 import { IKImage } from "imagekitio-react";
+import { Link } from "react-router-dom";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { MdLocationPin, MdAccessTime } from "react-icons/md";
@@ -118,14 +119,22 @@ export default function EventCard({ events }) {
               </tbody>
             </table>
           </div>
-          <a
-            href={events.href}
-            target="blank"
-            className=" float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
-          >
-            {" "}
-            {events.button}
-          </a>
+          {events.button === "Register" ? (
+            <Link
+              to={`/event-registration/${events.id}`}
+              className=" float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+            >
+              {events.button}
+            </Link>
+          ) : (
+            <a
+              href={events.href}
+              target="blank"
+              className=" float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+            >
+              {events.button}
+            </a>
+          )}
         </div>
       </div>
     </div>

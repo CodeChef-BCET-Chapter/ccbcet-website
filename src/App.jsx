@@ -5,13 +5,13 @@ import Home from "./Home";
 import Resource from "./Resource";
 import Event from "./Event";
 import Teams from "./Teams";
-import Inductionform from "./Inductionform";
 import EventDetails from "./EventDetails";
 import TeamTshirt from "./TeamTshirt";
 import CreateProfile from "./components/CreateProfile";
 import ViewProfile from "./components/ViewProfile";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { AuthContextProvider } from "./context/AuthContext";
+import EventForm from "./EventForm";
 
 export default function App() {
   return (
@@ -26,7 +26,7 @@ export default function App() {
             <Route path="/eventdetails" component={EventDetails} />
             <Route path="/teams" component={Teams} />
             <Route path="/team-tshirt" component={TeamTshirt} />
-            <Route path="/induction-registration" component={Inductionform} />
+            <Route path="/event-registration/:id" component={EventForm} />
             <Route path="/create-profile" component={CreateProfile} />
             <Route path="/view-profile" component={ViewProfile} />
           </Switch>
