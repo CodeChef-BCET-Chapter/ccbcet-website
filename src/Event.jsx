@@ -4,15 +4,19 @@ import { IKImage } from "imagekitio-react";
 import { getEvents } from "./firestoredb";
 import { Link } from "react-router-dom";
 import EventCardSkelton from "./components/EventCardSkelton";
-import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
+import { UserAuth } from "./context/AuthContext";
+import LoginPopup from "./components/modal/LoginPopup";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function Event() {
+  const { user } = UserAuth();
+  const [showModal, setShowModal] = useState(false);
+
   const [events, setEvents] = useState(null);
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    getEvents().then(value => {
+    getEvents().then((value) => {
       setEvents(value);
       setLoading(false);
       console.log(value);
@@ -21,6 +25,8 @@ export default function Event() {
   return (
     <div>
       {/* Event Cards */}
+      {showModal && <LoginPopup onConfirm={() => setShowModal(false)} />}
+
       <section className="mx-auto mt-12 mb-12 max-w-7xl overflow-hidden px-4 sm:px-6 lg:px-4">
         <article className="col-auto mb-10">
           <div className=" mb-20">
@@ -53,12 +59,21 @@ export default function Event() {
                   </p>
                 </div>
                 <div className="">
-                  <Link
-                    to="/event-registration/:id"
-                    className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
-                  >
-                    Register Here
-                  </Link>
+                  {!user ? (
+                    <button
+                      onClick={() => setShowModal(true)}
+                      className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+                    >
+                      Register Here
+                    </button>
+                  ) : (
+                    <Link
+                      to="/event-registration/id"
+                      className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+                    >
+                      Register Here
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -75,7 +90,7 @@ export default function Event() {
           {isLoading ? (
             <div className="">
               <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-              {[...Array(8)].map((item, index) => (
+                {[...Array(8)].map((item, index) => (
                   <EventCardSkelton key={index} />
                 ))}
               </section>

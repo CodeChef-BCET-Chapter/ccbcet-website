@@ -16,6 +16,8 @@ import LoginPopup from "./components/modal/LoginPopup";
 import { UserAuth } from "./context/AuthContext";
 
 export default function Home() {
+  const { user } = UserAuth();
+  const [showModal, setShowModal] = useState(false);
   const [events, setEvents] = useState(null);
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
@@ -34,7 +36,8 @@ export default function Home() {
 
   return (
     <div className="space-y-24">
-     
+      {showModal && <LoginPopup onConfirm={() => setShowModal(false)} />}
+
       <Landing />
       <Youtubevideo />
       {/* Event Cards */}
@@ -80,13 +83,21 @@ export default function Home() {
                 </p>
               </div>
               <div className="">
-                <Link
-                
-                  to="/event-registration/id"
-                  className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
-                >
-                  Register Here
-                </Link>
+                {!user ? (
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+                  >
+                    Register Here
+                  </button>
+                ) : (
+                  <Link
+                    to="/event-registration/id"
+                    className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
+                  >
+                    Register Here
+                  </Link>
+                )}
               </div>
             </div>
           </div>
