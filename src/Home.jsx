@@ -18,7 +18,6 @@ import { UserAuth } from "./context/AuthContext";
 export default function Home() {
   const [events, setEvents] = useState(null);
   const [isLoading, setLoading] = useState(false);
-  const {showModal, setShowModal} = UserAuth()
   useEffect(() => {
     setLoading(true);
     getEvents().then((value) => {
@@ -28,9 +27,6 @@ export default function Home() {
     });
   }, []);
 
-  const runCallback = (cb) => {
-    return cb();
-  };
   React.useEffect(() => {
     AOS.init();
     AOS.refresh();
@@ -38,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="space-y-24">
-      {showModal && <LoginPopup onConfirm={()=>setShowModal(false)} />}
+     
       <Landing />
       <Youtubevideo />
       {/* Event Cards */}
@@ -85,6 +81,7 @@ export default function Home() {
               </div>
               <div className="">
                 <Link
+                
                   to="/event-registration/id"
                   className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
                 >

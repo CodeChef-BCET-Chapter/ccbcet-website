@@ -11,7 +11,6 @@ import { useHistory } from "react-router-dom";
 const AuthContext = createContext();
 
 export const AuthContextProvider = ({ children }) => {
-  const [showModal, setShowModal] = useState(false);
   const history = useHistory();
   const [user, setUser] = useState(null);
 
@@ -37,7 +36,7 @@ export const AuthContextProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ googleSignIn, logOut, user, showModal, setShowModal }}
+      value={{ googleSignIn, logOut, user }}
     >
       {children}
     </AuthContext.Provider>
