@@ -55,7 +55,7 @@ export default function Home() {
           </div>
           <div className="mb-6 text-center my-5">
             <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-700 lg:w-3/4 xl:w-2/4">
-              Upcoming Events
+              Upcoming Event
             </p>
           </div>
           {/* banner */}

@@ -35,7 +35,7 @@ export default function Event() {
             </h1>
             <div className="mt-10 text-center my-5">
               <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-900 lg:w-3/4 xl:w-2/4">
-                UpcomingLink Events
+                Upcoming Event
               </p>
             </div>
             {/* banner */}
