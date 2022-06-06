@@ -25,7 +25,7 @@ function ViewProfile() {
   }, []);
   console.log(userData);
   return (
-    <div className=" bg-gray-100 pb-5 ">
+    <div className="bg-gray-100 pb-20 ">
       <div className="m-auto  h-60 w-full rounded-b-2xl ">
         <IKImage
           src="https://ik.imagekit.io/botoixhvc/profile_banner_zgkSWEabQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654189179267"

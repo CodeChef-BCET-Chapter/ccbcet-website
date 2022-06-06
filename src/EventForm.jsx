@@ -4,6 +4,7 @@ import { UserAuth } from "./context/AuthContext";
 import { addParticipants } from "./firestoredb";
 import { IKImage } from "imagekitio-react";
 import { TiTickOutline } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
@@ -31,7 +32,7 @@ function EventForm() {
     });
   }
   const [confirm, setConfirm] = useState(true);
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
     user && addParticipants(formData, id, user.id);
@@ -242,26 +243,27 @@ function EventForm() {
           </div>
         </div>
       ) : (
-        <div className=" h-full bg-gray-100 py-10 px-2 ">
-          <div className="m-auto w-full rounded-md bg-white  p-4 text-center shadow-md sm:w-2/3 md:w-2/5">
+        <div className=" bg-gray-100 py-10 px-2">
+          <div className="m-auto my-24 w-full rounded-md bg-white  p-4 text-center shadow-md sm:w-2/3 md:w-2/5">
             <p className=" flex justify-center p-2 text-green-600 ">
               <TiTickOutline size={70} />
             </p>
             <h1 className=" pb-6 text-5xl font-bold italic text-green-600">
               Sucessfully
             </h1>
-            <p className="">You have sucessfully submited your from</p>
-            <p className="">You can edit your form by resubmiting your form</p>
+            <p className="">You have sucessfully submited your form.</p>
+            <p className="">You can edit your registration details by resubmitting your form.</p>
 
             <div className="text-cnter py-10">
-              <a href="/" className="">
+              <Link to="/event-registration/CE6VSqi7LLhwKLXTxdaV" className="">
                 <button
+                  onClick={() => setConfirm(true)}
                   type="submit"
                   className="max-w-max rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300  sm:w-auto"
                 >
-                  Back To Home
+                  Edit
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -271,3 +273,7 @@ function EventForm() {
 }
 
 export default EventForm;
+
+
+// let x = 10; let y= 10;
+//  

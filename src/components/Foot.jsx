@@ -10,7 +10,7 @@ import {
 
 export default function Foot() {
   return (
-    <footer className="relative flex justify-center border-t-2 bg-gray-200 pt-8 pb-6    ">
+    <footer className="relative flex justify-center border-t-2 bg-gray-200 pt-8 pb-6 align-bottom ">
       <div className="container mx-auto px-4">
         <div className="mx-auto flex max-w-7xl flex-wrap text-left lg:text-left">
           <div className="w-full px-4 lg:w-6/12">

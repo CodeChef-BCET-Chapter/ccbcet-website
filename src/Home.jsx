@@ -53,7 +53,7 @@ export default function Home() {
               Event & Workshops
             </h1>
           </div>
-          <div className="mb-6 text-center">
+          <div className="mb-6 text-center my-5">
             <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-700 lg:w-3/4 xl:w-2/4">
               Upcoming Events
             </p>

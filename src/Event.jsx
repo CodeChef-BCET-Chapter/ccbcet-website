@@ -33,7 +33,7 @@ export default function Event() {
             <h1 className="title-font mb-8 text-center text-2xl font-medium text-gray-900 sm:text-3xl">
               Event & Workshops
             </h1>
-            <div className="mt-10 text-center">
+            <div className="mt-10 text-center my-5">
               <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-900 lg:w-3/4 xl:w-2/4">
                 UpcomingLink Events
               </p>
