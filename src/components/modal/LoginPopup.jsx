@@ -12,8 +12,8 @@ const Backdrop = (props) => {
 const ModalOverlay = (props) => {
   return (
     <Card className={classes.modal}>
-      <header className={classes.header}>Modal update</header>
-      <div className={classes.content}>Please login</div>
+      <header className={classes.header}>Modal</header>
+      <div className={classes.content}>Please login please</div>
       <footer className={classes.actions}>
         <Button onClick={props.onConfirm}>Okay hfgh</Button>
       </footer>
@@ -21,7 +21,7 @@ const ModalOverlay = (props) => {
   );
 };
 
-const ErrorModal = (props) => {
+const LoginPopup = (props) => {
   return (
     <React.Fragment>
       {ReactDOM.createPortal(
@@ -36,4 +36,4 @@ const ErrorModal = (props) => {
   );
 };
 
-export default ErrorModal;
+export default LoginPopup;
