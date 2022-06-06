@@ -12,10 +12,10 @@ const Backdrop = (props) => {
 const ModalOverlay = (props) => {
   return (
     <Card className={classes.modal}>
-      <header className={classes.header}>Modal</header>
+      <header className={classes.header}>Modal update</header>
       <div className={classes.content}>Please login</div>
       <footer className={classes.actions}>
-        <Button onClick={props.onConfirm}>Okay</Button>
+        <Button onClick={props.onConfirm}>Okay hfgh</Button>
       </footer>
     </Card>
   );
