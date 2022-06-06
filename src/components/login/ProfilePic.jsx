@@ -11,7 +11,7 @@ export default function ProfilePic() {
         <img
           onClick={() => setMenu(old => !old)}
           className="h-10 w-10 rounded-full  "
-          src={user.photoURL ? user.photoURL : "/img/Teams/exe.png"}
+          src={user.photoURL ? user.photoURL : ""}
           alt="Rounded avatar"
         />
         {menu && (

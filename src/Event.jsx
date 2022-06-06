@@ -68,7 +68,7 @@ export default function Event() {
                     </button>
                   ) : (
                     <Link
-                      to="/event-registration/id"
+                      to="/event-registration/CE6VSqi7LLhwKLXTxdaV"
                       className=" mt-10 rounded-full bg-red-600 p-2 px-4 text-center  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring"
                     >
                       Register Here

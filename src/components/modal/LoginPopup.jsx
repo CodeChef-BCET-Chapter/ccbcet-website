@@ -5,6 +5,7 @@ import Card from "./Card";
 import Button from "./Button";
 import classes from "./LoginPopup.module.css";
 
+import Login from "../login/Login"
 const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onConfirm} />;
 };
@@ -12,9 +13,10 @@ const Backdrop = (props) => {
 const ModalOverlay = (props) => {
   return (
     <Card className={classes.modal}>
-      <header className={classes.header}>Modal</header>
-      <div className={classes.content}>Please login please</div>
+      <header className=" bg-red-500">Modal</header>
+      <div className="text-xl">Please login please</div>
       <footer className={classes.actions}>
+        <Login />
         <Button onClick={props.onConfirm}>Okay hfgh</Button>
       </footer>
     </Card>
