@@ -5,7 +5,8 @@ import { addParticipants } from "./firestoredb";
 import { IKImage } from "imagekitio-react";
 import { TiTickOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
-
+import { AiOutlineHome } from "react-icons/ai";
+import { MdOutlineEngineering, MdOutlineModeEdit } from "react-icons/md";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 
 function EventForm() {
@@ -32,7 +33,7 @@ function EventForm() {
     });
   }
   const [confirm, setConfirm] = useState(true);
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     console.log(formData);
     user && addParticipants(formData, id, user.id);
@@ -249,19 +250,39 @@ function EventForm() {
               <TiTickOutline size={70} />
             </p>
             <h1 className=" pb-6 text-5xl font-bold italic text-green-600">
-              Sucessfully
+              Successfully
             </h1>
-            <p className="">You have sucessfully submited your form.</p>
-            <p className="">You can edit your registration details by resubmitting your form.</p>
+            <p className="">You have successfully submited your form.</p>
+            <p className="">
+              You can edit your registration details by resubmitting your form.
+            </p>
 
-            <div className="text-cnter py-10">
-              <Link to="/event-registration/CE6VSqi7LLhwKLXTxdaV" className="">
+            <div className="text-cnter py-10  flex justify-center space-x-2">
+              
+              <Link
+                to="/event-registration/CE6VSqi7LLhwKLXTxdaV"
+                className=" "
+              >
                 <button
                   onClick={() => setConfirm(true)}
                   type="submit"
-                  className="max-w-max rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300  sm:w-auto"
+                  className="flex max-w-max items-center  rounded-lg px-5 py-2.5 text-center text-sm font-medium text-gray-800 hover:text-white hover:bg-red-700 focus:outline-none border border-red-600 focus:ring-4 focus:ring-red-300  sm:w-auto"
                 >
-                  Edit
+                  Edit{" "}
+                  <span className=" px-1 text-xl ">
+                    <MdOutlineModeEdit />
+                  </span>
+                </button>
+              </Link>
+              <Link to="/">
+                <button
+                  type="submit"
+                  className="flex max-w-max items-center rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-300  sm:w-auto"
+                >
+                  <span className=" px-1 text-xl ">
+                    <AiOutlineHome />
+                  </span>{" "}
+                  Back to Home
                 </button>
               </Link>
             </div>
@@ -274,6 +295,5 @@ function EventForm() {
 
 export default EventForm;
 
-
 // let x = 10; let y= 10;
-//  
+//

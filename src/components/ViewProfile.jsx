@@ -11,21 +11,26 @@ import "react-loading-skeleton/dist/skeleton.css";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import ViewprofileSkleton from "./skelton/ViewprofileSkleton";
 
 function ViewProfile() {
   const { user } = UserAuth();
   const history = useHistory();
   const [userData, setUserData] = useState({});
+  const [isLoading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     user &&
       getRealTimeUserData(user?.uid).then(value => {
         if (!value.data) history.push("/create-profile");
         else setUserData(value.data);
+        setLoading(false);
       });
   }, []);
   console.log(userData);
   return (
     <div className="bg-gray-100 pb-20 ">
+      {isLoading && <ViewprofileSkleton />}
       <div className="m-auto  h-60 w-full rounded-b-2xl ">
         <IKImage
           src="https://ik.imagekit.io/botoixhvc/profile_banner_zgkSWEabQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654189179267"
@@ -92,7 +97,7 @@ function ViewProfile() {
               Social Links
             </p>
             <div className="flex space-x-3 py-2 pl-10 text-xl  ">
-              <a href={userData.linkedin} className=" "  target="_blank">
+              <a href={userData.linkedin} className=" " target="_blank">
                 <span className="hover:text-blue-700">
                   <BsLinkedin />
                 </span>

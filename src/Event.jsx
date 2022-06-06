@@ -3,7 +3,7 @@ import EventCard from "./components/EventCard";
 import { IKImage } from "imagekitio-react";
 import { getEvents } from "./firestoredb";
 import { Link } from "react-router-dom";
-import EventCardSkelton from "./components/EventCardSkelton";
+import EventCardSkelton from "./components/./skelton/EventCardSkelton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { UserAuth } from "./context/AuthContext";
 import LoginPopup from "./components/modal/LoginPopup";

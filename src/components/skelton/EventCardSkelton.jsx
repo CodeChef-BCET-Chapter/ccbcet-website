@@ -1,7 +1,6 @@
 import React from "react";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import { MdLocationPin, MdAccessTime } from "react-icons/md";
 import Skeleton from "react-loading-skeleton";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 function EventCardSkelton() {
   return (
@@ -29,7 +28,7 @@ function EventCardSkelton() {
         <div className="px-3 py-3 subpixel-antialiased  ">
           <Skeleton count={3} />
         </div>
-        <div className="float-right w-32 px-3 py-3  ">
+        <div className=" w-32 px-3 py-3  ">
           <Skeleton height={40} borderRadius={20} />
         </div>
       </div>

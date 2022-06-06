@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { IKImage } from "imagekitio-react";
-import EventCardSkelton from "./components/EventCardSkelton";
+import EventCardSkelton from "./components/./skelton/EventCardSkelton";
 import { getEvents } from "./firestoredb";
 import "react-loading-skeleton/dist/skeleton.css";
 const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
