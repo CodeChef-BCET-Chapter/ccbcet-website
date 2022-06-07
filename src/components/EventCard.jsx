@@ -34,7 +34,7 @@ export default function EventCard({ events}) {
                   </td>
                   <td>
                     {events.date}
-                    <sup>{events.suscript}</sup>
+                    <sup>{events.subscript}</sup>
                     {events.year}
                   </td>
                 </tr>
@@ -96,7 +96,7 @@ export default function EventCard({ events}) {
                   </td>
                   <td>
                     {events.date}
-                    <sup>{events.suscript}</sup>
+                    <sup>{events.subscript}</sup>
                     {events.year}
                   </td>
                 </tr>

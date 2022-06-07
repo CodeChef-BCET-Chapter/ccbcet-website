@@ -90,7 +90,7 @@ export default function Event() {
           {isLoading ? (
             <div className="">
               <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
-                {[...Array(8)].map((item, index) => (
+                {[...Array(10)].map((item, index) => (
                   <EventCardSkelton key={index} />
                 ))}
               </section>

@@ -53,7 +53,7 @@ export default[
         platform: "Zoom Webinar ",
         time: "04:00 pm - Onwards ",
         button: "View ",
-        href: "https://unacademy.zoom.us/j/89611357046 ",
+        href: "04:00 pm - Onwards  ",
     },
 
     {
