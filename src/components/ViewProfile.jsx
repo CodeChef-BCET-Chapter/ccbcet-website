@@ -41,7 +41,7 @@ function ViewProfile() {
           className=" h-60 w-full rounded-b-xl"
         />
       </div>
-      <div className="relative z-40 mx-2">
+      <div className="relative  mx-2">
         <div className="m-auto -mt-16 w-full rounded-xl  bg-white p-4 shadow-xl sm:w-2/3 md:w-1/2 ">
           <div className=" flex justify-center ">
             <div className=" -mt-20 mb-6 h-32 w-32  rounded-full border-3 border-white bg-white  ">

@@ -14,12 +14,12 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div>
+    <div className="sticky top-0 z-50 ">
       {/* Web */}
-      <nav className="bg-gray-800 ">
-        <div className="mx-auto max-w-7xl px-4  sm:px-6 lg:px-8">
+      <nav className="bg-gray-800   ">
+        <div className="mx-auto max-w-7xl px-4   sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex flex-grow justify-between">
+            <div className="flex flex-grow justify-between ">
               <Link to="/">
                 <div className="flex items-center gap-4">
                   <img
@@ -59,7 +59,7 @@ export default function NavBar() {
                     </Link>
 
                     <a
-                      href="https://www.codechef.com/ratings/Linkll?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
+                      href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&itemsPerPage=15&order=asc&page=1&sortBy=global_rank"
                       target="_blank"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
@@ -75,13 +75,14 @@ export default function NavBar() {
                     </Link>
                     {user ? <ProfilePic /> : <Login />}
                   </div>
-                  
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex md:hidden ">
               <div className=" flex items-center px-5 ">
-                <p className=" text-white px-4 ">{user ? user.displayName : null}</p>
+                <p className=" px-4 text-white ">
+                  {user ? user.displayName : null}
+                </p>
                 {user ? <ProfilePic /> : <Login />}
               </div>
               <button
@@ -143,33 +144,38 @@ export default function NavBar() {
           {ref => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-                <Link to="/"
+                <Link
+                  to="/"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <AiOutlineHome className="mx-1 text-lg" /> Home
                 </Link>
 
-                <Link to="/events"
+                <Link
+                  to="/events"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <BsCalendarEvent className="mx-1 text-lg" /> Events
                 </Link>
 
-                <Link to="/teams"
+                <Link
+                  to="/teams"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <RiTeamLine className="mx-1 text-lg" />
                   Teams
                 </Link>
 
-                <a to="https://www.codechef.com/ratings/Linkll?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
+                <a
+                  to="https://www.codechef.com/ratings/Linkll?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
                   target="_blank"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <MdOutlineLeaderboard className="mx-1 text-lg" />
                   Leaderboard
                 </a>
-                <Link to="/resources"
+                <Link
+                  to="/resources"
                   className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                 >
                   <RiBook2Line className="mx-1 text-lg" />

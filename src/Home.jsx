@@ -22,7 +22,7 @@ export default function Home() {
   const [isLoading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
-    getEvents().then((value) => {
+    getEvents().then(value => {
       setEvents(value);
       setLoading(false);
       console.log(value);
@@ -53,7 +53,7 @@ export default function Home() {
               Event & Workshops
             </h1>
           </div>
-          <div className="mb-6 text-center my-5">
+          <div className="my-5 mb-6 text-center">
             <p className="mx-auto text-2xl font-bold leading-relaxed text-gray-700 lg:w-3/4 xl:w-2/4">
               Upcoming Event
             </p>
@@ -119,9 +119,10 @@ export default function Home() {
             <div className="">
               <section className="mt-6 grid gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                 {events &&
-                  events.map((e, index) => (
-                    <EventCard events={e} key={index} />
-                  ))}
+                  events.map(
+                    (e, index) =>
+                      index <= 3 && <EventCard events={e} key={index} />
+                  )}
               </section>
             </div>
           )}

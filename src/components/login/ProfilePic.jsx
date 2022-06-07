@@ -11,7 +11,7 @@ export default function ProfilePic() {
         <img
           onClick={() => setMenu(old => !old)}
           className="h-10 w-10 rounded-full  "
-          src={user.photoURL ? user.photoURL : ""}
+          src={user.photoURL ? user.photoURL : "https://ik.imagekit.io/botoixhvc/user.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1654539990149"}
           alt="Rounded avatar"
         />
         {menu && (
