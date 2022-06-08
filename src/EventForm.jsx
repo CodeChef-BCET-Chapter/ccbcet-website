@@ -250,7 +250,7 @@ function EventForm() {
               <TiTickOutline size={70} />
             </p>
             <h1 className=" pb-6 text-5xl font-bold italic text-green-600">
-              Successfully
+              Successfull
             </h1>
             <p className="">You have successfully submited your form.</p>
             <p className="">
