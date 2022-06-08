@@ -221,7 +221,7 @@ function EventForm() {
                   htmlFor="message"
                   className="mb-2 block text-sm font-medium text-gray-900 "
                 >
-                  Your message
+                  Your question
                 </label>
                 <textarea
                   onChange={handleChange}

@@ -1,6 +1,6 @@
 export default [
     {
-      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/viresh_TAdyEOiHf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173413728",
+      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/viresh_Pwz-r_H6r.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654680982198",
       name: "Viresh Dev",
       designation: "President",
       instagram: "https://www.instagram.com/devviresh/",
@@ -9,7 +9,7 @@ export default [
       github: "https://github.com/devviresh"
     },
     {
-      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/user.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173435474",
+      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/wasim_tqmDhdggk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654681304003",
       name: "Wasim Raja",
       designation: "CP Lead",
       instagram: "https://www.instagram.com/wasimr101/",
@@ -18,7 +18,7 @@ export default [
       github: "https://github.com/wasim7raja10"
     },
     {
-      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/saurabh_pTW_wtJJI.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173413041",
+      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/saurabh_SPhVKtyZgk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654681473806",
       name: "Saurabh Kumar ",
       designation: "Outreach & Media Lead",
       instagram: "https://www.instagram.com/i_am_saurabhraj/",
@@ -27,7 +27,7 @@ export default [
       github: "https://github.com/OfficialSaurabh"
     },
     {
-      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/vicky_J78ouRzj1.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173413463",
+      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/vicky_O73YdbrPq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654683110554",
       name: "Vikcy Kumar Giri",
       designation: "Event Lead",
       instagram: "https://www.instagram.com/7091vicky/",

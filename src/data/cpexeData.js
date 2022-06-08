@@ -1,6 +1,7 @@
 export default [
   {
-    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/preeticpexe_fc7csj4OiK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173926088",
+    imageUrl:
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/preeti_-AGtnTnez.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654683399737",
     name: "Preeti Kumari Yadav",
     designation: "CP Executive",
     linkedin: "https://www.linkedin.com/in/preeti-yadav14",
@@ -8,51 +9,56 @@ export default [
     github: "",
     facebook: "https://www.facebook.com/preetiyadav.b",
     instagram: "https://instagram.com/granger_14_7?igshid=YmMyMTA2M2Y=",
-    
   },
   {
-    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/salonicpexe_vRYnle6Qt.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173926865",
+    imageUrl:
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/MediaExe/saloni_tgCtiFVRCG.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654674485949",
     name: "Saloni Sahay",
     designation: "CP Executive",
-    instagram: " ",
+    instagram: " https://www.instagram.com/saloni_sahay139/",
     linkedin: "https://www.linkedin.com/in/saloni-sahay-480311200",
-    twitter: "",
-    github: "https://github.com/SaloniSahay"
+    twitter: "https://twitter.com/saloni_sahay4",
+    github: "https://github.com/SaloniSahay",
   },
   {
-    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/ramolacpexe_n5DLXeQqQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173926414",
+    imageUrl:
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/ramola_EJeEGAzIf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654674765608",
     name: "Ramola Singh",
     designation: "CP Executive",
-    instagram: " ",
-    linkedin: "",
-    twitter: "",
-    github: ""
+    instagram: " https://www.instagram.com/ramola_singh/",
+    linkedin: "https://in.linkedin.com/in/ramola-singh",
+    twitter: "https://twitter.com/ramolasingh_",
+    github: "https://github.com/ramolasingh",
   },
   {
-    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/anirudhcpexe_1Xrc35xVP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925273",
-    name: "Aniruddha Pal",
-    designation: "CP Executive",
-    instagram: " ",
-    linkedin: "",
-    twitter: "",
-    github: ""
-  },
-  {
-    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/bibhuenducpexe_3wD1OPTbm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925324",
-    name: "Bibhabendu Mukherjee",
-    designation: "CP Executive",
-    instagram: " ",
-    linkedin: "",
-    twitter: "",
-    github: ""
-  },
-  {
-    imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/koushikcpexe_GxvnSkmTA.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925715",
+    imageUrl:
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/kausik_htJYPxWQl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654683223850",
     name: "Koushik Biswas",
     designation: "CP Executive",
     instagram: " ",
     linkedin: " ",
     twitter: " ",
-    github: " "
-  }
+    github: " ",
+  },
+
+  {
+    imageUrl:
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/anirudhcpexe_1Xrc35xVP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925273",
+    name: "Aniruddha Pal",
+    designation: "CP Executive",
+    instagram: " ",
+    linkedin: "",
+    twitter: "",
+    github: "",
+  },
+  {
+    imageUrl:
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/bibhanendu_dilRCJwxR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654674727754",
+    name: "Bibhabendu Mukherjee",
+    designation: "CP Executive",
+    instagram: " ",
+    linkedin: "",
+    twitter: "",
+    github: "",
+  },
 ];
