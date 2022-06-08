@@ -18,7 +18,7 @@ export default [
       github: "https://github.com/Shalini-Sahay"
     },
     {
-      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/EventExe/artieventexe_sEybpqa4B.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654176875054",
+      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/EventExe/ARTI_nppKB0tZQ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654685235726",
       name: "Aarti kumari ",
       designation: "Event Executive",
       instagram: "",
