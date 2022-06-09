@@ -128,14 +128,14 @@ export default function EventCard({ events}) {
               {events.button}
             </Link>
           ) : (
-            <button
-              href={events.href}
+            <Link
+              to={events.href}
               target="blank"
               type="button"
-              className=" cursor-not-allowed float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring-red-800"
+              className="  float-right m-2 mb-5 mr-3 w-32 rounded-full bg-red-600 p-2 pl-4 text-center font-semibold text-white shadow-lg transition-all duration-300 hover:bg-red-700 hover:shadow-none focus:outline-none focus:ring-red-800"
             >
               {events.button}
-            </button>
+            </Link>
           )}
         </div>
       </div>
