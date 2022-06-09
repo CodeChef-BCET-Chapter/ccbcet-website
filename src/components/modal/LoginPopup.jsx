@@ -17,7 +17,7 @@ const ModalOverlay = (props) => {
         Please Login
       </header>
       <div className="p-5 text-center text-2xl text-gray-800">
-        You need to login for registeration.
+        You need to login before registeration.
       </div>
       <footer className={classes.actions}>
         <Button onClick={props.onConfirm}>Cancel</Button>
