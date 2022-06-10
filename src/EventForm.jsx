@@ -145,6 +145,9 @@ function EventForm() {
                   <option name="branch" value="Civil">
                     Civil
                   </option>
+                  <option name="branch" value="Bca">
+                    Bca
+                  </option>
                 </select>
               </div>
 
