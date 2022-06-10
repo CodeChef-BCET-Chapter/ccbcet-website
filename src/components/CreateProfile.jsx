@@ -28,7 +28,7 @@ function CreateProfile() {
       [e.target.name]: e.target.value.trim(),
     });
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     addUserData(formData, user?.uid);
     history.push("/view-profile");
@@ -57,7 +57,6 @@ function CreateProfile() {
               name="name"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="name"
-              required
             />
           </div>
           <div className="mb-6">
@@ -74,7 +73,6 @@ function CreateProfile() {
               name="email"
               className="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="name@gmail.com"
-              required
             />
           </div>
           <div className="mb-6">
@@ -91,7 +89,6 @@ function CreateProfile() {
               name="contact"
               className="block w-full rounded-lg  border border-gray-300 bg-gray-50 p-2.5 text-sm focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="Contact No."
-              required
             />
           </div>
           <div className="mb-6">
@@ -107,7 +104,6 @@ function CreateProfile() {
               name="college"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
               placeholder="College Name"
-              required
             />
           </div>
           <div className="mb-6">
@@ -121,7 +117,6 @@ function CreateProfile() {
               onChange={handleChange}
               name="batch"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
-              required
             >
               <option name="batch" value="Choose">
                 --choose your Batch--
@@ -151,35 +146,34 @@ function CreateProfile() {
               onChange={handleChange}
               name="branch"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
-              required
             >
               <option name="branch" value="Choose">
                 --choose your Branch--
               </option>
               <option name="branch" value="Computer Science and Engineering">
-              Computer Science and Engineering
+                Computer Science and Engineering
               </option>
               <option name="branch" value="Information Technology ">
-              Information Technology
+                Information Technology
               </option>
               <option name="branch" value="Electronics & Communication">
-              Electronics & Communication
+                Electronics & Communication
               </option>
               <option name="branch" value="Electrical Engineering">
-              Electrical Engineering
+                Electrical Engineering
               </option>
               <option name="branch" value="Civil Engineering">
-              Civil Engineering
+                Civil Engineering
               </option>
               <option name="branch" value="Mechanical Engineering">
-              Mechanical Engineering
+                Mechanical Engineering
               </option>
               <option name="branch" value="Bachelor of Computer Application">
-              Bachelor of Computer Application
+                Bachelor of Computer Application
               </option>
             </select>
           </div>
-       
+
           <div className="mb-6">
             <label
               htmlFor="codechefusername"
@@ -193,7 +187,6 @@ function CreateProfile() {
               name="codechefusername"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               placeholder="codechef username"
-              required
             />
           </div>
           <div className="mb-6">
@@ -209,7 +202,6 @@ function CreateProfile() {
               name="skills"
               className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600  "
               placeholder="C++, Python, Java"
-              required
             />
           </div>
           <div className="mb-6 grid xl:grid-cols-3 xl:gap-6">
@@ -226,7 +218,6 @@ function CreateProfile() {
                 name="linkedin"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
                 placeholder="LinkedIn"
-                required
               />
             </div>
             <div className="">
@@ -242,7 +233,6 @@ function CreateProfile() {
                 name="github"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
                 placeholder="Github"
-                required
               />
             </div>
             <div className="">
@@ -258,7 +248,6 @@ function CreateProfile() {
                 name="twitter"
                 className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900  focus:border-red-500 focus:outline-none focus:ring-0 focus:ring-red-600 "
                 placeholder="twitter"
-                required
               />
             </div>
           </div>

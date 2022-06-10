@@ -24,20 +24,19 @@ export const AuthContextProvider = ({ children }) => {
     signOut(auth);
   };
 
-  onAuthStateChanged(auth, (currentUser) => {
+  onAuthStateChanged(auth, currentUser => {
     setUser(currentUser);
     if (
       currentUser &&
       currentUser.metadata.creationTime === currentUser.metadata.lastSignInTime
     ) {
-      history.push("/create-profile");
+      // history.push("/create-profile");
+      history.push("/event-registration/CE6VSqi7LLhwKLXTxdaV");
     }
   });
 
   return (
-    <AuthContext.Provider
-      value={{ googleSignIn, logOut, user }}
-    >
+    <AuthContext.Provider value={{ googleSignIn, logOut, user }}>
       {children}
     </AuthContext.Provider>
   );
