@@ -25,7 +25,9 @@ export const AuthContextProvider = ({ children }) => {
   };
 
   onAuthStateChanged(auth, currentUser => {
+    console.log("loading");
     setUser(currentUser);
+    console.log("loaded");
     if (
       currentUser &&
       currentUser.metadata.creationTime === currentUser.metadata.lastSignInTime

@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { MdLogin } from "react-icons/md";
 import { UserAuth } from "../../context/AuthContext";
-import { useHistory } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase";
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Login() {
-  const { googleSignIn, user } = UserAuth();
+  const { googleSignIn } = UserAuth();
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
@@ -13,6 +15,22 @@ export default function Login() {
     }
   };
 
+  const [user, loading, error] = useAuthState(auth);
+
+  if (loading) {
+    return (
+      <div>
+        <img
+          className=" h-8 w-8"
+          src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"
+          alt="loader"
+        />
+      </div>
+    );
+  }
+  if (error) {
+    return 
+  }
   return (
     <button
       onClick={handleGoogleSignIn}

@@ -17,6 +17,7 @@
     "imagekitio-react": "^1.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-firebase-hooks": "^5.0.3",
     "react-icons": "^4.3.1",
     "react-lazy-load-image-component": "^1.5.4",
     "react-loading-skeleton": "^3.1.0",
