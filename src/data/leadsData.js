@@ -27,7 +27,7 @@ export default [
       github: "https://github.com/OfficialSaurabh"
     },
     {
-      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/vicky_O73YdbrPq.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654683110554",
+      imageUrl: "https://ik.imagekit.io/botoixhvc/Teams_Image/vicky_RuociiA3b.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654930148655",
       name: "Vikcy Kumar Giri",
       designation: "Event Lead",
       instagram: "https://www.instagram.com/7091vicky/",

@@ -1,7 +1,7 @@
 export default [
   {
     imageUrl:
-      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/preeti_-AGtnTnez.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654683399737",
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/preeti_cp_InX_2Bfm7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654930209405",
     name: "Preeti Kumari Yadav",
     designation: "CP Executive",
     linkedin: "https://www.linkedin.com/in/preeti-yadav14",
@@ -43,7 +43,7 @@ export default [
 
   {
     imageUrl:
-      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/anirudhcpexe_1Xrc35xVP.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654173925273",
+      "https://ik.imagekit.io/botoixhvc/Teams_Image/CpExe/anirudh_qDhkvRpOy.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654930404569",
     name: "Aniruddha Pal",
     designation: "CP Executive",
     instagram: " ",
