@@ -2,6 +2,8 @@ import React from "react";
 import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { IKImage } from "imagekitio-react";
+const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function MediaExe({ eventexe }) {
   return (
     <div className="">
@@ -14,10 +16,12 @@ export default function MediaExe({ eventexe }) {
       >
         <div className=" flex justify-center">
           <div className=" -mt-28 h-32 w-32 rounded-full border-3 border-orange-600 ">
-            <LazyLoadImage
+            <IKImage
               src={eventexe.imageUrl}
               alt={eventexe.name}
-              effect="blur"
+              urlEndpoint={urlEndpoint}
+              lqip={{ active: true }}
+              loading="lazy"
               className=" rounded-full  object-cover "
             />
           </div>

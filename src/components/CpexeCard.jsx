@@ -1,8 +1,8 @@
 import React from "react";
 import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-
+import { IKImage } from "imagekitio-react";
+const urlEndpoint = "https://ik.imagekit.io/botoixhvc";
 export default function CpexeCard({ cpexe }) {
   return (
     <div className="">
@@ -17,10 +17,12 @@ export default function CpexeCard({ cpexe }) {
             className=" -mt-28  h-32 w-32 rounded-full border-3
              border-orange-600 "
           >
-            <LazyLoadImage
+            <IKImage
               src={cpexe.imageUrl}
               alt={cpexe.name}
-              effect="blur"
+              urlEndpoint={urlEndpoint}
+              lqip={{ active: true }}
+              loading="lazy"
               className=" rounded-full object-cover "
             />
           </div>

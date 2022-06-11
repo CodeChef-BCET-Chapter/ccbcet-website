@@ -1,7 +1,8 @@
+
 export default[
     //Code CRACKER
     {
-        imageUrl: "/img/Event/codecracker.png",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/codecracker_T0wojS4k66.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172937050",
         imageAlt: "Code Crakcer CCBCET",
         title: "Code Crakcer",
         date: "26", suscript:"th", year:"April 2021",
@@ -12,7 +13,7 @@ export default[
     },
     //Headstart to CP
     {
-        imageUrl: "/img/Event/headstartToCP.png",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/headstartToCP_vMzYfVA3lF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172937517",
         imageAlt: "Headstart to Competitive Programming CCBCET",
         title: "Headstart to CP",
         date: "18", suscript:"th", year:"April 2021",
@@ -23,7 +24,7 @@ export default[
     },
     //Bootcamp-2
     {
-        imageUrl: "/img/Event/bootcamp-2.png",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/bootcamp-2_7virojkw44.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172937456",
         imageAlt: "Bootcamp-2 CCBCET",
         title: "Bootcamp-2",
         date: "24", suscript:"th", year:"January 2021",
@@ -34,7 +35,7 @@ export default[
     },
     // Bootcamp-1
     {
-        imageUrl: "/img/Event/bootcamp-1.png ",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/bootcamp-1_t5NdnRTlk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172937356",
         imageAlt: "Bootcamp-1 CCBCET ",
         title: "Bootcamp-1 ",
         date: "17-18 ", suscript:"th", year:"January 2021",
@@ -45,18 +46,18 @@ export default[
     },
     
     {
-        imageUrl: "/img/Event/mythbusting.png ",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/mythbusting_7escQetfa.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172594116 ",
         imageAlt: "Busting Myths-CCBCET ",
         title: "Busting Myths ",
         date: " 16", suscript:"th", year:" October 2021 ",
         platform: "Zoom Webinar ",
         time: "04:00 pm - Onwards ",
         button: "View ",
-        href: "https://unacademy.zoom.us/j/89611357046 ",
+        href: "04:00 pm - Onwards  ",
     },
 
     {
-        imageUrl: "/img/Event/ama.png ",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/ama_47jKYrLpT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172545282 ",
         imageAlt: "AMA Session- CCBCET ",
         title: "AMA Session ",
         date: "06 ", suscript:"th", year:" October 2021 ",
@@ -67,7 +68,7 @@ export default[
     },
 
     {
-        imageUrl: "/img/Event/appetizer.png ",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/appetizer_n2I-dbPzi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172513336",
         imageAlt: "Chapter's Appetizer - CCBCET ",
         title: "Chapter's Appetizer ",
         date: "25 - 26 ", suscript:"th", year:" September 2021 ",
@@ -78,7 +79,7 @@ export default[
     },
 
     {
-        imageUrl: "/img/Event/induction.png ",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/induction_ZeMXbpDwJ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654172601212",
         imageAlt: "Induction-  CCBCET ",
         title: "Induction ",
         date: "11 ", suscript:"th", year:" January 2021 ",
@@ -100,7 +101,7 @@ export default[
     },
 
     {
-        imageUrl: "/img/Event/learning sprint.jpeg",
+        imageUrl: "https://ik.imagekit.io/botoixhvc/Event_Image/learning_sprint_HDbuKwBJO.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1654172570683",
         imageAlt: "learning sprint",
         title: "Learning Sprint",
         date: "18", suscript:"th", year:"November 2018",

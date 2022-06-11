@@ -3,79 +3,92 @@ import { Transition } from "@headlessui/react";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsCalendarEvent } from "react-icons/bs";
 import { RiTeamLine, RiBook2Line } from "react-icons/ri";
-import { MdOutlineLeaderboard } from "react-icons/md";
+import { MdOutlineLeaderboard, MdOutlineLogin } from "react-icons/md";
+import Login from "./login/Login";
+import ProfilePic from "./login/ProfilePic";
+import { UserAuth } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
+  const { user } = UserAuth();
   const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div>
-      <nav className="bg-gray-800 ">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="sticky top-0 z-50 ">
+      {/* Web */}
+      <nav className="bg-gray-800   ">
+        <div className="mx-auto max-w-7xl px-4   sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
-            <div className="flex flex-grow justify-between">
-              <a href="/">
+            <div className="flex flex-grow justify-between ">
+              <Link to="/">
                 <div className="flex items-center gap-4">
                   <img
-                    className="h-8 w-8"
+                    className="h-10 w-10"
                     src="/img/ccbcet-logo.svg"
                     alt="CC BECT logo"
                   />
-                  <h1 className="font-semibold text-white">
+                  <h1 className="hidden text-lg font-semibold text-white  lg:block   ">
                     CodeChef BCET Chapter
                   </h1>
                 </div>
-              </a>
+              </Link>
 
               <div>
                 <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
-                    <a
-                      href="/"
+                  <div className="ml-10 flex space-x-4">
+                    <Link
+                      to="/"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <AiOutlineHome className="mx-1 text-lg" /> Home
-                    </a>
+                    </Link>
 
-                    <a
-                      href="/events"
+                    <Link
+                      to="/events"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <BsCalendarEvent className="mx-1 text-lg" /> Events
-                    </a>
+                    </Link>
 
-                   
-                    <a
-                      href="/teams"
+                    <Link
+                      to="/teams"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <RiTeamLine className="mx-1 text-lg" />
                       Teams
-                    </a>
+                    </Link>
 
                     <a
-                      href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
+                      href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&itemsPerPage=15&order=asc&page=1&sortBy=global_rank"
                       target="_blank"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <MdOutlineLeaderboard className="mx-1 text-lg" />
                       Leaderboard
                     </a>
-                    <a
-                      href="/resources"
+                    <Link
+                      to="/resources"
                       className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <RiBook2Line className="mx-1 text-lg" />
-                    Resources
-                    </a>
+                      Resources
+                    </Link>
+                    {user ? <ProfilePic /> : <Login />}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden">
+            <div className="-mr-2 flex md:hidden ">
+              <div className=" flex items-center px-5 ">
+                <p className=" px-4 text-white ">
+                  {user ? user.displayName : null}
+                </p>
+                {user ? <ProfilePic /> : <Login />}
+              </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="focus:outline-none inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 hover:text-white focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -131,44 +144,43 @@ export default function NavBar() {
           {ref => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-              <a
-                      href="/"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <AiOutlineHome className="mx-1 text-lg" /> Home
-                    </a>
+                <Link
+                  to="/"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <AiOutlineHome className="mx-1 text-lg" /> Home
+                </Link>
 
-                    <a
-                      href="/events"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <BsCalendarEvent className="mx-1 text-lg" /> Events
-                    </a>
+                <Link
+                  to="/events"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <BsCalendarEvent className="mx-1 text-lg" /> Events
+                </Link>
 
-                   
-                    <a
-                      href="/teams"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <RiTeamLine className="mx-1 text-lg" />
-                      Teams
-                    </a>
+                <Link
+                  to="/teams"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <RiTeamLine className="mx-1 text-lg" />
+                  Teams
+                </Link>
 
-                    <a
-                      href="https://www.codechef.com/ratings/all?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
-                      target="_blank"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <MdOutlineLeaderboard className="mx-1 text-lg" />
-                      Leaderboard
-                    </a>
-                    <a
-                      href="/resources"
-                      className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                    >
-                      <RiBook2Line className="mx-1 text-lg" />
-                    Resources
-                    </a>
+                <a
+                  to="https://www.codechef.com/ratings/Linkll?filterBy=Institution%3DBengal%20College%20of%20Engineering%20and%20Technology&order=asc&sortBy=global_rank"
+                  target="_blank"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <MdOutlineLeaderboard className="mx-1 text-lg" />
+                  Leaderboard
+                </a>
+                <Link
+                  to="/resources"
+                  className="flex rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  <RiBook2Line className="mx-1 text-lg" />
+                  Resources
+                </Link>
               </div>
             </div>
           )}
