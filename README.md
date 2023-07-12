@@ -3,7 +3,7 @@ CodeChef BCET Chapter Web App
 
 ## Link
 
-https://www.codechefbcetchapter.tech/
+[https://www.codechefbcetchapter.tech/](https://codechefbcetchapter.netlify.app/)
 
 ## Tech and Tools
 
